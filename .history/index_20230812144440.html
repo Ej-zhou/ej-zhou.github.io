@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>
+     Zhou, Ej
+    </title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&amp;display=swap" rel="stylesheet"/>
+<style>
+     /* body, h1, h2, h3, h4, h5, h6 {font-family: "Lobster", sans-serif} */
+     h1, h2, h3, h4, h5, h6 {font-family: "Lobster", sans-serif}
+     .w3-row-padding img {margin-bottom: 12px}
+     .bgimg {
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-image: url('https://www.w3schools.com/w3images/profile_girl.jpg');
+       min-height: 100%;
+     }
+    @font-face {
+      font-family: 'YanShiFoXiTi';
+      src: url('fonts/YanShiFoXiTi/Slidefu-Regular-2.ttf'); /* Change the extension to match your file */
+    }
+
+    @font-face {
+    font-family: 'Aakar Regular';
+    src: url('fonts/Aakar\ Regular/A') format('truetype'); /* Update the path if needed */
+    }
+
+     .chinese {
+      font-family: 'YanShiFoXiTi', sans-serif;
+    }
+
+    .sanskrit{
+        font-family: 'Aakar Regular', sans-serif;
+    }
+  /* Other CSS rules */
+    
+    /* Style for the sidebar container */
+    .sidebar {
+    width: 600px; /* Same as the desired image width */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align with the top of the viewport */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling inside the sidebar */
+    display: flex; /* Enable flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    }
+
+    /* Style for the image container */
+    .image-container {
+    width: 100%; /* Take up full width of the sidebar */
+    text-align: left; /* Center the image horizontally */
+    }
+
+
+
+    .question-mark {
+      cursor: pointer;
+      font-weight: bold;
+      color: black; /* Change the color as needed */
+      font-size: 40%; /* Adjust the font size to make it smaller */
+      vertical-align: top; /* Display the question mark as a superscript */
+    }
+
+    .tooltip {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 20%; /* Set to the desired font size */
+    font-weight: normal; /* Set the font weight to normal */
+    font-style: normal; /* Set the font style to normal */
+    font-family: "Times New Roman", serif /* Set the desired font family */
+    }
+
+
+</style>
+</head>
+<!-- <body><div class="sidebar"><div class="image-container"><img alt="here should be a photo" height="400" src="pics/IMG_2185.JPG" width="600"/></div></div> -->
+<body><div class="sidebar"><div class="image-container"><img alt="here should be a photo"  src="pics/photo.jpeg" width="550"/></div></div>
+<!-- Sidebar with image -->
+<!-- <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%"> -->
+<!-- <div class="bgimg"> -->
+<!-- </div> -->
+<!-- </nav> -->
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<!-- <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" id="mySidebar" style="display:none;padding-top:150px;right:0;z-index:2">
+   <a class="w3-button w3-black w3-xxxlarge w3-display-topright" href="javascript:void(0)" onclick="closeNav()" style="padding:0 12px;">
+    <i class="fa fa-remove">
+    </i>
+   </a>
+   <div class="w3-bar-block w3-center">
+    <a class="w3-bar-item w3-button w3-text-grey w3-hover-black" href="#" onclick="closeNav()">
+     Home
+    </a>
+    <a class="w3-bar-item w3-button w3-text-grey w3-hover-black" href="#portfolio" onclick="closeNav()">
+     Portfolio
+    </a>
+    <a class="w3-bar-item w3-button w3-text-grey w3-hover-black" href="#about" onclick="closeNav()">
+     About
+    </a>
+    <a class="w3-bar-item w3-button w3-text-grey w3-hover-black" href="#contact" onclick="closeNav()">
+     Contact
+    </a>
+   </div>
+  </nav> -->
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+<!-- Menu icon to open sidebar -->
+<span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" onclick="openNav()" style="width:auto;right:0;">
+<i class="fa fa-bars">
+</i>
+</span>
+<!-- Header -->
+<header class="w3-container w3-center" id="home" style="padding:128px 16px">
+
+<h1 class="w3-jumbo">
+    <b> <span class="chinese">周逸杰</span>           </b>
+</h1>
+
+<h1 class="w3-jumbo">
+<b> 
+        ZHOU, EJ
+      </b>
+      <span class="question-mark">?</span>
+      <span class="tooltip">
+        My given name is <i>Yijie</i>, and my family name <i>Zhou</i>. <i>Ej</i> is my preferred name, and we put our family name in the front.
+      </span>
+
+      
+
+
+</h1>
+<p>
+     Where shall I begin...
+    </p>
+<!-- <img class="w3-image w3-hide-large w3-hide-small w3-round" src="https://www.w3schools.com/w3images/profile_girl.jpg" style="display:block;width:60%;margin:auto;"/> -->
+<!-- <img class="w3-image w3-hide-large w3-hide-medium w3-round" height="1333" src="https://www.w3schools.com/w3images/profile_girl.jpg" width="1000">
+<button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+<i class="fa fa-download">
+</i>
+      CV
+    </button>
+</img></header> -->
+<!-- Portfolio Section -->
+<!-- <div class="w3-padding-32 w3-content" id="portfolio">
+    <h2 class="w3-text-grey">
+     My Portfolio
+    </h2>
+    <hr class="w3-opacity"/> -->
+<!-- Grid for photos -->
+<!-- <div class="w3-row-padding" style="margin:0 -16px"> -->
+<!-- <div class="w3-half">
+      <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%"/>
+      <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%"/>
+      <img src="https://www.w3schools.com/w3images/sailboat.jpg" style="width:100%"/>
+     </div>
+     <div class="w3-half">
+      <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%"/>
+      <img src="https://www.w3schools.com/w3images/chef.jpg" style="width:100%"/>
+      <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%"/>
+      <img src="https://www.w3schools.com/w3images/p6.jpg" style="width:100%"/>
+     </div> -->
+<!-- End photo grid -->
+<!-- </div> -->
+<!-- End Portfolio Section -->
+<!-- </div> -->
+<!-- About Section -->
+<div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+<h2>
+     About
+    </h2>
+<hr class="w3-opacity"/>
+<p>
+    I am an undergraduate student in Zhejiang Unviersity. I am interested in NLP and AI. I am currently working on a project about building a corpus for cross-lingual summarization. I am also interested in the intersection of NLP and other fields, such as psychology and philosophy. I am also interested in the application of NLP in the field of education. I am currently working on a project about building a corpus for cross-lingual summarization. I am also interested in the intersection of NLP and other fields, such as psychology and philosophy. I am also interested in the application of NLP in the field of education. I am currently working on a project about building a corpus for cross-lingual summarization. I am also interested in the intersection of NLP and other fields, such as psychology and philosophy. I am also interested in the application of NLP in the field of education.
+    </p>
+<h3 class="w3-padding-16">
+<!-- My Skills
+    </h3>
+    <p class="w3-wide">
+     Photography
+    </p>
+    <div class="w3-light-grey">
+     <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">
+      95%
+     </div>
+    </div>
+    <p class="w3-wide">
+     Web Design
+    </p>
+    <div class="w3-light-grey">
+     <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">
+      85%
+     </div>
+    </div>
+    <p class="w3-wide">
+     Photoshop
+    </p>
+    <div class="w3-light-grey">
+     <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">
+      80%
+     </div>
+    </div>
+    <br/>
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
+     <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">
+       14+
+      </span> -->
+<!-- <br/>
+      Partners
+     </div>
+     <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">
+       55+
+      </span>
+      <br/>
+      Projects Done
+     </div>
+     <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">
+       89+
+      </span>
+      <br/>
+      Happy Clients
+     </div>
+     <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">
+       150+
+      </span>
+      <br/>
+      Meetings
+     </div>
+    </div>
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+     <i class="fa fa-download">
+     </i>
+     Download Resume -->
+<!-- </button> -->
+<!-- Testimonials -->
+<!-- <h3 class="w3-padding-24">
+     My Reputation
+    </h3>
+    <img alt="Avatar" class="w3-left w3-circle w3-margin-right" src="https://www.w3schools.com/w3images/avatar_smoke.jpg" style="width:80px"/>
+    <p>
+     <span class="w3-large w3-text-black w3-margin-right">
+      Chandler Bing.
+     </span>
+     Web Designer.
+    </p>
+    <p>
+     Jane Doe is just awesome. I am so happy to have met her!
+    </p>
+    <br/>
+    <img alt="Avatar" class="w3-left w3-circle w3-margin-right" src="https://www.w3schools.com/w3images/bandmember.jpg" style="width:80px"/>
+    <p>
+     <span class="w3-large w3-text-black w3-margin-right">
+      Chris Fox.
+     </span>
+     CEO at Mighty Schools.
+    </p>
+    <p>
+     Jane Doe saved us from a web disaster.
+    </p>
+    <br/>
+    <img alt="Avatar" class="w3-left w3-circle w3-margin-right" src="https://www.w3schools.com/w3images/avatar_g2.jpg" style="width:80px"/>
+    <p>
+     <span class="w3-large w3-text-black w3-margin-right">
+      Rebecca Flex.
+     </span>
+     CEO at Company.
+    </p>
+    <p>
+     No one is better than Jane Doe.
+    </p>
+    <br/> -->
+<!-- Grid for pricing tables -->
+<!-- End About Section -->
+<!-- </div> -->
+<!-- 
+  <script>
+   // Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+  </script>
+  <div class="w3-container w3-padding-64 w3-center"> -->
+
+<br><br><br><br>
+<h1 class="w3-jumbo">
+    <b> <span class="chinese">若以色见我，以音声求我，是人行邪道，不能见如来。</span>           </b>
+</h1>
+
+
+<p>
+</p>
+</h3></div>
+<div class="w3-container w3-padding-64 w3-center">
+<h2>
+    EDUCATION BACKGROUND
+   </h2>
+   <hr class="w3-opacity"/>
+<p>
+    College of Computer Science and Technology Hangzhou, China &amp; CKC Honors College, Zhejiang University
+   </p>
+<p>
+    Sept 2020 - Jun 2024(Expected)
+   </p>
+<p>
+    Bachelor of Science in Computer Science
+   </p>
+<p>
+    Overall GPA: 3.99/4.0; 91.19/100 Major GPA: 4.0/4.0
+   </p>
+<p>
+    GRE: 330 + AW4.0
+   </p>
+<p>
+    WestLake NLP Lab, Westlake University Hangzhou, China
+   </p>
+<p>
+    Research Internship &amp; Visiting Student Sept 2022 - Jan 2023
+   </p>
+<p>
+    College of Engineering, Cornell University Ithaca, NY
+   </p>
+<p>
+    Exchange Student Jan 2023 - May 2023
+   </p>
+s   <p>
+    Courses include: Computational Linguistics, Language and Information, Historical Linguistics
+   </p>
+</div>
+
+<br><br><br><br>
+<h1 class="w3-jumbo">
+    <b> <span class="chinese">गते गते पारगते पारसंगते बोधि स्वाहा</span>           </b>
+</h1>
+
+<div class="w3-container w3-padding-64 w3-center">
+<h2>
+    EXPERIENCE
+   </h2>
+<p>
+    Hangzhou City Brain
+   </p>
+<p>
+    Sept 2022 - Aug 2022
+   </p>
+<p>
+    Internship Hangzhou, China
+   </p>
+<p>
+    Assisted in the maintenance of the Integrated Resources System working on database systems.
+   </p>
+<p>
+    Westlake University
+   </p>
+<p>
+    Sept 2022 - Feb 2023
+   </p>
+<p>
+    Project: Building ConvSumX, an XLS corpus
+   </p>
+<p>
+    Hangzhou, China
+   </p>
+<p>
+    Research Intern in WestLake NLP Lab Advisor: Yue Zhang
+   </p>
+<p>
+    Spearheaded the Corpus-Annotation and Corpus-Evaluation team in the creation of the corpus.
+   </p>
+<p>
+    Conducted experiments by fine-tuning mBART model using various corpora on NVIDIA A100 GPUs.
+   </p>
+<p>
+    Delivered comprehensive analysis of both existing XLS corpora and experimental outcomes
+   </p>
+<p>
+    Paper Writing
+   </p>
+<p>
+    Cornell University
+   </p>
+<p>
+    Feb 2023 - Apr 2023
+   </p>
+<p>
+    Project: Persuasive Chatbot
+   </p>
+<p>
+    Ithaca, NY
+   </p>
+<p>
+    Developed an automated chatbot capable of detecting factual inaccuracies during conversations, and providing accurate information supported by evidence
+   </p>
+</div>
+
+
+
+<div class="w3-container w3-padding-64 w3-center">
+<h2>
+    PUBLICATION
+   </h2>
+<p>
+    [1] Yulong Chen, Huajian Zhang, Yijie Zhou, Xuefeng Bai, Yueguan Wang, Ming Zhong, Jianhao Yan, Yafu Li, Judy Li, Michael Zhu and Yue Zhang:
+   </p>
+<p>
+    Revisiting Cross-Lingual Summarization: A Corpus-based Study and A New Benchmark with Improvement Annotation, submitted to ACL 2023
+   </p>
+</div>
+<div class="w3-container w3-padding-64 w3-center">
+<h2>
+    AWARDS AND COMPETITIONS
+   </h2>
+<p>
+    Zhejiang Lab Cup Global AI Competition, Third Prize
+   </p>
+<p>
+    Oct 2021
+   </p>
+<p>
+    Hangzhou, China
+   </p>
+<p>
+    Zhejiang University Programming Contest, Third Prize
+   </p>
+<p>
+    Oct 2021
+   </p>
+<p>
+    Hangzhou, China
+   </p>
+</div>
+<div class="w3-container w3-padding-64 w3-center">
+<h2>
+    SELECTED COURSE-WORKS
+   </h2>
+<p>
+    Parallel Computing and Neural Networks
+   </p>
+<p>
+    Jul 2021 - Aug 2021
+   </p>
+<p>
+    Coursework for Integrate Practice for Courses I: Supercomputing; score 97/100
+   </p>
+<p>
+    Enhanced GEMM performance by over 100x using OpenMP and MPI on a computing cluster.
+   </p>
+<p>
+    Developed a CNN from scratch using PyTorch for handwriting recognition and object recognition.
+   </p>
+<p>
+    Mini-SQL GitHub
+   </p>
+<p>
+    May 2022 - Jun 2022
+   </p>
+<p>
+    Coursework for Database System; score 98/100
+   </p>
+<p>
+    Developed a compact single-user SQL engine (DBMS) supporting fundamental database operations and implemented an index-manager for record handling using a custom-designed B+-tree data structure.
+   </p>
+<p>
+    Socket and Web-server
+   </p>
+<p>
+    Oct 2022 - Dec 2022
+   </p>
+<p>
+    Coursework for Computer Network; score 96/100
+   </p>
+<p>
+    Developed a custom TCP-based communication protocol.
+   </p>
+<p>
+    Constructed a lightweight web server capable of parsing HTTP protocol and accepting browser access without relying on any pre-built libraries.
+   </p>
+</div>
+<div class="w3-container w3-padding-64 w3-center">
+<h2>
+    SKILLS
+   </h2>
+<p>
+    Programming Skills: Python, C, C++, Verilog, etc.
+   </p>
+<p>
+    Deep Learning Framework: Pytorch, Transformers, working with LLMs
+   </p>
+<p>
+    Developer Tools: Git, GitHub, Linux, Anaconda, LaTeX, Docker
+   </p>
+<p>
+    Others: SQL Language, Linux Kernel Programming, CUDA
+   </p>
+</div>
+<div class="w3-container w3-padding-64 w3-center">
+<h2>
+    LANGUAGES
+   </h2>
+<p>
+    Mandarin: Native mastery
+   </p>
+<p>
+    Wu-Chinese: Native in oral speech
+   </p>
+<p>
+    English: Proficient, TOEFL 110/120
+   </p>
+<p>
+    French: Fluent, TFU 84/100
+   </p>
+<p>
+    Japanese: Intermediate reading-comprehension, basic conversation
+   </p>
+<p>
+    Beginner level in Cantonese and Spanish
+   </p>
+</div>
+<div class="w3-container w3-padding-64 w3-center">
+<h2>
+    EXTRA-CURRICULAR ACTIVITIES
+   </h2>
+<p>
+    My film reviews (link), An experimental short-film that I was in: In Some Nights. Tarkovsky and Wim Wenders
+   </p>
+<p>
+    guqin and guitar
+   </p>
+</div>
+<div class="w3-container w3-padding-64 w3-center">
+<h2>
+    AWARDS AND HONORS
+   </h2>
+<p>
+    First-class Scholarship, Zhejiang University 2022/2021
+   </p>
+<p>
+    Excellence Honors Scholarship, Zhejiang University 2021
+   </p>
+<p>
+    Hengyi Scholarship 2021
+   </p>
+</div>
+
+<!-- Contact Section -->
+  
+
+<!-- <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+<h2>
+       Contact Me
+      </h2>
+<hr class="w3-opacity"/>
+<div class="w3-section">
+<p>
+<i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right">
+</i>
+        New Haven, CT
+       </p>
+<p>
+<i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right">
+</i>
+        Phone: +1 (607) 327-2411 / +86 188-0671-8188
+       </p>
+<p>
+<i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right">
+</i>
+        Email: e.j.zhou@zju.edu.cn / yz2876@cornell.edu
+       </p> -->
+</div>
+<!-- Image of location/map -->
+<!-- <img class="w3-image w3-greyscale" src="https://www.w3schools.com/w3images/map.jpg" style="width:100%;margin:32px 0"/> -->
+<!-- <p>
+       Lets get in touch. Send me a message:
+      </p> -->
+<!-- <form action="/action_page.php" target="_blank"> -->
+<!-- <p>
+<input class="w3-input w3-padding-16 w3-border" name="Name" placeholder="Name" required="" type="text"/>
+</p>
+<p>
+<input class="w3-input w3-padding-16 w3-border" name="Email" placeholder="Email" required="" type="text"/>
+</p>
+<p>
+<input class="w3-input w3-padding-16 w3-border" name="Subject" placeholder="Subject" required="" type="text"/>
+</p>
+<p>
+<input class="w3-input w3-padding-16 w3-border" name="Message" placeholder="Message" required="" type="text"/>
+</p>
+<p>
+<button class="w3-button w3-light-grey w3-padding-large" type="submit">
+<i class="fa fa-paper-plane">
+</i>
+         SEND MESSAGE
+        </button>
+</p> -->
+<!-- </form> -->
+<!-- End Contact Section -->
+</div>
+
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <!-- <a href="https://www.facebook.com/yourusername" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a> -->
+    <!-- <a href="https://www.instagram.com/yourusername" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a> -->
+    <!-- <a href="https://www.snapchat.com/yourusername" target="_blank"><i class="fa fa-snapchat w3-hover-opacity"></i></a> -->
+    <!-- <a href="https://www.pinterest.com/yourusername" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a> -->
+    <a href="https://twitter.com/ej_2876" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://github.com/cyber-e-j" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a> <!-- GitHub Link -->
+    <a href="https://www.linkedin.com/in/ej-zhou-1600a7264/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <!-- <a href="https://scholar.google.com/citations?authuser=1&user=e8yGb7IAAAAJ" target="_blank"><i class="fa-brands fa-google"></i></a> Google Scholar Link -->
+    <a href="https://scholar.google.com/citations?authuser=1&user=e8yGb7IAAAAJ" target="_blank"><img width="24" height="24" src="https://img.icons8.com/material-two-tone/384/google-scholar.png" alt="google-scholar" class="w3-hover-opacity" /></a> <!-- Google Scholar Link -->
+
+    <!-- Additional content -->
+    <p class="w3-small">
+      <!-- This website was made with W3schools Spaces. Make your own free website today! -->
+    </p>
+    <!-- <a class="w3-button w3-round-xxlarge w3-small w3-dark-grey" href="https://www.w3schools.com/spaces" target="_blank">
+       Start now
+      </a> -->
+    <!-- End footer -->
+  </footer>
+
+</div>
+
+
+
+<script>
+    const questionMark = document.querySelector('.question-mark');
+    const tooltip = document.querySelector('.tooltip');
+  
+    questionMark.addEventListener('mouseover', () => {
+      tooltip.style.display = 'inline-block';
+    });
+  
+    questionMark.addEventListener('mouseout', () => {
+      tooltip.style.display = 'none';
+    });
+  
+    // Optional: If you want to hide the tooltip when the mouse moves away from it, add the following code
+    tooltip.addEventListener('mouseout', () => {
+      tooltip.style.display = 'none';
+    });
+  </script>
+
+
+</body>
+
+  <!-- END PAGE CONTENT -->
+  </html>
+  

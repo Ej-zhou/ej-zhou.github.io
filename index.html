@@ -15,41 +15,122 @@
      /* body, h1, h2, h3, h4, h5, h6 {font-family: "Lobster", sans-serif} */
      h1, h2, h3, h4, h5, h6 {font-family: "Lobster", sans-serif}
      .w3-row-padding img {margin-bottom: 12px}
-     .bgimg {
+     /* .bgimg {
        background-position: center;
        background-repeat: no-repeat;
        background-size: cover;
        background-image: url('https://www.w3schools.com/w3images/profile_girl.jpg');
        min-height: 100%;
-     }
+     } */
     @font-face {
       font-family: 'YanShiFoXiTi';
       src: url('fonts/YanShiFoXiTi/Slidefu-Regular-2.ttf'); /* Change the extension to match your file */
     }
 
+    @font-face {
+    font-family: 'Aakar Regular';
+    src: url('fonts/Aakar Regular/Aakar Regular.ttf') format('truetype'); /* Update the path if needed */
+    }
+
+    @font-face {
+        font-family: 'vesper_libre';
+        src: url("fonts/Vesper_Libre/VesperLibre-Bold.ttf");
+    }
+
+    @font-face {
+        font-family: 'kalam';
+        src: url("fonts/Kalam/Kalam-Bold.ttf");
+    }
+
+    
+    @font-face {
+        font-family: 'Kurale';
+        src: url("fonts/Kurale/Kurale-Regular.ttf");
+    }
+
+    @font-face {
+        font-family: "Tillana";
+        src: url("fonts/Tillana/Tillana-Regular.ttf");
+    }
+
+
+    @font-face {
+        font-family: "hentaigana";
+        src: url('fonts/Yuji_Hentaigana_Akebono/YujiHentaiganaAkebono-Regular.ttf');
+    }
+
+    @font-face {
+        font-family: 'tegaki';
+        src: url('fonts/851-tegaki-zatsu/851tegaki_zatsu_normal_0883.ttf');
+    }
+
      .chinese {
       font-family: 'YanShiFoXiTi', sans-serif;
     }
+
+    .japanese {
+        font-family: 'tegaki';
+    }
+
+    .sanskrit {
+        font-family: 'Tillana';
+        font-size: 33px; /* Set the font size to your desired value */
+        font-style: italic;
+        font-weight: bold; /* Make the text bold */
+        text-align: right; /* Center align the text */
+        display: block; /* Make the span a block element to occupy the full width */
+        margin: 10px 0; /* Add some margin to separate it from other elements */
+        color: gray; /*Set the color to your preference*/
+    }
   /* Other CSS rules */
     
-/* Style for the sidebar container */
-.sidebar {
-  width: 600px; /* Same as the image width */
-  position: fixed; /* Fixed position */
-  top: 0; /* Align with the top of the viewport */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scrolling inside the sidebar */
-}
+    /* Style for the sidebar container */
+    .sidebar {
+    width: 600px; /* Same as the desired image width */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align with the top of the viewport */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling inside the sidebar */
+    display: flex; /* Enable flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    }
 
-/* Style for the image container */
-.image-container {
-  position: sticky; /* Sticky positioning */
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Align precisely at the center */
-}
+    /* Style for the image container */
+    .image-container {
+    width: 100%; /* Take up full width of the sidebar */
+    text-align: left; /* Center the image horizontally */
+    }
+
+
+
+    .question-mark {
+      cursor: pointer;
+      font-weight: bold;
+      color: gray; /* Change the color as needed */
+      font-size: 40%; /* Adjust the font size to make it smaller */
+      vertical-align: top; /* Display the question mark as a superscript */
+    }
+
+    .tooltip {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 20%; /* Set to the desired font size */
+    font-weight: normal; /* Set the font weight to normal */
+    font-style: normal; /* Set the font style to normal */
+    font-family: "Times New Roman", serif /* Set the desired font family */
+    }
+
+
 </style>
 </head>
-<body><div class="sidebar"><div class="image-container"><img alt="here should be a photo" height="400" src="pics/photo.jpeg" width="600"/></div></div>
+<!-- <body><div class="sidebar"><div class="image-container"><img alt="here should be a photo" height="400" src="pics/IMG_2185.JPG" width="600"/></div></div> -->
+<body><div class="sidebar"><div class="image-container"><img alt="here should be a photo"  src="pics/photo.jpeg" width="550"/></div></div>
 <!-- Sidebar with image -->
 <!-- <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%"> -->
 <!-- <div class="bgimg"> -->
@@ -86,26 +167,37 @@
 </span>
 <!-- Header -->
 <header class="w3-container w3-center" id="home" style="padding:128px 16px">
+
 <h1 class="w3-jumbo">
-<b> <span class="chinese">周逸杰</span></b>
+    <b> <span class="chinese">周逸杰</span>           </b>
 </h1>
+
+
+
 <h1 class="w3-jumbo">
 <b> 
-        Zhou, Ej
+        ZHOU, EJ
       </b>
-<a href="javascript:void(0)" onclick="alert('My formal name is Yijie Zhou');">ⓘ</a>
+      <span class="question-mark">?</span>
+      <span class="tooltip">
+        My given name is <i>Yijie</i>, and my family name <i>Zhou</i>. <i>Ej</i> is my preferred name, and <b>we</b> put our family name in the front.
+      </span>
+
+      
+
+
 </h1>
 <p>
      Where shall I begin...
     </p>
 <!-- <img class="w3-image w3-hide-large w3-hide-small w3-round" src="https://www.w3schools.com/w3images/profile_girl.jpg" style="display:block;width:60%;margin:auto;"/> -->
-<img class="w3-image w3-hide-large w3-hide-medium w3-round" height="1333" src="https://www.w3schools.com/w3images/profile_girl.jpg" width="1000">
+<!-- <img class="w3-image w3-hide-large w3-hide-medium w3-round" height="1333" src="https://www.w3schools.com/w3images/profile_girl.jpg" width="1000">
 <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
 <i class="fa fa-download">
 </i>
       CV
     </button>
-</img></header>
+</img></header> -->
 <!-- Portfolio Section -->
 <!-- <div class="w3-padding-32 w3-content" id="portfolio">
     <h2 class="w3-text-grey">
@@ -254,21 +346,26 @@ function closeNav() {
 }
   </script>
   <div class="w3-container w3-padding-64 w3-center"> -->
-<h1>
-    ZHOU, EJ
-   </h1>
-<p>
-    GitHub: Cyb er-E-J
-   </p>
-<p>
-    +1 (607) 327-2411
-   </p>
-<p>
-    e.j.zhou@zju.edu.cn
-   </p>
-<p>
-    yz2876@cornell.edu
-   </p>
+
+<br><br><br><br>
+<!-- <h1 class="w3-jumbo">
+    <b> <span class="chinese">若以色见我，以音声求我，是人行邪道，不能见如来。</span>           </b>
+</h1> -->
+
+<!-- <h1 class="w3-jumbo">
+    <b> <span class="chinese">凡所有相，皆是虚妄。<br> 若见诸相非相，即见如来。</span>           </b>
+</h1> -->
+
+<h1 class="w3-jumbo">
+    <b> <span class="chinese">远离颠倒梦想，究竟涅槃。</span>           </b>
+</h1> 
+
+<!-- 
+<h1 class="w3-jumbo">
+    <b> <span class="chinese">无苦、集、灭、道，无智亦无得</span>           </b>
+</h1>  -->
+
+
 <p>
 </p>
 </h3></div>
@@ -276,6 +373,7 @@ function closeNav() {
 <h2>
     EDUCATION BACKGROUND
    </h2>
+   <hr class="w3-opacity"/>
 <p>
     College of Computer Science and Technology Hangzhou, China &amp; CKC Honors College, Zhejiang University
    </p>
@@ -307,6 +405,9 @@ s   <p>
     Courses include: Computational Linguistics, Language and Information, Historical Linguistics
    </p>
 </div>
+
+
+
 <div class="w3-container w3-padding-64 w3-center">
 <h2>
     EXPERIENCE
@@ -366,6 +467,9 @@ s   <p>
     Developed an automated chatbot capable of detecting factual inaccuracies during conversations, and providing accurate information supported by evidence
    </p>
 </div>
+
+
+
 <div class="w3-container w3-padding-64 w3-center">
 <h2>
     PUBLICATION
@@ -481,7 +585,7 @@ s   <p>
     French: Fluent, TFU 84/100
    </p>
 <p>
-    Japanese: Intermediate reading-comprehension, basic conversation
+    <span class="japanese"> 日本語: 先天的なIntermediate reading-comprehension, basic conversation</span>
    </p>
 <p>
     Beginner level in Cantonese and Spanish
@@ -498,7 +602,7 @@ s   <p>
     guqin and guitar
    </p>
 </div>
-<footer class="w3-container w3-padding-64 w3-center">
+<div class="w3-container w3-padding-64 w3-center">
 <h2>
     AWARDS AND HONORS
    </h2>
@@ -511,10 +615,12 @@ s   <p>
 <p>
     Hengyi Scholarship 2021
    </p>
-</footer>
-</div></body>
+</div>
+
 <!-- Contact Section -->
-<div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+  
+
+<!-- <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
 <h2>
        Contact Me
       </h2>
@@ -523,26 +629,30 @@ s   <p>
 <p>
 <i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right">
 </i>
-        Chicago, US
+        New Haven, CT
        </p>
 <p>
 <i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right">
 </i>
-        Phone: +00 151515
+        Phone: +1 (607) 327-2411 / +86 188-0671-8188
        </p>
 <p>
 <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right">
 </i>
-        Email: mail@mail.com
-       </p>
+        Email: e.j.zhou@zju.edu.cn / yz2876@cornell.edu
+       </p> -->
+<br><br><br><br>
+<b> <span class="sanskrit">गते गते पारगते पारसंगते बोधि स्वाहा</span>           </b>
+       
+
 </div>
 <!-- Image of location/map -->
 <!-- <img class="w3-image w3-greyscale" src="https://www.w3schools.com/w3images/map.jpg" style="width:100%;margin:32px 0"/> -->
-<p>
+<!-- <p>
        Lets get in touch. Send me a message:
-      </p>
-<form action="/action_page.php" target="_blank">
-<p>
+      </p> -->
+<!-- <form action="/action_page.php" target="_blank"> -->
+<!-- <p>
 <input class="w3-input w3-padding-16 w3-border" name="Name" placeholder="Name" required="" type="text"/>
 </p>
 <p>
@@ -560,32 +670,63 @@ s   <p>
 </i>
          SEND MESSAGE
         </button>
-</p>
-</form>
+</p> -->
+<!-- </form> -->
 <!-- End Contact Section -->
-</div>
-<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
-<i class="fa fa-facebook-official w3-hover-opacity">
-</i>
-<i class="fa fa-instagram w3-hover-opacity">
-</i>
-<i class="fa fa-snapchat w3-hover-opacity">
-</i>
-<i class="fa fa-pinterest-p w3-hover-opacity">
-</i>
-<i class="fa fa-twitter w3-hover-opacity">
-</i>
-<i class="fa fa-linkedin w3-hover-opacity">
-</i>
-<p class="w3-small">
-<!-- This website was made with W3schools Spaces. Make your own free website today! -->
-</p>
-<!-- <a class="w3-button w3-round-xxlarge w3-small w3-dark-grey" href="https://www.w3schools.com/spaces" target="_blank">
-     Start now
-    </a> -->
-<!-- End footer -->
-</footer>
-<!-- END PAGE CONTENT -->
-</html>
 
+
+</div>
+
+
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <!-- <a href="https://www.facebook.com/yourusername" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a> -->
+    <!-- <a href="https://www.instagram.com/yourusername" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a> -->
+    <!-- <a href="https://www.snapchat.com/yourusername" target="_blank"><i class="fa fa-snapchat w3-hover-opacity"></i></a> -->
+    <!-- <a href="https://www.pinterest.com/yourusername" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a> -->
+    <a href="https://twitter.com/ej_2876" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://github.com/cyber-e-j" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a> <!-- GitHub Link -->
+    <a href="https://www.linkedin.com/in/ej-zhou-1600a7264/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <!-- <a href="https://scholar.google.com/citations?authuser=1&user=e8yGb7IAAAAJ" target="_blank"><i class="fa-brands fa-google"></i></a> Google Scholar Link -->
+    <a href="https://scholar.google.com/citations?authuser=1&user=e8yGb7IAAAAJ" target="_blank"><img width="24" height="24" src="https://img.icons8.com/material-two-tone/384/google-scholar.png" alt="google-scholar" class="w3-hover-opacity" /></a> <!-- Google Scholar Link -->
+
+    <!-- Additional content -->
+    <p class="w3-small">
+      <!-- This website was made with W3schools Spaces. Make your own free website today! -->
+    </p>
+    <!-- <a class="w3-button w3-round-xxlarge w3-small w3-dark-grey" href="https://www.w3schools.com/spaces" target="_blank">
+       Start now
+      </a> -->
+    <!-- End footer -->
+  </footer>
+
+</div>
+
+
+
+<script>
+    const questionMark = document.querySelector('.question-mark');
+    const tooltip = document.querySelector('.tooltip');
+  
+    questionMark.addEventListener('mouseover', () => {
+      tooltip.style.display = 'inline-block';
+    });
+  
+    questionMark.addEventListener('mouseout', () => {
+      tooltip.style.display = 'none';
+    });
+  
+    // Optional: If you want to hide the tooltip when the mouse moves away from it, add the following code
+    tooltip.addEventListener('mouseout', () => {
+      tooltip.style.display = 'none';
+    });
+  </script>
+
+
+</body>
+
+  <!-- END PAGE CONTENT -->
+  </html>
+  
