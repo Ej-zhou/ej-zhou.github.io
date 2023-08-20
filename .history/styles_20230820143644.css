@@ -1,0 +1,159 @@
+   /* body, h1, h2, h3, h4, h5, h6 {font-family: "Lobster", sans-serif} */
+     h1, h2, h3, h4, h5, h6 {font-family: "Lobster", sans-serif}
+     .w3-row-padding img {margin-bottom: 12px}
+     /* .bgimg {
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-image: url('https://www.w3schools.com/w3images/profile_girl.jpg');
+       min-height: 100%;
+     } */
+    @font-face {
+      font-family: 'YanShiFoXiTi';
+      src: url('fonts/YanShiFoXiTi/Slidefu-Regular-2.ttf'); /* Change the extension to match your file */
+    }
+
+    @font-face {
+    font-family: 'Aakar Regular';
+    src: url('fonts/Aakar Regular/Aakar Regular.ttf') format('truetype'); /* Update the path if needed */
+    }
+
+    @font-face {
+        font-family: 'vesper_libre';
+        src: url("fonts/Vesper_Libre/VesperLibre-Bold.ttf");
+    }
+
+    @font-face {
+        font-family: 'kalam';
+        src: url("fonts/Kalam/Kalam-Bold.ttf");
+    }
+
+    
+    @font-face {
+        font-family: 'Kurale';
+        src: url("fonts/Kurale/Kurale-Regular.ttf");
+    }
+
+    @font-face {
+        font-family: "Tillana";
+        src: url("fonts/Tillana/Tillana-Regular.ttf");
+    }
+
+
+    @font-face {
+        font-family: "hentaigana";
+        src: url('fonts/Yuji_Hentaigana_Akebono/YujiHentaiganaAkebono-Regular.ttf');
+    }
+
+    @font-face {
+        font-family: 'tegaki';
+        src: url('fonts/851-tegaki-zatsu/851tegaki_zatsu_normal_0883.ttf');
+    }
+
+     .chinese {
+      font-family: 'YanShiFoXiTi', sans-serif;
+    }
+
+    .japanese {
+        font-family: 'tegaki';
+    }
+
+    .sanskrit {
+        font-family: 'Tillana';
+        font-size: 33px; /* Set the font size to your desired value */
+        font-style: italic;
+        font-weight: bold; /* Make the text bold */
+        text-align: right; /* Center align the text */
+        display: block; /* Make the span a block element to occupy the full width */
+        margin: 10px 0; /* Add some margin to separate it from other elements */
+        color: gray; /*Set the color to your preference*/
+    }
+  /* Other CSS rules */
+    
+    /* Style for the sidebar container */
+    .sidebar {
+    width: 550px; /* Same as the desired image width */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align with the top of the viewport */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling inside the sidebar */
+    display: flex; /* Enable flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Center horizontally */
+    padding: 64px 0;
+    }
+
+    /* Style for the image container */
+    .image-container {
+    width: 100%; /* Take up full width of the sidebar */
+    text-align: left; /* Center the image horizontally */
+    }
+
+
+
+    .question-mark {
+      cursor: pointer;
+      font-weight: bold;
+      color: gray; /* Change the color as needed */
+      font-size: 40%; /* Adjust the font size to make it smaller */
+      vertical-align: top; /* Display the question mark as a superscript */
+    }
+
+    .tooltip {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 20%; /* Set to the desired font size */
+    font-weight: normal; /* Set the font weight to normal */
+    font-style: normal; /* Set the font style to normal */
+    font-family: "Times New Roman", serif /* Set the desired font family */
+    }
+  
+
+           .university-table {
+                 width: 70%; /* Reduced table width */
+                 margin: 0 auto; /* Center the table */
+             }
+     
+             .university-logo {
+                 width: 100px; /* Fixed width */
+                 height: 100px; /* Fixed height */
+             }
+     
+             .university-row td {
+             padding-left: 10px; /* Reduced padding */
+             padding-right: 10px; /* Added right padding */
+             vertical-align: middle;
+             text-align: left;
+         }
+             .university-row td:first-child {
+                 width: 25%;
+             }
+             .university-row td:last-child {
+                 width: 75%;
+                 vertical-align: middle;
+             }
+          
+
+           .experience-section {
+             display: flex; /* Use flex layout */
+             align-items: flex-start; /* Align items to the top */
+             margin-bottom: 30px; /* Add space between sections */
+         }
+         .experience-logo {
+             max-width: 100px; /* Adjust the width as needed */
+             height: fit-content; /* Maintain the aspect ratio */
+             margin-right: 20px; /* Add space between image and text */
+         }
+          
+
+         .section {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Aligns content to the left */
+            padding: 64px 0; /* Adjust as needed */
+        }
