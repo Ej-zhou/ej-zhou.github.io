@@ -80,10 +80,8 @@ src: url('fonts/Aakar Regular/Aakar Regular.ttf') format('truetype'); /* Update 
     display: flex;
     flex-direction: column; /* Stack horizontal bars vertically */
     align-items: center; /* Center the horizontal bars horizontally */
-    background-color: white; /* This color should match your page's background or the desired sidebar color */
-    box-shadow: 20px 0px 15px -5px grey; /* This creates the fade-out effect. Adjust the values for a stronger/weaker fade. */
+    position: relative;
 }
-
 
 
 /* Style for the horizontal bar */

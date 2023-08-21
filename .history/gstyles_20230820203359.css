@@ -80,10 +80,21 @@ src: url('fonts/Aakar Regular/Aakar Regular.ttf') format('truetype'); /* Update 
     display: flex;
     flex-direction: column; /* Stack horizontal bars vertically */
     align-items: center; /* Center the horizontal bars horizontally */
-    background-color: white; /* This color should match your page's background or the desired sidebar color */
-    box-shadow: 20px 0px 15px -5px grey; /* This creates the fade-out effect. Adjust the values for a stronger/weaker fade. */
+    position: relative;
 }
 
+/* Pseudo-element for the fade-out effect */
+.sidebar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px; /* Width of the fade-out effect. Adjust as needed. */
+    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0)); 
+    /* The gradient starts with a full white color on the rightmost side and fades to transparent as it moves leftward. Adjust colors if your sidebar background is different. */
+    pointer-events: none; /* Ensure it doesn't interfere with interactions on the sidebar content */
+}
 
 
 /* Style for the horizontal bar */
