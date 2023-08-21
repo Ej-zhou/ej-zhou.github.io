@@ -80,16 +80,27 @@ src: url('fonts/Aakar Regular/Aakar Regular.ttf') format('truetype'); /* Update 
     display: flex;
     flex-direction: column; /* Stack horizontal bars vertically */
     align-items: center; /* Center the horizontal bars horizontally */
-    /* position: relative; */
+    position: relative;
 }
 
+/* .sidebar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px; /* Width of the fade-out effect. Adjust as needed. */
+    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0)); 
+    /* The gradient starts with a full white color on the rightmost side and fades to transparent as it moves leftward. Adjust colors if your sidebar background is different. */
+    pointer-events: none; /* Ensure it doesn't interfere with interactions on the sidebar content */
+} */
 
 /* Style for the horizontal bar */
 .horizontal-bar-left {
     width: 100%; /* Full width of the sidebar */
     display: inline-flex;
 
-    animation: scroll 500s linear infinite; /* Animation duration for one set of images */
+    animation: scroll 20s linear infinite; /* Animation duration for one set of images */
 }
 
 .horizontal-bar-left img {
@@ -102,7 +113,7 @@ src: url('fonts/Aakar Regular/Aakar Regular.ttf') format('truetype'); /* Update 
 .horizontal-bar-right {
     width: 100%; /* Full width of the sidebar */
     display: inline-flex;
-    animation: scrollRight 500s linear infinite; /* Animation for right scrolling */
+    animation: scrollRight 20s linear infinite; /* Animation for right scrolling */
 }
 
 /* Animation for slow right scrolling */

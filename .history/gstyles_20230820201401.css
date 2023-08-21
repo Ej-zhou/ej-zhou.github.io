@@ -80,16 +80,14 @@ src: url('fonts/Aakar Regular/Aakar Regular.ttf') format('truetype'); /* Update 
     display: flex;
     flex-direction: column; /* Stack horizontal bars vertically */
     align-items: center; /* Center the horizontal bars horizontally */
-    /* position: relative; */
 }
-
 
 /* Style for the horizontal bar */
 .horizontal-bar-left {
     width: 100%; /* Full width of the sidebar */
     display: inline-flex;
 
-    animation: scroll 500s linear infinite; /* Animation duration for one set of images */
+    animation: scroll 20s linear infinite; /* Animation duration for one set of images */
 }
 
 .horizontal-bar-left img {
@@ -102,7 +100,7 @@ src: url('fonts/Aakar Regular/Aakar Regular.ttf') format('truetype'); /* Update 
 .horizontal-bar-right {
     width: 100%; /* Full width of the sidebar */
     display: inline-flex;
-    animation: scrollRight 500s linear infinite; /* Animation for right scrolling */
+    animation: scrollRight 20s linear infinite; /* Animation for right scrolling */
 }
 
 /* Animation for slow right scrolling */
