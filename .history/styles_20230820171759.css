@@ -105,7 +105,7 @@
 
 /* Style for the sidebar container */
 .sidebar {
-    width: 775px; /* Adjusted to fit three image's width */
+    width: 250px; /* Adjusted to fit one image's width */
     position: fixed; /* Fixed position */
     top: 0; /* Align with the top of the viewport */
     height: 100%; /* Full height */

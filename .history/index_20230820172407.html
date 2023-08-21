@@ -22,67 +22,15 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&amp;display=swap" rel="stylesheet"/>
 
-<link rel="stylesheet" href="gstyles.css" />
 
 </head>
 <!-- <body><div class="sidebar"><div class="image-container"><img alt="here should be a photo" height="400" src="pics/IMG_2185.JPG" width="600"/></div></div> -->
-<body>
-    <div class="sidebar">
-        <div class="horizontal-bar">
-            <img alt="here should be a photo"  src="pics/photo.jpeg" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/buddha.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/sh.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/scaoe.png" width="200" height="200"/>
-            <!-- Duplicated set of images -->
-            <img alt="here should be a photo"  src="pics/photo.jpeg" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/buddha.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/sh.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/scaoe.png" width="200" height="200"/>
-        </div>
-
-        <div class="horizontal-bar">
-            <img alt="here should be a photo"  src="pics/sh.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/scaoe.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/photo.jpeg" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/buddha.png" width="200" height="200"/>
-            <!-- Duplicated set of images -->
-            <img alt="here should be a photo"  src="pics/sh.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/scaoe.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/photo.jpeg" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/buddha.png" width="200" height="200"/>
-
-        </div>
+<body><div class="sidebar">
+        <img alt="here should be a photo"  src="pics/photo.jpeg" width="225" height="225"/>
+        <img alt="here should be a photo"  src="pics/bud.png" width="225" height="225"/>
+        <img alt="here should be a photo"  src="pics/sh.png" width="225" height="225"/>
         <!-- <img alt="here should be a photo"  src="pics/photo.jpeg" width="225" height="225"/> -->
-
-        <div class="horizontal-bar">
-            <img alt="here should be a photo"  src="pics/photo.jpeg" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/buddha.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/sh.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/scaoe.png" width="200" height="200"/>
-            <!-- Duplicated set of images -->
-            <img alt="here should be a photo"  src="pics/photo.jpeg" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/buddha.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/sh.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/scaoe.png" width="200" height="200"/>s
-
-        </div>
-
-
-        <div class="horizontal-bar">
-            <img alt="here should be a photo"  src="pics/sh.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/scaoe.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/photo.jpeg" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/buddha.png" width="200" height="200"/>
-            <!-- Duplicated set of images -->
-            <img alt="here should be a photo"  src="pics/sh.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/scaoe.png" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/photo.jpeg" width="200" height="200"/>
-            <img alt="here should be a photo"  src="pics/buddha.png" width="200" height="200"/>
-
-        </div>
-
-
-    </div>
+</div>
 <!-- Sidebar with image -->
 <!-- <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%"> -->
 <!-- <div class="bgimg"> -->
@@ -111,7 +59,7 @@
   </nav> -->
 
 <!-- Page Content -->
-<div class="w3-main w3-padding-large" style="margin-left:45%">
+<div class="w3-main w3-padding-large" style="margin-left:40%">
 <!-- Menu icon to open sidebar -->
 <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" onclick="openNav()" style="width:auto;right:0;">
 <i class="fa fa-bars">
@@ -431,7 +379,33 @@ s   <p>
 
         </tbody>
     </table>
+    
+    <style>
 
+        .university-table {
+            width: 70%; /* Reduced table width */
+            margin: 0 auto; /* Center the table */
+        }
+
+        .university-logo {
+            width: 100px; /* Fixed width */
+            height: 100px; /* Fixed height */
+        }
+
+        .university-row td {
+        padding-left: 10px; /* Reduced padding */
+        padding-right: 10px; /* Added right padding */
+        vertical-align: middle;
+        text-align: left;
+    }
+        .university-row td:first-child {
+            width: 25%;
+        }
+        .university-row td:last-child {
+            width: 75%;
+            vertical-align: middle;
+        }
+    </style>
     
 
 
@@ -447,7 +421,18 @@ s   <p>
         </div>
     </div> -->
 
-
+<style>
+    .experience-section {
+        display: flex; /* Use flex layout */
+        align-items: flex-start; /* Align items to the top */
+        margin-bottom: 30px; /* Add space between sections */
+    }
+    .experience-logo {
+        max-width: 100px; /* Adjust the width as needed */
+        height: fit-content; /* Maintain the aspect ratio */
+        margin-right: 20px; /* Add space between image and text */
+    }
+</style>
 
 </div>
 
