@@ -195,3 +195,9 @@ text-align: left;
     margin-right: 20px; /* Add space between image and text */
 }
 
+  
+
+  .w3-container li:last-child {
+    border-bottom: none; /* Remove border for the last list item */
+  }
+  

@@ -54,8 +54,8 @@ src: url('fonts/Aakar Regular/Aakar Regular.ttf') format('truetype'); /* Update 
 }
 
 .chinese-container {
-    width: 100%;  /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
+    width: 60%;  /* Adjust as needed */
+    height: ; /* Adjust as needed */
     display: flex; /* Enable flexbox */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -194,4 +194,3 @@ text-align: left;
     height: fit-content; /* Maintain the aspect ratio */
     margin-right: 20px; /* Add space between image and text */
 }
-
