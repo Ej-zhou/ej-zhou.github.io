@@ -501,20 +501,17 @@ ludwig wittgenstein
 
 
     const imgContainer = document.querySelector(".img-container-change");
-        const images = ["pics/photo.jpeg", "pics/girl.png", "pics/voila.png",
-            "pics/red.png", "pics/yellow.png", "pics/buddha.png", "pics/sh.png", "pics/scaoe.png", "pics/yaddha.png", "pics/bureal.png", "pics/gang.png"
-      
-      ]; // Add more image URLs as needed
+        const images = ["pics/photo.jpeg", "pics/red.png", "pics/voila.png"]; // Add more image URLs as needed
         let currentIndex = 0;
 
         function changeImage() {
             currentIndex = (currentIndex + 1) % images.length;
             imgContainer.querySelector("img").src = images[currentIndex];
-            // imgContainer.querySelector("img").style.transform = "scale(1.2)"; // Optional animation effect
-            // setTimeout(() => {
-            //     imgContainer.querySelector("img").style.transform = "scale(1)";
-            // }, 500); // Animation duration (in milliseconds)
+            imgContainer.querySelector("img").style.transform = "scale(1.2)"; // Optional animation effect
+            setTimeout(() => {
+                imgContainer.querySelector("img").style.transform = "scale(1)";
+            }, 500); // Animation duration (in milliseconds)
         }
 
-        setInterval(changeImage, 3000); // Change image every 3 seconds (adjust as needed)
+        setInterval(changeImage, 30); // Change image every 3 seconds (adjust as needed)
 </script>

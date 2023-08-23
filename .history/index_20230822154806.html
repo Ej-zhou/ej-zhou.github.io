@@ -23,41 +23,15 @@
  </head>
  <body>
   <div class="sidebar">
-
-    <div class="img-container-change">
-      <img src="pics/photo.jpeg" alt="Image 1">
-  </div>
-
-   <!-- <div class="horizontal-bar-left">
-    <img alt="here should be a photo" height="200" src="pics/photo.jpeg" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/buddha.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/sh.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/scaoe.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/photo.jpeg" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/buddha.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/sh.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/scaoe.png" width="200"/>
-   </div>
-   <div class="horizontal-bar-right">
-    <img alt="here should be a photo" height="200" src="pics/yellow.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/red.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/voila.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/girl.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/yellow.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/red.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/voila.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/girl.png" width="200"/>
-   </div>
    <div class="horizontal-bar-left">
-    <img alt="here should be a photo" height="200" src="pics/yaddha.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/bureal.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/gang.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/photo.jpeg" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/buddha.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/sh.png" width="200"/>
     <img alt="here should be a photo" height="200" src="pics/scaoe.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/yaddha.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/bureal.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/gang.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/photo.jpeg" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/buddha.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/sh.png" width="200"/>
     <img alt="here should be a photo" height="200" src="pics/scaoe.png" width="200"/>
-
    </div>
    <div class="horizontal-bar-right">
     <img alt="here should be a photo" height="200" src="pics/sh.png" width="200"/>
@@ -77,7 +51,28 @@
     <img alt="here should be a photo" height="200" src="pics/photo.jpeg" width="200"/>
     <img alt="here should be a photo" height="200" src="pics/buddha.png" width="200"/>
     <img alt="here should be a photo" height="200" src="pics/sh.png" width="200"/>
-    <img alt="here should be a photo" height="200" src="pics/scaoe.png" width="200"/> -->
+    <img alt="here should be a photo" height="200" src="pics/scaoe.png" width="200"/>
+    s
+   </div>
+   <div class="horizontal-bar-right">
+    <img alt="here should be a photo" height="200" src="pics/sh.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/scaoe.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/photo.jpeg" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/buddha.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/sh.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/scaoe.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/photo.jpeg" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/buddha.png" width="200"/>
+   </div>
+   <div class="horizontal-bar-left">
+    <img alt="here should be a photo" height="200" src="pics/photo.jpeg" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/buddha.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/sh.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/scaoe.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/photo.jpeg" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/buddha.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/sh.png" width="200"/>
+    <img alt="here should be a photo" height="200" src="pics/scaoe.png" width="200"/>
    </div>
   </div>
   <div class="w3-main w3-padding-large" style="margin-left:42%; margin-right: 2%;">
@@ -498,23 +493,4 @@ ludwig wittgenstein
     var img = document.getElementById('hiddenImage');
     img.style.display = 'block';
     }); 
-
-
-    const imgContainer = document.querySelector(".img-container-change");
-        const images = ["pics/photo.jpeg", "pics/girl.png", "pics/voila.png",
-            "pics/red.png", "pics/yellow.png", "pics/buddha.png", "pics/sh.png", "pics/scaoe.png", "pics/yaddha.png", "pics/bureal.png", "pics/gang.png"
-      
-      ]; // Add more image URLs as needed
-        let currentIndex = 0;
-
-        function changeImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            imgContainer.querySelector("img").src = images[currentIndex];
-            // imgContainer.querySelector("img").style.transform = "scale(1.2)"; // Optional animation effect
-            // setTimeout(() => {
-            //     imgContainer.querySelector("img").style.transform = "scale(1)";
-            // }, 500); // Animation duration (in milliseconds)
-        }
-
-        setInterval(changeImage, 3000); // Change image every 3 seconds (adjust as needed)
 </script>

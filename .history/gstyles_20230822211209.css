@@ -216,6 +216,6 @@ text-align: left;
 
 .img-container-change img {
     height: 100%;
-    width: auto;
+    height: auto;
     transition: transform 0.5s ease; /* Animation duration and easing */
 }

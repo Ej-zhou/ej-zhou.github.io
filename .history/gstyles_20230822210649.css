@@ -87,19 +87,16 @@ src: url('fonts/Aakar Regular/Aakar Regular.ttf') format('truetype'); /* Update 
     align-items: center;
     justify-content: center;
 
-    height: 100%; /* Full-height: remove this if you want "auto" height */
+    
     overflow-x: hidden; /* Hide horizontal scrollbar */
     overflow-y: auto; /* Allow vertical scrolling if needed */
-    position: fixed;/*Fixed position*/
+    position: fixed; /* Fixed position */
     top: 0;
     display: flex;
-    /* flex-direction: column; Stack horizontal bars vertically */
+    flex-direction: column; /* Stack horizontal bars vertically */
     align-items: center; /* Center the horizontal bars horizontally */
     background-color: white; /* This color should match your page's background or the desired sidebar color */
     /* box-shadow: 20px 0px 15px -5px grey; This creates the fade-out effect. Adjust the values for a stronger/weaker fade. */
-
-
-
 }
 
 
@@ -207,15 +204,18 @@ text-align: left;
 
 
 .img-container-change {
-    /* width: 400px;s */
-    height: 400px;
+    width: 400px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-container-change img {
-    height: 100%;
-    width: auto;
+    width: 100%;
+    height: auto;
     transition: transform 0.5s ease; /* Animation duration and easing */
 }
