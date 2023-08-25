@@ -80,7 +80,7 @@ src: url('fonts/Aakar Regular/Aakar Regular.ttf') format('truetype'); /* Update 
 
 /* Style for the sidebar */
 .sidebar {
-    width: 40%; /* Slightly adjusted for scrollbar space */
+    width: 30%; /* Slightly adjusted for scrollbar space */
 
     display: flex;
     flex-direction: column;
@@ -219,4 +219,3 @@ text-align: left;
     width: auto;
     transition: transform 0.5s ease; /* Animation duration and easing */
 }
-
