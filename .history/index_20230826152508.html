@@ -478,23 +478,6 @@
       </div>
 
 
-    <div class="w3-container w3-padding-64 w3-center">
-
-      <h2>LANGUAGES</h2>
-      <br/>
-      <p style="text-align: left; padding-left: 30px; padding-right: 30px;">
-      Wu was my forgotten mothertone. I grew up then speaking Mandarin. Learnt English from school. 
-      Speaking half French and a quarter Japanese. The way people talk in a foreign fascinates me.  I find myself instinctively trying to mimic the articulations and their intonations.
-      But for real—I'm a beginner in more languages than I'd care to admit. I have a high ambition though, and I won't stop learning.
-      </p>
-      <!-- <ul style="text-align: left;">
-        <li>CKC Honors College Scholarship for Excellence, 2021 (<b>Top 1%</b> in CKC, ZJU)</li>
-        <li>First-class Scholarship, Zhejiang University, 2022/2021 (Top 10% in ZJU)</li>
-        <li>Hengyi Scholarship, 2021 (5 / ~24,000 in ZJU)</li>
-      </ul> -->
-    </div>
-
-
       <div class="w3-container w3-padding-64 w3-center">
         <h2>
          MISSCELLANEOUS
@@ -502,37 +485,14 @@
         <br/>
 
         <ul style="text-align: left;"> 
-          <li>🎬 I am a cinema enthusiast.
+          <li>🎬 I am a cinema enthusiast. I was in the <a href="https://www.festival-cannes.com">76E FESTIVAL DE CANNES</a>.
             <button id="revealButton">See More</button>
-            <div id="hiddenContent" style="display: none;">
-              <br/>
-              <div style="display: flex;">
-                <!-- Image -->
-                <img id="hiddenImage" src="pics/IMG_4754.JPG" alt="Description" style="height: 200px; padding-left: 25px;">
-                
-                <!-- Description -->
-                <div style="padding-left: 20px; padding-right: 80px;">
-                  <ul style="min-height: 150px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <li style="padding-bottom: 15px;"> This May I was in the <a href="https://www.festival-cannes.com">76E FESTIVAL DE CANNES</a>. Really enjoyed <i style="color: grey;">Il sol dell'avvenire</i>, <i style="color: grey;">The Zone of Interest</i> and <i style="color: grey;">青春</i>.</li>
-                    <li style="padding-bottom: 15px;"> I had participated in the production of some student films.</li>
-                    <li> The most influential movie to me was <i style="color: grey;">Holy Motors</i> by Leos Carax.</li>
-                  </ul>
-                </div>
-              </div>
-              
-              
-              <br/>
-
-            </div>
-          </li>
-          
-
-          
+            <img id="hiddenImage" src="pics/IMG_4754.JPG" alt="Description" style="display: none; height: 30%; width: 30%;">
+            
 
           <li>🙏 I do not consider myself fully a Buddhist, but I read sutra and I'm interested in Buddhist philosophy.
 
-          <li>🎵 I started Guqin from very young at <a href="http://www.xihuqinshe.com" target="_blank">Westlake Qin-Society</a>
-            and I taught it in ZJU for one year. I am a regular at local jazz scene, and I'm exploring more underground music like techno and post-punk. 
+          <li>🎵 I am a regular at local jazz/techno/post-punk scene. I started Guqin from very young and I served as a tutor for Guqin for one year in ZJU.   
         </ul>
        </div>
       
@@ -587,18 +547,10 @@
       tooltip.style.display = 'none';
     });
 
-    document.getElementById("revealButton").addEventListener("click", function() {
-    const hiddenContent = document.getElementById("hiddenContent");
-    const button = document.getElementById("revealButton");
-    
-    if (hiddenContent.style.display === "none") {
-      hiddenContent.style.display = "block";
-      button.innerHTML = "Hide";
-    } else {
-      hiddenContent.style.display = "none";
-      button.innerHTML = "See More";
-    }
-  });
+    document.getElementById('revealButton').addEventListener('click', function() {
+    var img = document.getElementById('hiddenImage');
+    img.style.display = 'block';
+    }); 
 
 
     const imgContainer = document.querySelector(".img-container-change");
