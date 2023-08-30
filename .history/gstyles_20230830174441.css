@@ -177,7 +177,9 @@ font-family: "Times New Roman", serif /* Set the desired font family */
 .university-logo {
     width: 100px; /* Fixed width */
     height: 100px; /* Fixed height */
-
+    position: fixed;
+    top: 0;
+            left: 0;
 }
 
 .university-row td {
@@ -188,7 +190,6 @@ text-align: left;
 }
 .university-row td:first-child {
     width: 25%;
-    vertical-align: top;
 }
 .university-row td:last-child {
     width: 75%;
@@ -222,11 +223,3 @@ text-align: left;
     transition: transform 0.5s ease; /* Animation duration and easing */
 }
 
-#arrow {
-    cursor: pointer;
-}
-#courses {
-    display: none;
-    margin-left: 20px;
-    margin-top: -10px;  /* Reduced margin-top */
-}

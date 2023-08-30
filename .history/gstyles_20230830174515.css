@@ -188,7 +188,6 @@ text-align: left;
 }
 .university-row td:first-child {
     width: 25%;
-    vertical-align: top;
 }
 .university-row td:last-child {
     width: 75%;
@@ -222,11 +221,3 @@ text-align: left;
     transition: transform 0.5s ease; /* Animation duration and easing */
 }
 
-#arrow {
-    cursor: pointer;
-}
-#courses {
-    display: none;
-    margin-left: 20px;
-    margin-top: -10px;  /* Reduced margin-top */
-}

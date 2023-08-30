@@ -228,5 +228,5 @@ text-align: left;
 #courses {
     display: none;
     margin-left: 20px;
-    margin-top: -10px;  /* Reduced margin-top */
+    margin-top: 0;  /* Reduced margin-top */
 }
