@@ -170,8 +170,8 @@ font-family: "Times New Roman", serif /* Set the desired font family */
 }
 
 .university-table {
-    width: 70%; /* Reduced table width */
-    margin: 0 auto; /* Center the table */
+    width: 100%;
+    margin: 0;
 }
 
 .university-logo {
@@ -200,6 +200,20 @@ text-align: left;
     align-items: flex-start; /* Align items to the top */
     margin-bottom: 30px; /* Add space between sections */
 }
+
+.content-section {
+    text-align: left;
+}
+
+.content-section h2 {
+    text-align: left;
+}
+
+.content-section table {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .experience-logo {
     max-width: 100px; /* Adjust the width as needed */
     height: fit-content; /* Maintain the aspect ratio */
