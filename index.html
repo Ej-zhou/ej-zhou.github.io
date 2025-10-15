@@ -175,6 +175,29 @@
       </tr>
 
 
+      <tr>
+        <td height="30"></td>
+      </tr>
+      <tr>
+        <td width="30%" valign="top" style="text-align: left; padding-right: 20px;">
+          <img src="./pics/healthdial.jpg" width="280" alt="LGM" style="border-style: none; vertical-align: top;">
+        </td>
+        <td width="70%" valign="top" style="text-align: left; padding-left: 20px;">
+          <p style="margin-top: 0px; margin-bottom: 3px; line-height: 1.25;">
+            <b> Dial HEALTHDIAL for Advice: A Multilingual and Multi-Parallel Spoken Dialogue Dataset for Evidence-Based Public Health Communication</b>
+            <br>
+            <br>
+            <a style="color:gray">
+            Songbo Hu*, Yinhong Liu*, <b>Ej Zhou*</b>, Evgeniia Razumovskaia, Xiaobin Wang, Alexander Fraser, Ivan Vulić**, and Anna Korhonen**<br></a>
+            <br/>
+            <i>In submission to TACL </i>       
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td height="50"></td>
+      </tr>
+
 
       <tr>
         <td height="30"></td>
@@ -455,7 +478,7 @@
               <b>Team Leader</b> 
               <br/>
               Aug 2021, <i><a href="http://www.paraedu.org.cn/home/index">The 9th INTEL CUP Parallel Application Challenge</i></a><br/>
-                 Achieved a 3,431% acceleration on optimizing the WBP algorithm.
+                 <!-- Achieved a 3,431% acceleration on optimizing the WBP algorithm. -->
                  <br/>
               <b>Internship</b> <br/>
               Aug 2022 - Sept 2022, <i>Hangzhou City Brain</i>, 
@@ -491,10 +514,10 @@
       <h2>Language et al.</h2>
       <br/>
       <p style="text-align: left; padding-left: 30px; padding-right: 30px; font-family: 'Courier New', Courier, monospace;">
-      Wu <i>is</i> my muttersprache but my education was in Mandarin. Apart from that I can speak some French, Japanese, Russian, English and German to varying degrees. I am starting to learn Polish and Portuguese this year.
-      It is <i>my passion for languages</i> that has always been a motivation for me to work on NLP. 
+      Wu <i>is</i> my muttersprache but my education was in Mandarin. Apart from that I can speak some French, Japanese, Russian, English and German to varying degrees. I am learning Polish and Portuguese this year.
+      I am <i>passionate about languages</i> and it has always been a motivation for me to work on NLP.
         <br/> <br/>
-      Other stuff about me include: I am a cinema enthusiast and I was in 76-78E FESTIVAL DE CANNES;
+      Some other stuff about me include: I am a cinema enthusiast and I was in 76-78E FESTIVAL DE CANNES;
       I consider myself a Buddhist;
       I trained Guqin in <a href="http://www.xihuqinshe.com" target="_blank">Westlake Qin-Society</a> and I taught it in ZJU for one year.
       </p>
@@ -538,38 +561,36 @@
  </body>
 </html>
 <script>
- const questionMark = document.querySelector('.question-mark');
-    const tooltip = document.querySelector('.tooltip');
-  
-    questionMark.addEventListener('mouseover', () => {
-      tooltip.style.display = 'inline-block';
-    });
-  
-    questionMark.addEventListener('mouseout', () => {
-      tooltip.style.display = 'none';
-    });
-  
-    // Optional: If you want to hide the tooltip when the mouse moves away from it, add the following code
-    tooltip.addEventListener('mouseout', () => {
-      tooltip.style.display = 'none';
-    });
+  // const questionMark = document.querySelector('.question-mark');
+  // const tooltip = document.querySelector('.tooltip');
 
-    document.getElementById("revealButton").addEventListener("click", function() {
-    const hiddenContent = document.getElementById("hiddenContent");
-    const button = document.getElementById("revealButton");
-    
-    if (hiddenContent.style.display === "none") {
-      hiddenContent.style.display = "block";
-      button.innerHTML = "Hide";
-    } else {
-      hiddenContent.style.display = "none";
-      button.innerHTML = "See More";
-    }
-  });
+  // if (questionMark && tooltip) {
+  //   questionMark.addEventListener('mouseover', () => {
+  //     tooltip.style.display = 'inline-block';
+  //   });
+  //   questionMark.addEventListener('mouseout', () => {
+  //     tooltip.style.display = 'none';
+  //   });
+  //   tooltip.addEventListener('mouseout', () => {
+  //     tooltip.style.display = 'none';
+  //   });
+  // }
+
+  // const button = document.getElementById('revealButton');
+  // const hiddenContent = document.getElementById('hiddenContent');
+
+  // if (button && hiddenContent) {
+  //   button.addEventListener('click', () => {
+  //     const isHidden = hiddenContent.style.display === 'none';
+  //     hiddenContent.style.display = isHidden ? 'block' : 'none';
+  //     button.textContent = isHidden ? 'Hide' : 'See More';
+  //   });
+  // }
+
 
 
     const imgContainer = document.querySelector(".img-container-change");
-        const images = ["pics/dark.png", "pics/syn.png" , "pics/stone.png","pics/night.png", "pics/girl.png", "pics/voila.png",
+        const images = ["pics/syn.png" , "pics/dark.png", "pics/stone.png","pics/night.png", "pics/girl.png", "pics/voila.png",
             "pics/red.png", "pics/yellow.png", "pics/buddha.png", "pics/sh.png", "pics/scaoe.png", "pics/yaddha.png", "pics/bureal.png", "pics/gang.png"
       
       ]; // Add more image URLs as needed
@@ -578,13 +599,13 @@
         function changeImage() {
             currentIndex = (currentIndex + 1) % images.length;
             imgContainer.querySelector("img").src = images[currentIndex];
-            imgContainer.querySelector("img").style.transform = "scale(1.2)"; // Optional animation effect
-            setTimeout(() => {
-                imgContainer.querySelector("img").style.transform = "scale(1)";
-            }, 500); // Animation duration (in milliseconds)
+            // imgContainer.querySelector("img").style.transform = "scale(1.2)"; // Optional animation effect
+            // setTimeout(() => {
+                // imgContainer.querySelector("img").style.transform = "scale(1)";
+            // }, 500); // Animation duration (in milliseconds)
         }
 
-        setInterval(changeImage, 15000); // Change image every 3 seconds (adjust as needed)
+        setInterval(changeImage, 3000); // Change image every 3 seconds (adjust as needed)
 </script>
 
 <script>
