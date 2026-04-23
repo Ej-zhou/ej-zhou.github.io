@@ -95,6 +95,17 @@
   color: var(--ink-dim);
 }
 .post-notes li { margin-bottom: 0.7em; }
+.post-refs {
+  margin-top: 24px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink-dim);
+}
+.post-poem p {
+  font-size: 16px;
+  line-height: 1.7;
+  font-style: italic;
+}
 .post-body h2 {
   font-family: var(--sans);
   font-size: 24px;
