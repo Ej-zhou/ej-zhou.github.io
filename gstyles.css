@@ -1,246 +1,180 @@
-h1, h2, h3, h4, h5, h6 {font-family: "Lobster", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* .bgimg {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('https://www.w3schools.com/w3images/profile_girl.jpg');
-  min-height: 100%;
-} */
-@font-face {
- font-family: 'YanShiFoXiTi';
- src: url('fonts/YanShiFoXiTi/Slidefu-Regular-2.ttf'); /* Change the extension to match your file */
+/* ── Ej Zhou · personal site · minimalist build ────────────────────── */
+
+/* Local display / script fonts still used on the page */
+@font-face { font-family: 'YanShiFoXiTi'; src: url('fonts/YanShiFoXiTi/Slidefu-Regular-2.ttf'); font-display: swap; }
+@font-face { font-family: 'Tillana';      src: url('fonts/Tillana/Tillana-Regular.ttf');         font-display: swap; }
+
+:root {
+  --ink:        #1a1a1a;
+  --ink-soft:   #444;
+  --ink-dim:    #7a7a7a;
+  --paper:      #ffffff;
+  --rule:       #e6e6e6;
+  --accent:     #6e3d34;           /* a quiet, ink-red */
+  --max-content: 820px;
+  --sans: 'Nova Script', 'Times New Roman', serif;
+  --body: 'Courier New', ui-monospace, Menlo, monospace;
+  --mono: ui-monospace, 'SF Mono', Menlo, 'Courier New', monospace;
 }
 
-@font-face {
-font-family: 'Aakar Regular';
-src: url('fonts/Aakar Regular/Aakar Regular.ttf') format('truetype'); /* Update the path if needed */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@font-face {
-   font-family: 'vesper_libre';
-   src: url("fonts/Vesper_Libre/VesperLibre-Bold.ttf");
+a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 0.5px; }
+a:hover { color: var(--accent); }
+
+h1, h2, h3 { font-family: var(--sans); font-weight: 900; margin: 0; }
+h1 { font-size: 64px; line-height: 1.05; letter-spacing: -0.01em; }
+h2 { font-size: 34px; line-height: 1.1; margin-bottom: 18px; }
+
+#education .prose,
+#personal .prose { font-size: 15px; line-height: 1.6; }
+#education .entry strong,
+#experience .entry strong { font-size: 14px; }
+#education .entry .detail,
+#experience .entry .detail { font-size: 13.5px; line-height: 1.5; }
+#education .entry .when,
+#experience .entry .when { font-size: 10px; }
+h3 { font-size: 20px; }
+
+p { margin: 0 0 1em; }
+
+/* ── Layout ───────────────────────────────────────────────────────── */
+.page {
+  display: grid;
+  grid-template-columns: minmax(360px, 40%) 1fr;
+  gap: 64px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px 48px 120px;
+  align-items: start;
 }
 
-@font-face {
-   font-family: 'kalam';
-   src: url("fonts/Kalam/Kalam-Bold.ttf");
-}
-
-
-@font-face {
-   font-family: 'Kurale';
-   src: url("fonts/Kurale/Kurale-Regular.ttf");
-}
-
-@font-face {
-   font-family: "Tillana";
-   src: url("fonts/Tillana/Tillana-Regular.ttf");
-}
-
-
-@font-face {
-   font-family: "hentaigana";
-   src: url('fonts/Yuji_Hentaigana_Akebono/YujiHentaiganaAkebono-Regular.ttf');
-}
-
-@font-face {
-   font-family: 'tegaki';
-   src: url('fonts/851-tegaki-zatsu/851tegaki_zatsu_normal_0883.ttf');
-}
-
-.chinese {
- font-family: 'YanShiFoXiTi', sans-serif;
-}
-
-.chinese-container {
-    width: 100%;  /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
-    display: flex; /* Enable flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    font-family: 'Arial', sans-serif; /* Example font, adjust as needed */
-}
-
-.japanese {
-   font-family: 'tegaki';
-}
-
-.sanskrit {
-   font-family: 'Tillana';
-   font-size: 33px; /* Set the font size to your desired value */
-   font-style: italic;
-   font-weight: bold; /* Make the text bold */
-   text-align: right; /* Center align the text */
-   display: block; /* Make the span a block element to occupy the full width */
-   margin: 10px 0; /* Add some margin to separate it from other elements */
-   color: gray; /*Set the color to your preference*/
-}
-/* Other CSS rules */
-
-/* Style for the sidebar */
 .sidebar {
-    width: 40%; /* Slightly adjusted for scrollbar space */
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    overflow-y: auto; /* Allow vertical scrolling if needed */
-    position: fixed;/*Fixed position*/
-    top: 0;
-    display: flex;
-    /* flex-direction: column; Stack horizontal bars vertically */
-    align-items: center; /* Center the horizontal bars horizontally */
-    background-color: white; /* This color should match your page's background or the desired sidebar color */
-    /* box-shadow: 20px 0px 15px -5px grey; This creates the fade-out effect. Adjust the values for a stronger/weaker fade. */
-
-
-
+  position: sticky;
+  top: 64px;
+  display: flex;
+  justify-content: center;
+}
+.sidebar img {
+  height: 400px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform .5s ease;
 }
 
+main { max-width: var(--max-content); min-width: 0; }
 
+/* ── Header / hero ────────────────────────────────────────────────── */
+.hero { padding: 24px 0 48px; }
+.hero .chinese { font-family: 'YanShiFoXiTi', serif; display: block; font-size: 44px; line-height: 1; margin-bottom: 10px; color: var(--ink-soft); }
+.hero h1 .alt { font-style: italic; font-weight: 400; color: var(--accent); font-family: var(--sans); }
 
-/* Style for the horizontal bar */
-.horizontal-bar-left {
-    width: 100%; /* Full width of the sidebar */
-    display: inline-flex;
+.name-gloss {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+}
+.name-gloss i { font-style: italic; color: var(--ink-soft); text-transform: none; letter-spacing: 0.04em; }
 
-    animation: scroll 500s linear infinite; /* Animation duration for one set of images */
+.social {
+  margin-top: 26px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.social a {
+  color: var(--ink-dim);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color .2s, transform .2s;
+}
+.social a:hover { color: var(--accent); transform: translateY(-1px); }
+.social svg { width: 22px; height: 22px; stroke-width: 1.6; }
+
+/* ── Sections ─────────────────────────────────────────────────────── */
+section { margin: 0 0 56px; }
+section p, section li { color: var(--ink-soft); }
+
+/* About & simple prose blocks */
+.prose { font-family: var(--body); font-size: 1.2em; line-height: 1.65; color: var(--ink-soft); }
+.prose a { color: var(--ink); }
+
+/* ── Publications ─────────────────────────────────────────────────── */
+.pubs { display: flex; flex-direction: column; gap: 44px; }
+.pub {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.pub img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+.pub-title { font-weight: 700; line-height: 1.35; margin-bottom: 8px; font-family: var(--body); font-size: 15.5px; color: var(--ink); }
+.pub-authors { color: var(--ink-dim); font-size: 14px; line-height: 1.55; margin-bottom: 8px; }
+.pub-authors .me { color: var(--ink); font-weight: 700; }
+.pub-venue { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 8px; }
+.pub-links { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; }
+.pub-links a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+  margin-right: 14px;
+}
+.pub-links a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* ── Education & experience ──────────────────────────────────────── */
+.entry-list { display: flex; flex-direction: column; gap: 22px; }
+.entry { line-height: 1.5; }
+.entry strong { font-family: var(--body); font-weight: 700; color: var(--ink); font-size: 16px; }
+.entry .when { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; color: var(--ink-dim); text-transform: uppercase; margin-top: 2px; }
+.entry .detail { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
+
+/* ── Misc ─────────────────────────────────────────────────────────── */
+.sanskrit {
+  font-family: 'Tillana', serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 700;
+  text-align: right;
+  display: block;
+  margin: 72px 0 8px;
+  color: var(--ink-dim);
 }
 
-.horizontal-bar-left img {
-    width: 200px;
-    height: 200px;
+/* ── Responsive ───────────────────────────────────────────────────── */
+@media (max-width: 880px) {
+  .page { grid-template-columns: 1fr; gap: 32px; padding: 36px 22px 80px; }
+  .sidebar { position: static; }
+  .sidebar img { height: 320px; }
+  h1 { font-size: 44px; }
+  h2 { font-size: 28px; }
+  .pub { grid-template-columns: 160px 1fr; gap: 18px; }
+  .prose { font-size: 16px; }
 }
-
-
-/* Style for the horizontal bar that scrolls to the right */
-.horizontal-bar-right {
-    width: 100%; /* Full width of the sidebar */
-    display: inline-flex;
-    animation: scrollRight 500s linear infinite; /* Animation for right scrolling */
-}
-
-/* Animation for slow right scrolling */
-@keyframes scrollRight {
-    0% { transform: translateX(-800px); } /* Start from the leftmost position */
-    100% { transform: translateX(0); } /* End at the initial position */
-}
-
-
-.horizontal-bar-right img {
-    width: 200px;
-    height: 200px;
-}
-
-/* Animation for slow scrolling */
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-800px); } /* 800px is the total width of one set of images */
-}
-
-
-
-
-
-.question-mark {
- cursor: pointer;
- font-weight: bold;
- color: gray; /* Change the color as needed */
- font-size: 40%; /* Adjust the font size to make it smaller */
- vertical-align: top; /* Display the question mark as a superscript */
-}
-
-.tooltip {
-display: none;
-position: absolute;
-background-color: #f9f9f9;
-padding: 5px;
-border: 1px solid #ccc;
-border-radius: 4px;
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-font-size: 20%; /* Set to the desired font size */
-font-weight: normal; /* Set the font weight to normal */
-font-style: normal; /* Set the font style to normal */
-font-family: "Times New Roman", serif /* Set the desired font family */
-}
-
-.university-table {
-    width: 100%;
-    margin: 0;
-}
-
-.university-logo {
-    width: 100px; /* Fixed width */
-    height: 100px; /* Fixed height */
-
-}
-
-.university-row td {
-padding-left: 10px; /* Reduced padding */
-padding-right: 10px; /* Added right padding */
-vertical-align: middle;
-text-align: left;
-}
-.university-row td:first-child {
-    width: 25%;
-    vertical-align: top;
-}
-.university-row td:last-child {
-    width: 75%;
-    vertical-align: middle;
-}
-
-.experience-section {
-    display: flex; /* Use flex layout */
-    align-items: flex-start; /* Align items to the top */
-    margin-bottom: 30px; /* Add space between sections */
-}
-
-.content-section {
-    text-align: left;
-}
-
-.content-section h2 {
-    text-align: left;
-}
-
-.content-section table {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.experience-logo {
-    max-width: 100px; /* Adjust the width as needed */
-    height: fit-content; /* Maintain the aspect ratio */
-    margin-right: 20px; /* Add space between image and text */
-}
-
-
-
-.img-container-change {
-    /* width: 400px;s */
-    height: 400px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.img-container-change img {
-    height: 100%;
-    width: auto;
-    transition: transform 0.5s ease; /* Animation duration and easing */
-}
-
-#arrow {
-    cursor: pointer;
-}
-#courses {
-    display: none;
-    margin-left: 20px;
-    margin-top: -10px;  /* Reduced margin-top */
+@media (max-width: 520px) {
+  .pub { grid-template-columns: 1fr; }
+  .pub img { max-width: 260px; }
 }
