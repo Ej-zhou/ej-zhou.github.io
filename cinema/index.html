@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cinematic Cartography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<aside class="sidebar" id="sidebar">
+  <header class="sidebar-head">
+    <div class="ornament">— ·· —</div>
+    <h1 class="title">Cinematic<br><em>Cartography</em></h1>
+    <p class="subtitle">A personal atlas of cinema.<br><span id="count-line">— films across the world.</span></p>
+  </header>
+
+  <nav class="filters">
+    <div class="filter">
+      <label for="q">Search</label>
+      <input id="q" type="search" placeholder="film, director, place…" autocomplete="off">
+    </div>
+    <div class="filter-row">
+      <div class="filter">
+        <label for="year">Year</label>
+        <select id="year"><option value="">any</option></select>
+      </div>
+      <div class="filter">
+        <label for="director">Director</label>
+        <select id="director"><option value="">any</option></select>
+      </div>
+    </div>
+    <div class="toggles">
+      <label class="toggle">
+        <input id="checked" type="checkbox">
+        <span>watched</span>
+      </label>
+      <label class="toggle">
+        <input id="cannes" type="checkbox">
+        <span>cannes 26</span>
+      </label>
+      <button id="reset" class="reset" title="clear filters">reset</button>
+    </div>
+  </nav>
+
+  <div class="list-wrap">
+    <div class="list-head"><span id="visible-count">—</span> visible</div>
+    <ul id="list" class="list"></ul>
+  </div>
+
+  <footer class="sidebar-foot">
+    <div class="mono">EST. MMXXVI · OSM · CARTO · LEAFLET</div>
+  </footer>
+</aside>
+
+<button class="sidebar-toggle" id="toggle" aria-label="toggle sidebar">≡</button>
+<main id="map"></main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
