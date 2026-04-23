@@ -131,6 +131,7 @@ section p, section li { color: var(--ink-soft); }
   border: 1px solid var(--rule);
   border-radius: 2px;
 }
+.pub--no-img { grid-template-columns: 1fr; }
 .pub-title { font-weight: 700; line-height: 1.35; margin-bottom: 8px; font-family: var(--body); font-size: 15.5px; color: var(--ink); }
 .pub-authors { color: var(--ink-dim); font-size: 14px; line-height: 1.55; margin-bottom: 8px; }
 .pub-authors .me { color: var(--ink); font-weight: 700; }
