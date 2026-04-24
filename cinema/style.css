@@ -865,14 +865,130 @@ body::after {
   vertical-align: -4px;
 }
 
+.errata-file-row {
+  padding: 14px 34px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 46px;
+  flex-wrap: wrap;
+}
+.errata-file-row:empty { display: none; }
+.errata-file-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 12px;
+  border: 1px solid var(--rule-strong);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--bone);
+  max-width: 280px;
+}
+.errata-file-pill.warn {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.errata-file-pill .file-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--bone-dim);
+  flex: 0 0 auto;
+}
+.errata-file-pill .file-dot.live {
+  background: #76d392;
+  box-shadow: 0 0 0 2px rgba(118, 211, 146, 0.15), 0 0 10px rgba(118, 211, 146, 0.45);
+  animation: liveDot 2.4s ease-in-out infinite;
+}
+.errata-file-pill .file-dot.warn {
+  background: var(--gold);
+  box-shadow: 0 0 0 2px rgba(201, 169, 97, 0.18), 0 0 10px rgba(201, 169, 97, 0.55);
+}
+@keyframes liveDot {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: .55; }
+}
+.errata-file-pill .file-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.errata-linkbtn {
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  color: var(--bone-soft);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  padding: 6px 11px;
+  cursor: pointer;
+  transition: all .2s;
+}
+.errata-linkbtn:hover {
+  border-color: var(--crimson);
+  color: var(--crimson);
+}
+.errata-linkbtn.attach {
+  border-style: dashed;
+  color: var(--crimson);
+  border-color: var(--crimson);
+  letter-spacing: 0.28em;
+  padding: 7px 13px;
+}
+.errata-linkbtn.attach:hover {
+  background: rgba(214, 40, 57, 0.1);
+  border-style: solid;
+}
+.errata-linkbtn.warn {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.errata-linkbtn.warn:hover {
+  background: rgba(201, 169, 97, 0.08);
+}
+.errata-file-note {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  color: var(--bone-dim);
+  font-size: 13px;
+  line-height: 1.4;
+}
+.errata-file-note em {
+  font-style: normal;
+  color: var(--bone-soft);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  padding: 0 4px;
+}
+
 .errata-foot {
   padding: 14px 34px 20px;
   border-top: 1px solid var(--rule);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
 }
+.errata-download {
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  color: var(--bone-soft);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  padding: 7px 12px;
+  cursor: pointer;
+  margin-right: auto;
+  transition: all .2s;
+}
+.errata-download:hover { border-color: var(--bone-soft); color: var(--bone); }
 .errata-export, .errata-clear {
   background: transparent;
   border: 1px solid var(--rule-strong);

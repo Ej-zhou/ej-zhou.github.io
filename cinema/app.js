@@ -1,6 +1,9 @@
-/* ─── Errata store (localStorage) ─── */
+/* ─── Errata store (localStorage + optional local file) ─── */
 const ERRATA_KEY = 'cartography.errata.v1';
 const ERRATA_FIELDS = ['title', 'director', 'year', 'place', 'other'];
+
+let onErrataPersist = () => {};
+
 const errataStore = (() => {
   let data = {};
   try { data = JSON.parse(localStorage.getItem(ERRATA_KEY) || '{}'); } catch {}
@@ -8,17 +11,149 @@ const errataStore = (() => {
     key: (m) => `${m.name}|${m.year ?? ''}`,
     get(m) { return data[this.key(m)] || null; },
     all() { return data; },
+    replace(next) {
+      data = next && typeof next === 'object' ? next : {};
+      localStorage.setItem(ERRATA_KEY, JSON.stringify(data));
+      onErrataPersist();
+    },
     set(m, entry) {
       const k = this.key(m);
       if (!entry || (!entry.fields?.length && !entry.note)) delete data[k];
       else data[k] = { ...entry, ts: new Date().toISOString() };
       localStorage.setItem(ERRATA_KEY, JSON.stringify(data));
+      onErrataPersist();
     },
-    remove(key) { delete data[key]; localStorage.setItem(ERRATA_KEY, JSON.stringify(data)); },
-    clear() { data = {}; localStorage.removeItem(ERRATA_KEY); },
+    remove(key) { delete data[key]; localStorage.setItem(ERRATA_KEY, JSON.stringify(data)); onErrataPersist(); },
+    clear() { data = {}; localStorage.removeItem(ERRATA_KEY); onErrataPersist(); },
     count() { return Object.keys(data).length; },
   };
 })();
+
+/* ─── Local file sync (File System Access API, Chromium-based) ─── */
+const HAS_FS_API = 'showSaveFilePicker' in window;
+const fileSync = (() => {
+  let handle = null;
+  let state = 'none'; // 'none' | 'linked' | 'needs-verify'
+  let dbP = null;
+
+  function openDb() {
+    return dbP ||= new Promise((res, rej) => {
+      const r = indexedDB.open('cartography', 1);
+      r.onupgradeneeded = () => r.result.createObjectStore('handles');
+      r.onsuccess = () => res(r.result);
+      r.onerror = () => rej(r.error);
+    });
+  }
+  async function idbGet(key) {
+    const db = await openDb();
+    return new Promise((res, rej) => {
+      const req = db.transaction('handles', 'readonly').objectStore('handles').get(key);
+      req.onsuccess = () => res(req.result);
+      req.onerror = () => rej(req.error);
+    });
+  }
+  async function idbPut(key, val) {
+    const db = await openDb();
+    return new Promise((res, rej) => {
+      const tx = db.transaction('handles', 'readwrite');
+      tx.objectStore('handles').put(val, key);
+      tx.oncomplete = () => res();
+      tx.onerror = () => rej(tx.error);
+    });
+  }
+  async function idbDel(key) {
+    const db = await openDb();
+    return new Promise((res, rej) => {
+      const tx = db.transaction('handles', 'readwrite');
+      tx.objectStore('handles').delete(key);
+      tx.oncomplete = () => res();
+      tx.onerror = () => rej(tx.error);
+    });
+  }
+
+  return {
+    supported: HAS_FS_API,
+    get state() { return state; },
+    get filename() { return handle?.name || ''; },
+
+    async restore() {
+      if (!HAS_FS_API) return;
+      try {
+        handle = await idbGet('errataFile');
+        if (!handle) return;
+        const perm = await handle.queryPermission({ mode: 'readwrite' });
+        state = (perm === 'granted') ? 'linked' : 'needs-verify';
+      } catch { handle = null; state = 'none'; }
+    },
+
+    async attach() {
+      if (!HAS_FS_API) return false;
+      try {
+        const h = await window.showSaveFilePicker({
+          suggestedName: 'cartography-errata.json',
+          types: [{ description: 'Errata JSON', accept: { 'application/json': ['.json'] } }],
+        });
+        handle = h;
+        state = 'linked';
+        await idbPut('errataFile', h);
+        await this.write();
+        return true;
+      } catch { return false; }
+    },
+
+    async detach() {
+      handle = null;
+      state = 'none';
+      try { await idbDel('errataFile'); } catch {}
+    },
+
+    async verify() {
+      if (!handle) return false;
+      try {
+        const p = await handle.requestPermission({ mode: 'readwrite' });
+        if (p === 'granted') {
+          state = 'linked';
+          await this.write();
+          return true;
+        }
+      } catch {}
+      return false;
+    },
+
+    async write() {
+      if (!handle || state !== 'linked') return;
+      try {
+        const w = await handle.createWritable();
+        await w.write(JSON.stringify(errataStore.all(), null, 2));
+        await w.close();
+      } catch { state = 'needs-verify'; }
+    },
+
+    async readIn() {
+      if (!handle || state !== 'linked') return;
+      try {
+        const f = await handle.getFile();
+        const text = await f.text();
+        if (!text.trim()) return;
+        const parsed = JSON.parse(text);
+        if (parsed && typeof parsed === 'object') errataStore.replace(parsed);
+      } catch {}
+    },
+  };
+})();
+
+function downloadErrata() {
+  const blob = new Blob(
+    [JSON.stringify(errataStore.all(), null, 2)],
+    { type: 'application/json' },
+  );
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `cartography-errata-${new Date().toISOString().slice(0, 10)}.json`;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 0);
+}
 
 (async () => {
   const res = await fetch('data.json');
@@ -314,6 +449,55 @@ const errataStore = (() => {
   });
 
   updateErrataTally();
+
+  /* ─── File sync wiring ─── */
+  onErrataPersist = () => { fileSync.write(); };
+
+  await fileSync.restore();
+  if (fileSync.state === 'linked') {
+    await fileSync.readIn();
+    applyFilters();
+    updateErrataTally();
+  }
+  renderFileStatus();
+
+  function renderFileStatus() {
+    const el = document.getElementById('errata-file-status');
+    if (!el) return;
+    if (!fileSync.supported) {
+      el.innerHTML = `<span class="errata-file-note">— browser lacks File System API · use <em>download</em> to save locally</span>`;
+      return;
+    }
+    if (fileSync.state === 'linked') {
+      el.innerHTML = `
+        <span class="errata-file-pill">
+          <span class="file-dot live"></span>
+          <span class="file-name" title="${esc(fileSync.filename)}">${esc(fileSync.filename)}</span>
+        </span>
+        <button class="errata-linkbtn" id="errata-detach">detach</button>`;
+      document.getElementById('errata-detach').onclick = async () => {
+        await fileSync.detach();
+        renderFileStatus();
+      };
+    } else if (fileSync.state === 'needs-verify') {
+      el.innerHTML = `
+        <span class="errata-file-pill warn">
+          <span class="file-dot warn"></span>
+          <span class="file-name">${esc(fileSync.filename)}</span>
+        </span>
+        <button class="errata-linkbtn warn" id="errata-verify">verify access</button>`;
+      document.getElementById('errata-verify').onclick = async () => {
+        if (await fileSync.verify()) renderFileStatus();
+      };
+    } else {
+      el.innerHTML = `<button class="errata-linkbtn attach" id="errata-attach">⎘ link local file…</button>`;
+      document.getElementById('errata-attach').onclick = async () => {
+        if (await fileSync.attach()) renderFileStatus();
+      };
+    }
+  }
+
+  document.getElementById('errata-download').addEventListener('click', downloadErrata);
 
   /* ─── sidebar toggle ─── */
   document.getElementById('toggle').addEventListener('click', () => {
