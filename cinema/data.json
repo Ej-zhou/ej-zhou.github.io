@@ -2589,7 +2589,7 @@
       "director": "Josie Rourke",
       "year": 2018,
       "link": "https://movie.douban.com/subject/11639146/",
-      "checked": false,
+      "checked": true,
       "cannes": false
     },
     {
@@ -4249,18 +4249,6 @@
       "cannes": false
     },
     {
-      "name": "FLCL Progressive",
-      "place": "Japan",
-      "display_place": "Japan",
-      "lat": 36.5748441,
-      "lon": 139.2394179,
-      "director": "Various",
-      "year": 2018,
-      "link": "https://movie.douban.com/subject/27080660/",
-      "checked": false,
-      "cannes": false
-    },
-    {
       "name": "L'Argent",
       "place": "Paris, Ile-de-France, Metropolitan France, France",
       "display_place": "Paris, Ile-de-France, Metropolitan France, France",
@@ -4557,7 +4545,7 @@
       "director": "Pema Tseden",
       "year": 2019,
       "link": "https://movie.douban.com/subject/30204413/",
-      "checked": false,
+      "checked": true,
       "cannes": false
     },
     {
@@ -4569,7 +4557,7 @@
       "director": "Pang Ho-cheung",
       "year": 2001,
       "link": "https://movie.douban.com/subject/1300616/",
-      "checked": false,
+      "checked": true,
       "cannes": false
     },
     {
@@ -5145,7 +5133,7 @@
       "director": "Edward Yang",
       "year": 1991,
       "link": "https://movie.douban.com/subject/1292329/",
-      "checked": false,
+      "checked": true,
       "cannes": false
     },
     {
