@@ -43,12 +43,21 @@
         <input id="cannes" type="checkbox">
         <span>cannes 26</span>
       </label>
+      <label class="toggle toggle-errata">
+        <input id="disputed" type="checkbox">
+        <span>errata</span>
+      </label>
       <button id="reset" class="reset" title="clear filters">reset</button>
     </div>
   </nav>
 
   <div class="list-wrap">
-    <div class="list-head"><span id="visible-count">—</span> visible</div>
+    <div class="list-head">
+      <span><span id="visible-count">—</span> visible</span>
+      <span class="errata-tally" id="errata-tally" title="review errata">
+        <span class="errata-mark">⚑</span><span id="errata-count">0</span>
+      </span>
+    </div>
     <ul id="list" class="list"></ul>
   </div>
 
@@ -59,6 +68,21 @@
 
 <button class="sidebar-toggle" id="toggle" aria-label="toggle sidebar">≡</button>
 <main id="map"></main>
+
+<div class="errata-drawer" id="errata-drawer" aria-hidden="true">
+  <div class="errata-sheet">
+    <header class="errata-head">
+      <div class="errata-kicker">— Marginalia · Disputed Entries —</div>
+      <h3>Errata <em>Log</em></h3>
+      <button class="errata-close" id="errata-close" aria-label="close">×</button>
+    </header>
+    <div class="errata-body" id="errata-body"></div>
+    <footer class="errata-foot">
+      <button class="errata-export" id="errata-export">copy as json</button>
+      <button class="errata-clear" id="errata-clear">clear all</button>
+    </footer>
+  </div>
+</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="app.js"></script>

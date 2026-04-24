@@ -1,3 +1,25 @@
+/* ─── Errata store (localStorage) ─── */
+const ERRATA_KEY = 'cartography.errata.v1';
+const ERRATA_FIELDS = ['title', 'director', 'year', 'place', 'other'];
+const errataStore = (() => {
+  let data = {};
+  try { data = JSON.parse(localStorage.getItem(ERRATA_KEY) || '{}'); } catch {}
+  return {
+    key: (m) => `${m.name}|${m.year ?? ''}`,
+    get(m) { return data[this.key(m)] || null; },
+    all() { return data; },
+    set(m, entry) {
+      const k = this.key(m);
+      if (!entry || (!entry.fields?.length && !entry.note)) delete data[k];
+      else data[k] = { ...entry, ts: new Date().toISOString() };
+      localStorage.setItem(ERRATA_KEY, JSON.stringify(data));
+    },
+    remove(key) { delete data[key]; localStorage.setItem(ERRATA_KEY, JSON.stringify(data)); },
+    clear() { data = {}; localStorage.removeItem(ERRATA_KEY); },
+    count() { return Object.keys(data).length; },
+  };
+})();
+
 (async () => {
   const res = await fetch('data.json');
   if (!res.ok) {
@@ -35,10 +57,65 @@
     });
     const marker = L.marker([m.lat, m.lon], { icon, riseOnHover: true }).addTo(map);
     marker.bindPopup(renderPopup(m, idx), { closeButton: true, autoPan: true, maxWidth: 310 });
-    marker.on('popupopen', () => highlightList(idx, false));
+    marker.on('popupopen', (ev) => {
+      highlightList(idx, false);
+      wireErrataForm(ev.popup, m, idx, marker);
+    });
     byIdx.set(idx, marker);
     return { marker, data: m, idx };
   });
+
+  /* ─── Errata: popup form wiring ─── */
+  function wireErrataForm(popup, m, idx, marker) {
+    const root = popup.getElement();
+    if (!root) return;
+    const form = root.querySelector('form[data-errata]');
+    if (!form) return;
+    const dot = root.querySelector('.save-dot');
+    const clearBtn = root.querySelector('.errata-clear-one');
+    const seal = root.querySelector('.disputed-seal');
+
+    const flash = () => {
+      if (!dot) return;
+      dot.classList.remove('pulse');
+      void dot.offsetWidth;
+      dot.classList.add('pulse');
+    };
+    const readForm = () => {
+      const fields = [...form.querySelectorAll('input[type=checkbox][name=field]:checked')]
+        .map(i => i.value);
+      const note = form.querySelector('textarea[name=note]').value.trim();
+      return { fields, note };
+    };
+    const persist = () => {
+      const { fields, note } = readForm();
+      errataStore.set(m, (fields.length || note) ? { fields, note } : null);
+      updateMovieRow(idx, m);
+      updateErrataTally();
+      if (seal) seal.style.display = (fields.length || note) ? '' : 'none';
+      flash();
+    };
+
+    let debTimer;
+    form.addEventListener('change', persist);
+    form.querySelector('textarea[name=note]').addEventListener('input', () => {
+      clearTimeout(debTimer);
+      debTimer = setTimeout(persist, 420);
+    });
+    if (clearBtn) clearBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      form.querySelectorAll('input[type=checkbox]').forEach(c => c.checked = false);
+      form.querySelector('textarea[name=note]').value = '';
+      persist();
+      form.closest('details').removeAttribute('open');
+    });
+  }
+
+  function updateMovieRow(idx, m) {
+    const li = listEl.querySelector(`li[data-idx="${idx}"]`);
+    if (!li) return;
+    li.classList.toggle('is-disputed', !!errataStore.get(m));
+  }
 
   /* ─── filter controls ─── */
   const yearSel = document.getElementById('year');
@@ -55,7 +132,10 @@
   const qEl = document.getElementById('q');
   const ckEl = document.getElementById('checked');
   const cnEl = document.getElementById('cannes');
+  const dpEl = document.getElementById('disputed');
   const resetBtn = document.getElementById('reset');
+  const errataCountEl = document.getElementById('errata-count');
+  const errataTallyEl = document.getElementById('errata-tally');
 
   function opt(v, label = v) {
     const o = document.createElement('option');
@@ -75,9 +155,12 @@
     items.forEach(({ data: m, idx }) => {
       const li = document.createElement('li');
       li.dataset.idx = idx;
+      const disputed = !!errataStore.get(m);
+      if (disputed) li.classList.add('is-disputed');
       const badges = [
         m.checked ? '<span class="dot">·</span><span class="check" title="watched">●</span>' : '',
         m.cannes  ? '<span class="dot">·</span><span class="palm" title="Cannes 2026">★</span>' : '',
+        disputed  ? '<span class="dot">·</span><span class="flag" title="flagged as incorrect">⚑</span>' : '',
       ].join('');
       li.innerHTML = `
         <div class="movie-title">${esc(m.name)}</div>
@@ -119,6 +202,7 @@
     const dv = dirSel.value.toLowerCase();
     const ck = ckEl.checked;
     const cn = cnEl.checked;
+    const dp = dpEl.checked;
 
     const visible = markers.filter(({ data: m }) => {
       if (q && !`${m.name} ${m.director} ${m.place}`.toLowerCase().includes(q)) return false;
@@ -126,6 +210,7 @@
       if (dv && !(m.director || '').toLowerCase().includes(dv)) return false;
       if (ck && !m.checked) return false;
       if (cn && !m.cannes) return false;
+      if (dp && !errataStore.get(m)) return false;
       return true;
     });
 
@@ -137,12 +222,98 @@
     renderList(visible);
   }
 
-  [qEl, yearSel, dirSel, ckEl, cnEl].forEach(el => el.addEventListener('input', applyFilters));
+  [qEl, yearSel, dirSel, ckEl, cnEl, dpEl].forEach(el => el.addEventListener('input', applyFilters));
   resetBtn.addEventListener('click', () => {
     qEl.value = ''; yearSel.value = ''; dirSel.value = '';
-    ckEl.checked = false; cnEl.checked = false;
+    ckEl.checked = false; cnEl.checked = false; dpEl.checked = false;
     applyFilters();
   });
+
+  /* ─── Errata drawer (review log) ─── */
+  const drawerEl = document.getElementById('errata-drawer');
+  const drawerBody = document.getElementById('errata-body');
+  const drawerClose = document.getElementById('errata-close');
+  const exportBtn = document.getElementById('errata-export');
+  const clearBtn = document.getElementById('errata-clear');
+
+  function updateErrataTally() {
+    const n = errataStore.count();
+    errataCountEl.textContent = String(n).padStart(2, '0');
+    errataTallyEl.classList.toggle('empty', n === 0);
+  }
+
+  function renderDrawer() {
+    const data = errataStore.all();
+    const entries = Object.entries(data).sort((a, b) => (b[1].ts || '').localeCompare(a[1].ts || ''));
+    if (entries.length === 0) {
+      drawerBody.innerHTML = '<div class="errata-empty">No disputed entries yet.<br>Flag a film from its popup.</div>';
+      return;
+    }
+    drawerBody.innerHTML = entries.map(([key, v]) => {
+      const [name, year] = key.split('|');
+      const tags = (v.fields || []).map(f => `<span class="errata-tag">${esc(f)}</span>`).join('');
+      const note = v.note ? `<div class="errata-entry-note">${esc(v.note)}</div>` : '';
+      return `
+        <div class="errata-entry" data-key="${esc(key)}">
+          <div class="errata-entry-title">${esc(name)}<span class="yr">${esc(year || '—')}</span></div>
+          ${tags ? `<div class="errata-entry-fields">${tags}</div>` : ''}
+          ${note}
+        </div>`;
+    }).join('');
+
+    drawerBody.querySelectorAll('.errata-entry').forEach(el => {
+      el.addEventListener('click', () => {
+        const [name, year] = el.dataset.key.split('|');
+        const hit = markers.find(x => x.data.name === name && String(x.data.year ?? '') === (year || ''));
+        if (!hit) return;
+        closeDrawer();
+        map.flyTo([hit.data.lat, hit.data.lon], Math.max(map.getZoom(), 6), { duration: 1.1 });
+        hit.marker.openPopup();
+        highlightList(hit.idx, true);
+      });
+    });
+  }
+
+  function openDrawer() {
+    renderDrawer();
+    drawerEl.classList.add('open');
+    drawerEl.setAttribute('aria-hidden', 'false');
+  }
+  function closeDrawer() {
+    drawerEl.classList.remove('open');
+    drawerEl.setAttribute('aria-hidden', 'true');
+  }
+
+  errataTallyEl.addEventListener('click', openDrawer);
+  drawerClose.addEventListener('click', closeDrawer);
+  drawerEl.addEventListener('click', (e) => { if (e.target === drawerEl) closeDrawer(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+
+  exportBtn.addEventListener('click', async () => {
+    const json = JSON.stringify(errataStore.all(), null, 2);
+    try {
+      await navigator.clipboard.writeText(json);
+      exportBtn.classList.add('copied');
+      exportBtn.textContent = 'copied ✓';
+      setTimeout(() => {
+        exportBtn.classList.remove('copied');
+        exportBtn.textContent = 'copy as json';
+      }, 1600);
+    } catch {
+      exportBtn.textContent = 'copy failed';
+      setTimeout(() => exportBtn.textContent = 'copy as json', 1600);
+    }
+  });
+
+  clearBtn.addEventListener('click', () => {
+    if (!confirm('Clear all errata? This cannot be undone.')) return;
+    errataStore.clear();
+    updateErrataTally();
+    renderDrawer();
+    applyFilters();
+  });
+
+  updateErrataTally();
 
   /* ─── sidebar toggle ─── */
   document.getElementById('toggle').addEventListener('click', () => {
@@ -153,9 +324,12 @@
   renderList(markers);
 })();
 
-function renderPopup(m, i) {
-  const esc = s => (s ?? '').toString().replace(/[&<>"']/g, c =>
+function esc(s) {
+  return (s ?? '').toString().replace(/[&<>"']/g, c =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function renderPopup(m, i) {
   const num = String(i + 1).padStart(3, '0');
   const director = (m.director && !/^https?:/i.test(m.director)) ? m.director : 'unknown';
   const badges = [
@@ -165,13 +339,31 @@ function renderPopup(m, i) {
   const link = m.link
     ? `<a class="link" href="${esc(m.link)}" target="_blank" rel="noopener">view ↗</a>` : '';
 
+  const entry = errataStore.get(m);
+  const seal = entry ? `<div class="disputed-seal">disputed</div>` : '';
+  const fieldChecks = ERRATA_FIELDS.map(f => {
+    const on = entry && entry.fields?.includes(f) ? 'checked' : '';
+    return `<label class="errata-check"><input type="checkbox" name="field" value="${f}" ${on}><span>${f}</span></label>`;
+  }).join('');
+  const noteVal = entry?.note ? esc(entry.note) : '';
+  const hasAny = !!entry;
+
   return `
-    <div class="popup">
+    <div class="popup" style="position:relative;">
+      ${seal}
       <div class="frame"><span>№ ${num}</span><span class="year">${m.year ?? ''}</span></div>
       <h2>${esc(m.name)}</h2>
       <div class="director">${esc(director)}</div>
       <div class="place">${esc(m.place)}</div>
       <div class="badges">${badges}</div>
       ${link}
+      <details class="errata" ${hasAny ? 'open' : ''}>
+        <summary>mark as incorrect<span class="save-dot"></span></summary>
+        <form class="errata-form" data-errata onsubmit="return false;">
+          <div class="errata-row">${fieldChecks}</div>
+          <textarea class="errata-note" name="note" rows="1" placeholder="note — what's wrong? (optional)">${noteVal}</textarea>
+          <button type="button" class="errata-clear-one">clear flag</button>
+        </form>
+      </details>
     </div>`;
 }
