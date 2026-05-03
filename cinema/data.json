@@ -1,6 +1,18 @@
 {
   "movies": [
     {
+      "name": "Ride Your Horse",
+      "place": "Xilingol League, Inner Mongolia, China",
+      "display_place": "Xilingol League (锡林郭勒盟), Inner Mongolia Autonomous Region, China",
+      "lat": 43.9333,
+      "lon": 116.0667,
+      "director": "Song Dongxu",
+      "year": 2025,
+      "link": "https://movie.douban.com/subject/37103194/",
+      "checked": true,
+      "cannes": false
+    },
+    {
       "name": "Dwelling in the Fuchun Mountains",
       "place": "Fuyang District, Hangzhou, Zhejiang, China",
       "display_place": "Hangzhou Metro Line 6 (Fuyang Line), Meiyuan Street (S), Zhuantang, Xihu District, Hangzhou City, Zhejiang, 310024, China",
