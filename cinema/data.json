@@ -22,7 +22,7 @@
       "year": 2019,
       "link": "https://en.wikipedia.org/wiki/Dwelling_in_the_Fuchun_Mountains_(film)",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Only Lovers Left Alive",
@@ -2446,7 +2446,7 @@
       "year": 2023,
       "link": "https://movie.douban.com/subject/27042464/",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "My Mother",
@@ -2902,7 +2902,7 @@
       "year": 2025,
       "link": "https://movie.douban.com/subject/35416174/",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Alpha",
@@ -3334,7 +3334,7 @@
       "year": 2024,
       "link": "https://movie.douban.com/subject/36289263/",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "The Substance",
@@ -3418,7 +3418,7 @@
       "year": 2019,
       "link": "https://movie.douban.com/subject/27668250/",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Long Day's Journey Into Night (地球最后的夜晚)",
@@ -3430,7 +3430,7 @@
       "year": 2018,
       "link": "https://movie.douban.com/subject/26633257/",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Oppenheimer",
@@ -3562,7 +3562,7 @@
       "year": 2023,
       "link": "https://movie.douban.com/subject/35672437/",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "The Rocky Horror Picture Show",
@@ -6044,6 +6044,462 @@
       "lon": 1.6753,
       "director": "Tom Fontenille",
       "year": 2026,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Sons of the Neon Night (风林火山)",
+      "place": "Causeway Bay (alt. 1994)",
+      "display_place": "Snowbound Causeway Bay, alt. 1994 Hong Kong (neon thriller)",
+      "lat": 22.2805,
+      "lon": 114.1834,
+      "director": "Juno Mak",
+      "year": 2025,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Left-Handed Girl",
+      "place": "Taipei night market",
+      "display_place": "Taipei night markets (single mother & noodle stand)",
+      "lat": 25.033,
+      "lon": 121.5654,
+      "director": "Shih-Ching Tsou",
+      "year": 2025,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Girl on Edge (花漾少女杀人事件)",
+      "place": "Harbin",
+      "display_place": "Harbin figure-skating world (Huayang Skating Centre)",
+      "lat": 45.8038,
+      "lon": 126.534,
+      "director": "Zhou Jinghao",
+      "year": 2025,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Black Dog (狗阵)",
+      "place": "Edge of Gobi, NW China",
+      "display_place": "Chixia township, edge of the Gobi (pre-2008 Olympics)",
+      "lat": 40.0,
+      "lon": 99.0,
+      "director": "Guan Hu",
+      "year": 2024,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "She's Got No Name (酱园弄)",
+      "place": "1940s Shanghai",
+      "display_place": "Jiang-yuan-long, 1940s Shanghai",
+      "lat": 31.2304,
+      "lon": 121.4737,
+      "director": "Peter Chan",
+      "year": 2024,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Twilight of the Warriors: Walled In (九龙城寨之围城)",
+      "place": "Kowloon Walled City",
+      "display_place": "Kowloon Walled City, 1980s Hong Kong",
+      "lat": 22.3326,
+      "lon": 114.1908,
+      "director": "Soi Cheang",
+      "year": 2024,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "An Unfinished Film (一部未完成的电影)",
+      "place": "Wuhan (Jan 2020)",
+      "display_place": "Hotel near Wuhan, January 2020 (Covid lockdown)",
+      "lat": 30.5928,
+      "lon": 114.3055,
+      "director": "Lou Ye",
+      "year": 2024,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Blue Sun Palace (蓝色太阳宫)",
+      "place": "Flushing, Queens",
+      "display_place": "Flushing, Queens, NYC (massage-parlour Chinese diaspora)",
+      "lat": 40.7574,
+      "lon": -73.83,
+      "director": "Constance Tsang",
+      "year": 2024,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Mongrel (白衣苍狗)",
+      "place": "Rural eastern Taiwan",
+      "display_place": "Mountains of eastern Taiwan (undocumented Thai caregiver)",
+      "lat": 23.7,
+      "lon": 121.4,
+      "director": "Chiang Wei Liang & You Qiao Yin",
+      "year": 2024,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Only the River Flows (河边的错误)",
+      "place": "Banpo Town (1990s)",
+      "display_place": "1990s \"Banpo Town\" rural China (shot in Nanfeng, Jiangxi)",
+      "lat": 27.2,
+      "lon": 116.5,
+      "director": "Wei Shujun",
+      "year": 2023,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Man in Black (黑衣人)",
+      "place": "Théâtre des Bouffes du Nord",
+      "display_place": "Théâtre des Bouffes du Nord, Paris (Wang Xilin concert doc)",
+      "lat": 48.8838,
+      "lon": 2.3589,
+      "director": "Wang Bing",
+      "year": 2023,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "A Song Sung Blue (小白船)",
+      "place": "Harbin",
+      "display_place": "Harbin (lonely summer; Korean-Chinese teen friendship)",
+      "lat": 45.8038,
+      "lon": 126.534,
+      "director": "Geng Zihan",
+      "year": 2023,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Streetwise (街娃儿)",
+      "place": "Zhenwu, Sichuan (2004)",
+      "display_place": "Zhenwu town, Sichuan, 2004 (shot in Chongqing; debt-collector noir)",
+      "lat": 29.563,
+      "lon": 106.5516,
+      "director": "Na Jiazuo",
+      "year": 2021,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Are You Lonesome Tonight? (热带往事)",
+      "place": "Guangzhou",
+      "display_place": "Guangzhou summer (hit-and-run noir)",
+      "lat": 23.1291,
+      "lon": 113.2644,
+      "director": "Wen Shipei",
+      "year": 2021,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Revolution of Our Times (时代革命)",
+      "place": "Hong Kong (2019 protests)",
+      "display_place": "Hong Kong, 2019 (Anti-ELAB movement documentary)",
+      "lat": 22.3193,
+      "lon": 114.1694,
+      "director": "Kiwi Chow",
+      "year": 2021,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Ripples of Life (永安镇故事集)",
+      "place": "Yong'an town",
+      "display_place": "Yong'an, remote small town (film shoot disrupts daily life)",
+      "lat": 25.97,
+      "lon": 117.36,
+      "director": "Wei Shujun",
+      "year": 2021,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Venus by Water (水边维纳斯)",
+      "place": "Southern China, 1992",
+      "display_place": "Southern Chinese family home, 1992 (three generations of women)",
+      "lat": 24.5,
+      "lon": 110.0,
+      "director": "Wang Lin",
+      "year": 2021,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Striding into the Wind (野马分鬃)",
+      "place": "Inner Mongolia grasslands",
+      "display_place": "Beijing film school grad road-trips to Inner Mongolia",
+      "lat": 43.97,
+      "lon": 116.07,
+      "director": "Wei Shujun",
+      "year": 2020,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Summer of Changsha (六欲天)",
+      "place": "Changsha",
+      "display_place": "Changsha, Hunan (detective + grieving sister)",
+      "lat": 28.2278,
+      "lon": 112.9388,
+      "director": "Zu Feng",
+      "year": 2019,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Nina Wu (灼人秘密)",
+      "place": "Taipei",
+      "display_place": "Taipei film industry (actress's breakdown)",
+      "lat": 25.033,
+      "lon": 121.5654,
+      "director": "Midi Z",
+      "year": 2019,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "To Live to Sing (活着唱着)",
+      "place": "Chengdu outskirts",
+      "display_place": "Chengdu outskirts (Sichuan Opera troupe facing demolition)",
+      "lat": 30.5728,
+      "lon": 104.0668,
+      "director": "Johnny Ma",
+      "year": 2019,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Ash Is Purest White (江湖儿女)",
+      "place": "Datong + Three Gorges",
+      "display_place": "Datong, Shanxi & Three Gorges (jianghu love over two decades)",
+      "lat": 40.0768,
+      "lon": 113.3001,
+      "director": "Jia Zhangke",
+      "year": 2018,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Dead Souls (死灵魂)",
+      "place": "Jiabiangou, Gansu",
+      "display_place": "Jiabiangou laogai survivors, Hexi Corridor, Gansu",
+      "lat": 39.65,
+      "lon": 98.5,
+      "director": "Wang Bing",
+      "year": 2018,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "The Pluto Moment (冥王星时刻)",
+      "place": "Shennongjia, Hubei",
+      "display_place": "Shennongjia mountains, Hubei (film crew scouting locations)",
+      "lat": 31.5,
+      "lon": 110.3,
+      "director": "Zhang Ming",
+      "year": 2018,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Walking Past the Future (路过未来)",
+      "place": "Shenzhen + Gansu",
+      "display_place": "Shenzhen factory life & Gansu hometown (rural-urban migrant)",
+      "lat": 22.5431,
+      "lon": 114.0579,
+      "director": "Li Ruijun",
+      "year": 2017,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Last Laugh (喜丧)",
+      "place": "Rural Shandong",
+      "display_place": "Rural Shandong village (elderly mother shuttled between children)",
+      "lat": 35.0,
+      "lon": 117.5,
+      "director": "Zhang Tao",
+      "year": 2017,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "The Assassin (刺客聂隐娘)",
+      "place": "Tang dynasty Weibo",
+      "display_place": "Tang dynasty Weibo region (9th-c. martial arts)",
+      "lat": 36.28,
+      "lon": 115.15,
+      "director": "Hou Hsiao-hsien",
+      "year": 2015,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Mountains May Depart (山河故人)",
+      "place": "Fenyang, Shanxi",
+      "display_place": "Fenyang, Shanxi & Australia (1999/2014/2025 triptych)",
+      "lat": 37.27,
+      "lon": 111.79,
+      "director": "Jia Zhangke",
+      "year": 2015,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Coming Home (归来)",
+      "place": "North China (Cultural Revolution era)",
+      "display_place": "North China, late Cultural Revolution into reform era",
+      "lat": 36.0,
+      "lon": 113.0,
+      "director": "Zhang Yimou",
+      "year": 2014,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Fantasia (幻想曲)",
+      "place": "Chongqing",
+      "display_place": "Chongqing (low-income family, father with leukemia)",
+      "lat": 29.563,
+      "lon": 106.5516,
+      "director": "Wang Chao",
+      "year": 2014,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "A Touch of Sin (天注定)",
+      "place": "Shanxi (& 3 other locales)",
+      "display_place": "Four-vignette violence across China (Shanxi, Chongqing, Hubei, Dongguan)",
+      "lat": 37.27,
+      "lon": 111.79,
+      "director": "Jia Zhangke",
+      "year": 2013,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Blind Detective (盲探)",
+      "place": "Hong Kong",
+      "display_place": "Hong Kong (blind ex-detective + cold cases)",
+      "lat": 22.3193,
+      "lon": 114.1694,
+      "director": "Johnnie To",
+      "year": 2013,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Bends (过界)",
+      "place": "Hong Kong–Shenzhen border",
+      "display_place": "Hong Kong / Shenzhen border (housewife & chauffeur, One-Child Policy)",
+      "lat": 22.55,
+      "lon": 114.07,
+      "director": "Flora Lau",
+      "year": 2013,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Ilo Ilo (爸妈不在家)",
+      "place": "Singapore",
+      "display_place": "Singapore HDB family (1997 Asian financial crisis; Filipina helper)",
+      "lat": 1.3521,
+      "lon": 103.8198,
+      "director": "Anthony Chen",
+      "year": 2013,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Mystery (浮城谜事)",
+      "place": "Wuhan",
+      "display_place": "Wuhan (bigamy thriller)",
+      "lat": 30.5928,
+      "lon": 114.3055,
+      "director": "Lou Ye",
+      "year": 2012,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Dangerous Liaisons (危险关系)",
+      "place": "1930s Shanghai",
+      "display_place": "1930s Shanghai (Laclos adaptation)",
+      "lat": 31.2304,
+      "lon": 121.4737,
+      "director": "Hur Jin-ho",
+      "year": 2012,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Dragon / Wu Xia (武侠)",
+      "place": "Yunnan village (1917)",
+      "display_place": "Liu Village, Yunnan, 1917 (papermaker with hidden past)",
+      "lat": 25.04,
+      "lon": 102.71,
+      "director": "Peter Chan",
+      "year": 2011,
+      "link": "",
+      "checked": false,
+      "cannes": true
+    },
+    {
+      "name": "Sauna on the Moon (嫦娥)",
+      "place": "Guangdong",
+      "display_place": "Guangdong present-day (upmarket brothel \"Chang'e\")",
+      "lat": 23.1291,
+      "lon": 113.2644,
+      "director": "Zou Peng",
+      "year": 2011,
       "link": "",
       "checked": false,
       "cannes": true
