@@ -6503,6 +6503,54 @@
       "link": "",
       "checked": false,
       "cannes": false
+    },
+    {
+      "name": "Das Boot",
+      "place": "La Rochelle U-boat base",
+      "display_place": "La Rochelle U-boat base & North Atlantic patrol (1941; U-96)",
+      "lat": 46.1591,
+      "lon": -1.1517,
+      "director": "Wolfgang Petersen",
+      "year": 1981,
+      "link": "",
+      "checked": false,
+      "cannes": false
+    },
+    {
+      "name": "Run Lola Run (Lola rennt)",
+      "place": "Berlin (Oberbaumbrücke / Mitte)",
+      "display_place": "Berlin Mitte (Oberbaumbrücke, Friedrichstraße, Bebelplatz)",
+      "lat": 52.5018,
+      "lon": 13.4451,
+      "director": "Tom Tykwer",
+      "year": 1998,
+      "link": "",
+      "checked": false,
+      "cannes": false
+    },
+    {
+      "name": "Alice in the Cities (Alice in den Städten)",
+      "place": "Wuppertal (Schwebebahn)",
+      "display_place": "Wuppertal Schwebebahn & Ruhr (after NYC/Amsterdam road trip)",
+      "lat": 51.2562,
+      "lon": 7.1508,
+      "director": "Wim Wenders",
+      "year": 1974,
+      "link": "",
+      "checked": false,
+      "cannes": false
+    },
+    {
+      "name": "Fitzcarraldo",
+      "place": "Iquitos / Camisea, Peru",
+      "display_place": "Iquitos opera dream & Camisea-Ucayali isthmus (steamship over the mountain)",
+      "lat": -3.7437,
+      "lon": -73.2516,
+      "director": "Werner Herzog",
+      "year": 1982,
+      "link": "",
+      "checked": false,
+      "cannes": false
     }
   ],
   "skipped": []
