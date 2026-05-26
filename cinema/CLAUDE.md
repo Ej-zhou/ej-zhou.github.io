@@ -5,6 +5,9 @@
 - Source CSV: `Cinematic Cartography 07a73f99e9c348ca823995e3e7d27acc_all.csv` (city-level only).
 - Errata snapshot file: `cartography-errata.json` (usually `{}`; user-flagged errata live in browser localStorage).
 
+## `cannes` flag is current-year only
+`cannes: true` means "in this year's Cannes" (currently Cannes 2026). The UI toggle is labeled "cannes 26". Older films by Cannes alumni (Ida, Son of Saul, Leviathan, Shoplifters, Mountains May Depart, etc.) belong in the atlas but must have `cannes: false`. If the user adds Cannes selections from prior years, add them with `cannes: false` and rely on `year` for any time-based filtering.
+
 ## No two films at the same coordinate
 Each entry must have a unique `(lat, lon)` (to 4 decimal places, ~11m). Two films sharing a position collide on the map.
 
