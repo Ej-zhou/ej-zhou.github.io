@@ -167,6 +167,7 @@ section p, section li { color: var(--ink-soft); }
 .pub-authors { color: var(--ink-dim); font-size: 14px; line-height: 1.55; margin-bottom: 8px; }
 .pub-authors .me { color: var(--ink); font-weight: 700; }
 .pub-venue { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 8px; }
+.pub-note { font-family: var(--body); font-size: 12px; color: var(--ink-dim); margin-bottom: 8px; }
 .pub-links { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; }
 .pub-links a {
   color: var(--accent);
