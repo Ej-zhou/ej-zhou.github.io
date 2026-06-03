@@ -26,14 +26,20 @@ document.addEventListener('DOMContentLoaded', function() {
   // Image rotator for sidebar
   const imgContainer = document.querySelector('.img-container-change');
   if (imgContainer) {
-    const images = [
-      'pics/syn.png','pics/dark.png','pics/stone.png','pics/night.png','pics/girl.png','pics/voila.png',
-      'pics/red.png','pics/yellow.png','pics/buddha.png','pics/sh.png','pics/scaoe.png','pics/yaddha.png','pics/bureal.png','pics/gang.png'
+    const img = imgContainer.querySelector('img');
+    // Derive the path prefix from the initial src so this works from any
+    // directory depth (e.g. "/" -> "pics/...", "/cv/" -> "../pics/...").
+    const rawSrc = img ? img.getAttribute('src') : 'pics/dark.png';
+    const pivot = rawSrc.indexOf('pics/');
+    const prefix = pivot >= 0 ? rawSrc.slice(0, pivot) : '';
+    const names = [
+      'syn.png','dark.png','stone.png','night.png','girl.png','voila.png',
+      'red.png','yellow.png','buddha.png','sh.png','scaoe.png','yaddha.png','bureal.png','gang.png'
     ];
+    const images = names.map(function (n) { return prefix + 'pics/' + n; });
     let currentIndex = 0;
     function changeImage() {
       currentIndex = (currentIndex + 1) % images.length;
-      const img = imgContainer.querySelector('img');
       if (img) img.src = images[currentIndex];
     }
     // Respect user's reduced-motion preference
