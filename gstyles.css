@@ -37,12 +37,6 @@ h1, h2, h3 { font-family: var(--sans); font-weight: 900; margin: 0; }
 h1 { font-size: 64px; line-height: 1.05; letter-spacing: -0.01em; }
 h2 { font-size: 34px; line-height: 1.1; margin-bottom: 18px; }
 
-#education .entry strong,
-#experience .entry strong { font-size: 14px; }
-#education .entry .detail,
-#experience .entry .detail { font-size: 13.5px; line-height: 1.5; }
-#education .entry .when,
-#experience .entry .when { font-size: 10px; }
 h3 { font-size: 20px; }
 
 p { margin: 0 0 1em; }
