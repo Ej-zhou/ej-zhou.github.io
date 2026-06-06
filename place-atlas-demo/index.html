@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waypoints / 去处</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="place-rail" aria-label="Saved places">
+        <header class="brand-block">
+          <div>
+            <p class="eyebrow">去处 / Waypoints</p>
+            <h1>Places I Keep</h1>
+          </div>
+          <button class="icon-button" type="button" title="Add place" aria-label="Add place">
+            +
+          </button>
+        </header>
+
+        <div class="home-switcher" aria-label="Map focus">
+          <button class="chip active" type="button" data-region="all">All</button>
+          <button class="chip" type="button" data-region="china">Zhejiang</button>
+          <button class="chip" type="button" data-region="uk">Cambridge</button>
+        </div>
+
+        <label class="search-box">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Temple, garden, city..." />
+        </label>
+
+        <section class="mini-stats" aria-label="Place summary">
+          <div>
+            <strong id="totalCount">0</strong>
+            <span>saved</span>
+          </div>
+          <div>
+            <strong id="plannedCount">0</strong>
+            <span>planned</span>
+          </div>
+          <div>
+            <strong id="visitedCount">0</strong>
+            <span>visited</span>
+          </div>
+        </section>
+
+        <div class="filter-row" aria-label="Status filter">
+          <button class="filter active" type="button" data-status="all">All</button>
+          <button class="filter" type="button" data-status="want">Want</button>
+          <button class="filter" type="button" data-status="planned">Planned</button>
+          <button class="filter" type="button" data-status="visited">Visited</button>
+        </div>
+
+        <section class="place-list" id="placeList" aria-label="Place list"></section>
+      </aside>
+
+      <section class="map-section" aria-label="Map">
+        <div class="map-toolbar">
+          <div>
+            <p class="eyebrow">Map Journal</p>
+            <h2 id="mapTitle">Hangzhou, Ningbo, Cambridge</h2>
+          </div>
+          <div class="view-tools" aria-label="Category filter">
+            <button class="tool active" type="button" data-category="all">All</button>
+            <button class="tool" type="button" data-category="heritage">Heritage</button>
+            <button class="tool" type="button" data-category="nature">Nature</button>
+            <button class="tool" type="button" data-category="walk">Walks</button>
+          </div>
+        </div>
+
+        <div class="map-canvas">
+          <div id="actualMap" class="actual-map" aria-label="Interactive places map"></div>
+          <div class="map-fallback" id="mapFallback">
+            Map tiles need an internet connection. The saved places are still available in the list.
+          </div>
+        </div>
+      </section>
+
+      <aside class="detail-panel" id="detailPanel" aria-label="Place details"></aside>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
