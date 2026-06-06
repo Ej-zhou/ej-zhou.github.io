@@ -24,9 +24,8 @@
         </header>
 
         <div class="home-switcher" aria-label="Map focus">
-          <button class="chip active" type="button" data-region="all">All</button>
-          <button class="chip" type="button" data-region="china">Zhejiang</button>
-          <button class="chip" type="button" data-region="uk">Cambridge</button>
+          <button class="chip" type="button" data-region="china">Hangzhou</button>
+          <button class="chip active" type="button" data-region="uk">Cambridge</button>
         </div>
 
         <label class="search-box">
@@ -60,21 +59,12 @@
       </aside>
 
       <section class="map-section" aria-label="Map">
-        <div class="map-toolbar">
-          <div>
-            <p class="eyebrow">Map Journal</p>
-            <h2 id="mapTitle">Hangzhou, Ningbo, Cambridge</h2>
-          </div>
-          <div class="view-tools" aria-label="Category filter">
-            <button class="tool active" type="button" data-category="all">All</button>
-            <button class="tool" type="button" data-category="heritage">Heritage</button>
-            <button class="tool" type="button" data-category="nature">Nature</button>
-            <button class="tool" type="button" data-category="walk">Walks</button>
-          </div>
-        </div>
-
-        <div class="map-canvas">
+        <div class="map-canvas mapstyle-parchment">
           <div id="actualMap" class="actual-map" aria-label="Interactive places map"></div>
+          <button id="mapStyleToggle" class="map-style-toggle" type="button" aria-label="Change map style" title="Change map style">
+            <span class="map-style-swatch" aria-hidden="true"></span>
+            <span id="mapStyleName">Parchment</span>
+          </button>
           <div class="map-fallback" id="mapFallback">
             Map tiles need an internet connection. The saved places are still available in the list.
           </div>

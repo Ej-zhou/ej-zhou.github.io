@@ -298,19 +298,10 @@ h2 {
 
 .map-section {
   display: grid;
-  grid-template-rows: auto minmax(520px, 1fr);
+  grid-template-rows: minmax(0, 1fr);
   min-height: calc(100vh - 32px);
   border-radius: 8px;
   overflow: hidden;
-}
-
-.map-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 22px 24px 18px;
-  border-bottom: 1px solid var(--line);
 }
 
 .map-canvas {
@@ -367,8 +358,66 @@ h2 {
 }
 
 .leaflet-tile-pane {
-  filter: grayscale(0.72) saturate(0.42) contrast(0.82) brightness(1.12);
-  opacity: 0.58;
+  transition: filter 0.35s ease, opacity 0.35s ease;
+}
+
+/* Map surface styles, toggled by a class on .map-canvas */
+.mapstyle-parchment .leaflet-tile-pane {
+  filter: sepia(0.55) saturate(0.72) brightness(1.08) contrast(0.9) hue-rotate(-12deg);
+  opacity: 0.9;
+}
+
+.mapstyle-soft .leaflet-tile-pane {
+  filter: saturate(0.82) brightness(1.06) contrast(0.95);
+  opacity: 0.92;
+}
+
+.mapstyle-grey .leaflet-tile-pane {
+  filter: grayscale(1) brightness(1.03) contrast(0.92);
+  opacity: 0.92;
+}
+
+.map-style-toggle {
+  position: absolute;
+  z-index: 4;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 14px 7px 10px;
+  color: var(--ink);
+  background: rgba(255, 253, 247, 0.9);
+  box-shadow: 0 10px 24px rgba(23, 33, 29, 0.16);
+  backdrop-filter: blur(10px);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.map-style-toggle:hover {
+  background: var(--white);
+}
+
+.map-style-swatch {
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(23, 33, 29, 0.2);
+  border-radius: 50%;
+  background: var(--ochre);
+}
+
+.mapstyle-parchment .map-style-swatch {
+  background: #c9a36a;
+}
+
+.mapstyle-soft .map-style-swatch {
+  background: linear-gradient(135deg, #8fae7e, #7296a6);
+}
+
+.mapstyle-grey .map-style-swatch {
+  background: #9a9a96;
 }
 
 .leaflet-control-attribution {
@@ -486,20 +535,26 @@ h2 {
 }
 
 .place-model-detail {
-  width: min(230px, 72%);
+  position: relative;
+  z-index: 3;
+  width: min(250px, 78%);
   height: auto;
+  margin-bottom: -26px;
   filter: drop-shadow(0 24px 28px rgba(23, 33, 29, 0.28));
 }
 
 .place-asset-detail {
-  width: min(250px, 78%);
+  position: relative;
+  z-index: 3;
+  width: min(280px, 84%);
   height: auto;
+  margin-bottom: -26px;
   filter: drop-shadow(0 26px 30px rgba(23, 33, 29, 0.32));
 }
 
 .place-asset-kings.place-asset-detail,
 .place-asset-ely.place-asset-detail {
-  width: min(320px, 90%);
+  width: min(340px, 94%);
 }
 
 .model-shadow {
@@ -638,9 +693,12 @@ h2 {
 }
 
 .photo-strip {
+  position: relative;
+  z-index: 2;
   display: grid;
   place-items: center;
-  min-height: 220px;
+  min-height: 240px;
+  overflow: visible;
   background:
     linear-gradient(150deg, rgba(255, 255, 255, 0.12), transparent 38%),
     radial-gradient(circle at 70% 26%, rgba(255, 255, 255, 0.28), transparent 18%),
@@ -665,15 +723,33 @@ h2 {
   display: grid;
   width: 100%;
   height: 100%;
-  min-height: 220px;
-  place-items: center;
+  min-height: 240px;
+  place-items: end center;
+  overflow: visible;
   background:
     radial-gradient(circle at 50% 64%, rgba(255, 253, 247, 0.34), transparent 30%),
     linear-gradient(180deg, transparent 0%, rgba(23, 33, 29, 0.08) 100%);
 }
 
 .detail-copy {
-  padding: 22px;
+  position: relative;
+  z-index: 1;
+  padding: 30px 22px 22px;
+}
+
+.detail-empty {
+  grid-row: 1 / -1;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 32px 26px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.detail-empty p {
+  margin: 0;
+  line-height: 1.5;
 }
 
 .detail-copy h3 {
@@ -736,6 +812,37 @@ h2 {
   font-size: 0.96rem;
 }
 
+/* Desktop: pin the 3-column shell to the viewport so the place list scrolls
+   inside the rail instead of stretching the whole row and ballooning the map. */
+@media (min-width: 1101px) {
+  .app-shell {
+    height: 100vh;
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .place-list {
+    min-height: 0;
+  }
+}
+
+/* Tablet: keep the rail + map row at viewport height (so the rail scrolls and
+   the map keeps a sane height) while the detail panel flows below the fold. */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .app-shell {
+    grid-template-rows: minmax(0, calc(100vh - 32px)) auto;
+  }
+
+  .place-rail,
+  .map-section {
+    min-height: 0;
+    max-height: calc(100vh - 32px);
+  }
+
+  .place-list {
+    min-height: 0;
+  }
+}
+
 @media (max-width: 1100px) {
   .app-shell {
     grid-template-columns: minmax(270px, 330px) 1fr;
@@ -766,13 +873,8 @@ h2 {
     min-height: auto;
   }
 
-  .map-toolbar {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
   .map-section {
-    grid-template-rows: auto 68vh;
+    grid-template-rows: 68vh;
   }
 
   .map-canvas {
