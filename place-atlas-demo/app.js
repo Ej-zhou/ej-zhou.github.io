@@ -124,13 +124,12 @@ const statusLabels = {
 function filteredPlaces() {
   const term = state.search.trim().toLowerCase();
   return places.filter((place) => {
-    const matchesRegion = state.region === "all" || place.region === state.region;
     const matchesStatus = state.status === "all" || place.status === state.status;
     const matchesCategory = state.category === "all" || place.category === state.category;
     const haystack = [place.name, place.english, place.city, place.tags.join(" ")]
       .join(" ")
       .toLowerCase();
-    return matchesRegion && matchesStatus && matchesCategory && haystack.includes(term);
+    return matchesStatus && matchesCategory && haystack.includes(term);
   });
 }
 
@@ -301,7 +300,12 @@ function renderMarkers(visiblePlaces, activePlace) {
   }
 
   if (shouldFitMap) {
-    const bounds = L.latLngBounds(visiblePlaces.map((place) => place.coords));
+    const focusPlaces =
+      state.region === "all"
+        ? visiblePlaces
+        : visiblePlaces.filter((place) => place.region === state.region);
+    const placesForBounds = focusPlaces.length > 0 ? focusPlaces : visiblePlaces;
+    const bounds = L.latLngBounds(placesForBounds.map((place) => place.coords));
     map.fitBounds(bounds.pad(0.24), { animate: true, maxZoom: state.region === "all" ? 5 : 11 });
     return;
   }

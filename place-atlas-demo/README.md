@@ -44,14 +44,14 @@ Files:
 
 - `index.html`: app shell and Leaflet setup.
 - `styles.css`: layout, map styling, labels, generated asset display.
-- `app.js`: place data, filters, map markers, detail panel rendering.
+- `app.js`: place data, map focus controls, filters, map markers, detail panel rendering.
 - `assets/`: generated and processed landmark images.
 
 Current features:
 
 - Left-side place list.
 - Interactive Leaflet map.
-- Region filters for Zhejiang and Cambridge.
+- Region focus buttons for Zhejiang and Cambridge. These should zoom the map only, not filter or select the place list.
 - Status filters.
 - Category filters.
 - Search.
