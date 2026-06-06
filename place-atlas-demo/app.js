@@ -417,11 +417,12 @@ const state = {
   activeId: null
 };
 
-// Which places each region chip frames when focused. "Hangzhou" zooms into the
-// Hangzhou city cluster rather than all of Zhejiang.
+// How each region chip frames the map when focused. "Hangzhou" fits the
+// Hangzhou city cluster; "Cambridge" uses a fixed close-in view centred on the
+// city rather than fitting every outlying National Trust / English Heritage site.
 const regionFocus = {
-  china: (place) => place.city.startsWith("Hangzhou"),
-  uk: (place) => place.region === "uk"
+  china: { filter: (place) => place.city.startsWith("Hangzhou") },
+  uk: { view: { center: [52.205, 0.12], zoom: 11 } }
 };
 
 const placeList = document.querySelector("#placeList");
@@ -696,8 +697,13 @@ function renderMarkers(visiblePlaces, activePlace) {
   }
 
   if (shouldFitMap) {
-    const focusFilter = regionFocus[state.region];
-    const focusPlaces = focusFilter ? visiblePlaces.filter(focusFilter) : visiblePlaces;
+    const focus = regionFocus[state.region];
+    if (focus && focus.view) {
+      map.setView(focus.view.center, focus.view.zoom, { animate: true });
+      return;
+    }
+    const filter = focus && focus.filter;
+    const focusPlaces = filter ? visiblePlaces.filter(filter) : visiblePlaces;
     const placesForBounds = focusPlaces.length > 0 ? focusPlaces : visiblePlaces;
     const bounds = L.latLngBounds(placesForBounds.map((place) => place.coords));
     map.fitBounds(bounds.pad(0.22), { animate: true, maxZoom: 13 });
@@ -730,27 +736,8 @@ function renderDetail(activePlace) {
       </div>
     </div>
     <div class="detail-copy">
-      <p class="eyebrow">${statusLabels[activePlace.status]}</p>
       <h3>${activePlace.name}</h3>
-      <p class="detail-location">${activePlace.english}<br>${activePlace.city}</p>
-      <div class="tag-row">
-        ${activePlace.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
-      </div>
-      <p class="note-block">${activePlace.note}</p>
-      <div class="detail-grid">
-        <div>
-          <span>Best season</span>
-          <strong>${activePlace.season}</strong>
-        </div>
-        <div>
-          <span>Trip shape</span>
-          <strong>${activePlace.travel}</strong>
-        </div>
-        <div>
-          <span>Category</span>
-          <strong>${activePlace.category}</strong>
-        </div>
-      </div>
+      <p class="detail-location">${activePlace.city}</p>
     </div>
   `;
 }
