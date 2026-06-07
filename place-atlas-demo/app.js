@@ -279,6 +279,7 @@ const places = [
     category: "nature",
     status: "want",
     coords: [52.2359, 0.2408],
+    asset: "assets/anglesey-abbey.png",
     initial: "A",
     tags: ["garden", "historic house", "weekend"],
     season: "Snowdrop season",
@@ -326,11 +327,173 @@ const places = [
     category: "nature",
     status: "want",
     coords: [52.1453, -0.0497],
+    asset: "assets/wimpole-estate.png",
     initial: "W",
     tags: ["National Trust", "estate", "parkland"],
     season: "Spring lambing",
     travel: "Short drive south-west of Cambridge",
     note: "A big estate place: Georgian hall, walled garden, and a working farm to wander."
+  },
+
+  {
+    id: "bury-st-edmunds-abbey",
+    name: "Bury St Edmunds Abbey",
+    english: "Bury St Edmunds Abbey",
+    city: "Bury St Edmunds, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [52.2441, 0.7192],
+    asset: "assets/bury-st-edmunds-abbey.png",
+    initial: "B",
+    tags: ["abbey ruins", "Suffolk", "medieval"],
+    season: "Late spring",
+    travel: "East Anglia abbey route",
+    note: "A powerful abbey-ruin stop, good for anchoring the Suffolk side of the map."
+  },
+  {
+    id: "castle-acre-priory",
+    name: "Castle Acre Priory",
+    english: "Castle Acre Priory",
+    city: "Castle Acre, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [52.7046, 0.6877],
+    asset: "assets/castle-acre-priory.png",
+    initial: "P",
+    tags: ["priory", "Norfolk", "ruins"],
+    season: "Clear autumn",
+    travel: "Norfolk ruins circuit",
+    note: "A priory ruin with enough structure left to read as architecture, not just landscape."
+  },
+  {
+    id: "castle-rising",
+    name: "Castle Rising",
+    english: "Castle Rising Castle",
+    city: "Castle Rising, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [52.794, 0.47],
+    asset: "assets/castle-rising.png",
+    initial: "R",
+    tags: ["castle", "Norfolk", "earthworks"],
+    season: "Windy afternoon",
+    travel: "West Norfolk castle stop",
+    note: "A compact keep-and-earthworks place, visually different from the abbey ruins."
+  },
+  {
+    id: "thetford-priory",
+    name: "Thetford Priory",
+    english: "Thetford Priory",
+    city: "Thetford, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [52.4146, 0.7509],
+    asset: "assets/thetford-priory.png",
+    initial: "T",
+    tags: ["priory", "Norfolk", "monastic ruins"],
+    season: "Soft overcast",
+    travel: "East Anglia priory route",
+    note: "A large monastic ruin to keep near the Norfolk and Suffolk cluster."
+  },
+  {
+    id: "netley-abbey",
+    name: "Netley Abbey",
+    english: "Netley Abbey",
+    city: "Netley, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [50.8765, -1.353],
+    asset: "assets/netley-abbey.png",
+    initial: "N",
+    tags: ["abbey", "Hampshire", "ruins"],
+    season: "Summer evening",
+    travel: "South coast abbey stop",
+    note: "A southern abbey ruin with a more romantic, open-air feeling."
+  },
+  {
+    id: "stonehenge",
+    name: "Stonehenge",
+    english: "Stonehenge",
+    city: "Wiltshire, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [51.1789, -1.8262],
+    asset: "assets/stonehenge.png",
+    initial: "S",
+    tags: ["prehistoric", "stone circle", "Wiltshire"],
+    season: "Low winter sun",
+    travel: "Wiltshire heritage day",
+    note: "A landmark that needs very little explanation, but deserves a strong object on the map."
+  },
+  {
+    id: "frankfurt-romer",
+    name: "Frankfurt Römer",
+    english: "Frankfurt Römer",
+    city: "Frankfurt, Germany",
+    region: "germany",
+    category: "heritage",
+    status: "want",
+    coords: [50.1106, 8.6822],
+    asset: "assets/frankfurt-romer.png",
+    initial: "F",
+    tags: ["old town", "town hall", "Germany"],
+    season: "Christmas market season",
+    travel: "Frankfurt city walk",
+    note: "A civic-square landmark, useful as the German city texture on the atlas."
+  },
+  {
+    id: "heidelberg-castle",
+    name: "Heidelberg Castle",
+    english: "Heidelberg Castle",
+    city: "Heidelberg, Germany",
+    region: "germany",
+    category: "heritage",
+    status: "want",
+    coords: [49.4106, 8.7156],
+    asset: "assets/heidelberg-castle.png",
+    initial: "H",
+    tags: ["castle", "ruins", "Neckar"],
+    season: "Golden autumn",
+    travel: "Heidelberg hill walk",
+    note: "A red-stone castle ruin above the river, good for a strong hillside marker."
+  },
+  {
+    id: "marburg-landgrafenschloss",
+    name: "Marburg Landgrafenschloss",
+    english: "Marburg Landgrafenschloss",
+    city: "Marburg, Germany",
+    region: "germany",
+    category: "heritage",
+    status: "want",
+    coords: [50.809, 8.77],
+    asset: "assets/marburg-landgrafenschloss.png",
+    initial: "M",
+    tags: ["castle", "Hesse", "hill town"],
+    season: "Crisp autumn",
+    travel: "Marburg old-town climb",
+    note: "A hilltop castle marker for the steep, storybook side of central Germany."
+  },
+  {
+    id: "trier-porta-nigra",
+    name: "Porta Nigra",
+    english: "Trier Porta Nigra",
+    city: "Trier, Germany",
+    region: "germany",
+    category: "heritage",
+    status: "want",
+    coords: [49.7596, 6.6442],
+    asset: "assets/trier-porta-nigra.png",
+    initial: "P",
+    tags: ["Roman gate", "Trier", "Germany"],
+    season: "Clear cold day",
+    travel: "Trier Roman route",
+    note: "A Roman city-gate object, different enough to widen the atlas beyond castles and abbeys."
   },
   {
     id: "wicken-fen",
@@ -371,6 +534,7 @@ const places = [
     category: "heritage",
     status: "want",
     coords: [52.0214, 0.2156],
+    asset: "assets/audley-end-house.png",
     initial: "E",
     tags: ["English Heritage", "Jacobean", "gardens"],
     season: "Late spring",
@@ -401,6 +565,7 @@ const places = [
     category: "heritage",
     status: "want",
     coords: [52.1145, 0.1561],
+    asset: "assets/duxford-chapel.png",
     initial: "C",
     tags: ["English Heritage", "medieval chapel", "free"],
     season: "Any clear day",
@@ -718,12 +883,42 @@ function renderMarkers(visiblePlaces, activePlace) {
   }
 }
 
+const compassMark = `
+  <svg class="compass" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" />
+  </svg>
+`;
+
+const cityZh = {
+  "Ningbo, Zhejiang": "宁波",
+  "Hangzhou, Zhejiang": "杭州",
+  "Jinhua, Zhejiang": "金华",
+  "Dongyang, Zhejiang": "东阳",
+  "Huzhou, Zhejiang": "湖州",
+  "Quzhou, Zhejiang": "衢州",
+  "Tiantai, Zhejiang": "天台"
+};
+
+function formatLocation(place) {
+  if (place.region === "uk") {
+    return place.city.replace(/,\s*UK$/i, "");
+  }
+  return cityZh[place.city] || place.city;
+}
+
+function formatCoord([lat, lng]) {
+  const ns = lat >= 0 ? "N" : "S";
+  const ew = lng >= 0 ? "E" : "W";
+  return `${Math.abs(lat).toFixed(2)}°${ns}&nbsp;&nbsp;·&nbsp;&nbsp;${Math.abs(lng).toFixed(2)}°${ew}`;
+}
+
 function renderDetail(activePlace) {
   if (!activePlace) {
     detailPanel.innerHTML = `
       <div class="detail-empty">
+        <span class="detail-empty-mark">${compassMark}</span>
         <p class="eyebrow">Nothing selected</p>
-        <p>Pick a place from the list, or tap a marker on the map, to see its details.</p>
+        <p>Pick a place from the list, or tap a marker on the map, to see it here.</p>
       </div>
     `;
     return;
@@ -736,8 +931,14 @@ function renderDetail(activePlace) {
       </div>
     </div>
     <div class="detail-copy">
-      <h3>${activePlace.name}</h3>
-      <p class="detail-location">${activePlace.city}</p>
+      <div class="detail-head">
+        <h3>${activePlace.name}</h3>
+        <p class="detail-location">${formatLocation(activePlace)}</p>
+      </div>
+      <div class="detail-foot">
+        <div class="detail-rule">${compassMark}</div>
+        <p class="detail-coord">${formatCoord(activePlace.coords)}</p>
+      </div>
     </div>
   `;
 }

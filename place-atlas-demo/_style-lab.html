@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map style lab</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+      :root { --paper:#f6f2e9; --ink:#17211d; --moss:#425a43; --line:rgba(23,33,29,.14); }
+      html, body { margin: 0; height: 100%; font-family: Inter, system-ui, sans-serif; }
+      #map { position: absolute; inset: 0; background: #eef0e7; }
+      #tint { position: absolute; inset: 0; z-index: 450; pointer-events: none; }
+      .leaflet-control-attribution { display: none; }
+
+      .bar {
+        position: absolute; left: 50%; top: 14px; transform: translateX(-50%);
+        z-index: 700; display: flex; gap: 6px; flex-wrap: wrap; justify-content: center;
+        max-width: 94vw; padding: 8px; border-radius: 999px;
+        background: rgba(255,253,247,.9); border: 1px solid var(--line);
+        box-shadow: 0 14px 34px rgba(23,33,29,.16); backdrop-filter: blur(10px);
+      }
+      .bar button {
+        font: 700 13px Inter, sans-serif; cursor: pointer; color: var(--ink);
+        background: rgba(255,255,255,.55); border: 1px solid var(--line);
+        border-radius: 999px; padding: 7px 13px; min-height: 32px;
+      }
+      .bar button.active { color: #fff; background: var(--moss); border-color: transparent; }
+      .bar .sep { width: 1px; background: var(--line); margin: 2px 4px; }
+      .bar button.loc { background: rgba(173,95,69,.12); }
+      .bar button.loc.active { background: #ad5f45; }
+
+      #label {
+        position: absolute; left: 18px; bottom: 18px; z-index: 700;
+        font: 800 16px Georgia, serif; color: var(--ink);
+        background: #fff0a8; padding: 9px 13px; border-radius: 4px;
+        box-shadow: 0 10px 20px rgba(23,33,29,.18); transform: rotate(-1deg);
+      }
+      .sticker { width: 120px; filter: drop-shadow(0 16px 16px rgba(23,33,29,.28)); }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="tint"></div>
+    <div class="bar" id="bar"></div>
+    <div id="label"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      const PRESETS = {
+        current:    { name: "Current (cold grey)", tiles: "osm",
+                      filter: "grayscale(0.72) saturate(0.42) contrast(0.82) brightness(1.12)",
+                      opacity: 0.58, tint: "transparent", blend: "normal" },
+        sepia:      { name: "Warm parchment", tiles: "osm",
+                      filter: "grayscale(1) brightness(1.18) contrast(0.86)",
+                      opacity: 0.95, tint: "rgba(201,163,106,0.55)", blend: "multiply" },
+        sage:       { name: "Sage herbal", tiles: "osm",
+                      filter: "grayscale(1) brightness(1.2) contrast(0.85)",
+                      opacity: 0.95, tint: "rgba(125,149,124,0.62)", blend: "multiply" },
+        blue:       { name: "Antique chart blue", tiles: "osm",
+                      filter: "grayscale(1) brightness(1.16) contrast(0.9)",
+                      opacity: 0.95, tint: "rgba(91,125,140,0.6)", blend: "multiply" },
+        soft:       { name: "Soft natural colour", tiles: "osm",
+                      filter: "saturate(0.82) brightness(1.06) contrast(0.95)",
+                      opacity: 0.92, tint: "rgba(246,242,233,0.18)", blend: "normal" },
+        watercolor: { name: "Stamen watercolour", tiles: "watercolor",
+                      filter: "saturate(1.05) brightness(1.03)",
+                      opacity: 1, tint: "rgba(246,242,233,0.12)", blend: "normal" }
+      };
+
+      const PLACES = {
+        hangzhou:  { name: "Hangzhou · West Lake", view: [30.245, 120.13], z: 13,
+                     sticker: "assets/lingyin-statue.png", at: [30.2419, 120.1006] },
+        cambridge: { name: "Cambridge", view: [52.2043, 0.1196], z: 14,
+                     sticker: "assets/kings-chapel.png", at: [52.2043, 0.1163] },
+        ely:       { name: "Ely Cathedral", view: [52.3990, 0.2625], z: 15,
+                     sticker: "assets/ely-cathedral.png", at: [52.3990, 0.2625] }
+      };
+
+      let curStyle = "sepia";
+      let curPlace = "hangzhou";
+      let tileLayer = null;
+      let stickerMarker = null;
+
+      const map = L.map("map", { zoomControl: true, attributionControl: false });
+      const tint = document.getElementById("tint");
+
+      function applyStyle() {
+        const p = PRESETS[curStyle];
+        if (tileLayer) map.removeLayer(tileLayer);
+        const url = p.tiles === "watercolor"
+          ? "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg"
+          : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+        tileLayer = L.tileLayer(url, { maxZoom: 19, crossOrigin: true }).addTo(map);
+        const pane = document.querySelector(".leaflet-tile-pane");
+        pane.style.filter = p.filter;
+        pane.style.opacity = p.opacity;
+        tint.style.background = p.tint;
+        tint.style.mixBlendMode = p.blend;
+        document.getElementById("label").textContent = p.name + "  ·  " + PLACES[curPlace].name;
+        syncButtons();
+      }
+
+      function applyPlace(fly) {
+        const pl = PLACES[curPlace];
+        if (fly) map.flyTo(pl.view, pl.z, { duration: 0.8 });
+        else map.setView(pl.view, pl.z);
+        if (stickerMarker) map.removeLayer(stickerMarker);
+        const icon = L.divIcon({ className: "",
+          html: '<img class="sticker" src="' + pl.sticker + '" alt="">',
+          iconSize: [120, 120], iconAnchor: [60, 110] });
+        stickerMarker = L.marker(pl.at, { icon }).addTo(map);
+        document.getElementById("label").textContent = PRESETS[curStyle].name + "  ·  " + pl.name;
+      }
+
+      function syncButtons() {
+        document.querySelectorAll("[data-style]").forEach(b =>
+          b.classList.toggle("active", b.dataset.style === curStyle));
+        document.querySelectorAll("[data-place]").forEach(b =>
+          b.classList.toggle("active", b.dataset.place === curPlace));
+      }
+
+      // Build the toolbar.
+      const bar = document.getElementById("bar");
+      Object.entries(PRESETS).forEach(([k, v]) => {
+        const b = document.createElement("button");
+        b.textContent = v.name.replace(/ \(.*\)/, "");
+        b.dataset.style = k;
+        b.onclick = () => { curStyle = k; applyStyle(); applyPlace(false); };
+        bar.appendChild(b);
+      });
+      const sep = document.createElement("div"); sep.className = "sep"; bar.appendChild(sep);
+      Object.entries(PLACES).forEach(([k, v]) => {
+        const b = document.createElement("button");
+        b.textContent = v.name.split(" ")[0];
+        b.className = "loc"; b.dataset.place = k;
+        b.onclick = () => { curPlace = k; applyPlace(true); };
+        bar.appendChild(b);
+      });
+
+      applyStyle();
+      applyPlace(false);
+    </script>
+  </body>
+</html>
