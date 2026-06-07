@@ -15,17 +15,19 @@
       <aside class="place-rail" aria-label="Saved places">
         <header class="brand-block">
           <div>
-            <p class="eyebrow">去处 / Waypoints</p>
-            <h1>Places I Keep</h1>
+            <h1>去处 / Waypoints</h1>
           </div>
-          <button class="icon-button" type="button" title="Add place" aria-label="Add place">
-            +
-          </button>
+          <div class="focus-toggle" role="group" aria-label="Place scope">
+            <button class="focus-btn active" type="button" data-focus="focused" title="Focused: places I know">F</button>
+            <button class="focus-btn" type="button" data-focus="all" title="All places">A</button>
+            <button class="focus-btn" type="button" data-focus="visited" title="Visited places">V</button>
+          </div>
         </header>
 
         <div class="home-switcher" aria-label="Map focus">
           <button class="chip" type="button" data-region="china">Hangzhou</button>
           <button class="chip active" type="button" data-region="uk">Cambridge</button>
+          <button class="chip" type="button" data-region="germany">Frankfurt</button>
         </div>
 
         <label class="search-box">
@@ -39,21 +41,10 @@
             <span>saved</span>
           </div>
           <div>
-            <strong id="plannedCount">0</strong>
-            <span>planned</span>
-          </div>
-          <div>
             <strong id="visitedCount">0</strong>
             <span>visited</span>
           </div>
         </section>
-
-        <div class="filter-row" aria-label="Status filter">
-          <button class="filter active" type="button" data-status="all">All</button>
-          <button class="filter" type="button" data-status="want">Want</button>
-          <button class="filter" type="button" data-status="planned">Planned</button>
-          <button class="filter" type="button" data-status="visited">Visited</button>
-        </div>
 
         <section class="place-list" id="placeList" aria-label="Place list"></section>
       </aside>
