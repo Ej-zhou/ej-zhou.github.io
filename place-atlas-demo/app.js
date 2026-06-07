@@ -2855,7 +2855,7 @@ const CAMBRIDGE_CENTER = [52.205, 0.12];
 const FOCUS_RADIUS_MILES = 30;
 const FOCUS_ALWAYS = new Set(["stonehenge", "netley-abbey", "thetford-priory"]);
 // Places to keep out of the "Focused" scope even if they would otherwise qualify.
-const FOCUS_NEVER = new Set(["feilai", "zhakou-white-pagoda", "yuqian", "hz-confucian", "baochu", "huqingyutang"]);
+const FOCUS_NEVER = new Set(["feilai", "zhakou-white-pagoda", "yuqian", "hz-confucian", "baochu", "huqingyutang", "xiling"]);
 
 function milesBetween([lat1, lng1], [lat2, lng2]) {
   const toRad = (deg) => (deg * Math.PI) / 180;
