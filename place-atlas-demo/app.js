@@ -2922,9 +2922,33 @@ function renderList(visiblePlaces) {
   });
 }
 
+// Assets that ship a higher-res "-detail.png" twin for the right-hand panel.
+// The small base image stays on the map markers; only the detail panel (one
+// image at a time) loads the crisp version.
+const DETAIL_VARIANTS = new Set([
+  "assets/ayuwang-temple.png", "assets/baochu-pagoda.png",
+  "assets/cangpo-village-architecture.png", "assets/caoe-temple.png",
+  "assets/chen-ge-residence.png", "assets/chongren-village-architecture.png",
+  "assets/chuzhou-covered-bridge.png", "assets/cicheng-architecture.png",
+  "assets/furong-village-architecture.png", "assets/gongchen-pagoda.png",
+  "assets/hangzhou-confucian-temple.png", "assets/lanxi-tongzhou-bridge.png",
+  "assets/nange-archways.png", "assets/putuoshan-duobao-pagoda.png",
+  "assets/qiantong-architecture.png", "assets/qingan-guild-hall.png",
+  "assets/rulong-bridge.png", "assets/shaoxing-ancient-towpath.png",
+  "assets/sizhai-architecture.png", "assets/songyang-yanqing-pagoda.png",
+  "assets/tangqi-guangji-bridge.png", "assets/tianfeng-pagoda.png", "assets/tongji-weir.png",
+  "assets/wang-yangming-residence.png", "assets/wenlan-pavilion.png",
+  "assets/xiling-seal-society.png", "assets/yantou-village-architecture.png",
+  "assets/yanzhou-city-wall.png", "assets/yuqian-shrine.png"
+]);
+
 function modelMarkup(place, size = "marker") {
   if (place.asset) {
-    return `<img class="place-asset place-asset-${size} place-asset-${place.id}" src="${place.asset}" alt="" loading="lazy" decoding="async" />`;
+    const src =
+      size === "detail" && DETAIL_VARIANTS.has(place.asset)
+        ? place.asset.replace(/\.png$/, "-detail.png")
+        : place.asset;
+    return `<img class="place-asset place-asset-${size} place-asset-${place.id}" src="${src}" alt="" loading="lazy" decoding="async" />`;
   }
 
   // Places flagged as placeholders show a neutral map pin until bespoke art exists.
