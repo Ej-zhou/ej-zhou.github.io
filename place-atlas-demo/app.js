@@ -1134,13 +1134,30 @@ const places = [
     region: "uk",
     category: "heritage",
     status: "want",
-    coords: [52.2441, 0.7192],
+    coords: [52.244592, 0.721189],
     asset: "assets/bury-st-edmunds-abbey.png",
     initial: "B",
-    tags: ["abbey ruins", "Suffolk", "medieval"],
+    tags: ["English Heritage", "abbey ruins", "Suffolk", "free"],
     season: "Late spring",
     travel: "East Anglia abbey route",
-    note: "A powerful abbey-ruin stop, good for anchoring the Suffolk side of the map."
+    note: "Big, worthwhile ruins in Abbey Gardens. Free entry; parking nearby is charged."
+  },
+  {
+    id: "priors-hall-barn",
+    custodian: "english-heritage",
+    name: "Prior's Hall Barn",
+    english: "Prior's Hall Barn, Widdington",
+    city: "Widdington, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [51.963458, 0.237984],
+    asset: "assets/priors-hall-barn.png",
+    initial: "P",
+    tags: ["English Heritage", "medieval barn", "free"],
+    season: "April to September weekends",
+    travel: "Near Saffron Walden",
+    note: "Free-entry medieval barn near Saffron Walden, open weekends April to September; small car park by the barn."
   },
   {
     id: "castle-acre-priory",
@@ -1185,13 +1202,30 @@ const places = [
     region: "uk",
     category: "heritage",
     status: "want",
-    coords: [52.4146, 0.7509],
+    coords: [52.416126, 0.743064],
     asset: "assets/thetford-priory.png",
     initial: "T",
-    tags: ["priory", "Norfolk", "monastic ruins"],
+    tags: ["English Heritage", "priory", "Norfolk", "free"],
     season: "Soft overcast",
     travel: "East Anglia priory route",
-    note: "A large monastic ruin to keep near the Norfolk and Suffolk cluster."
+    note: "Extensive monastic ruins, free entry, with a small free car park near the entrance."
+  },
+  {
+    id: "thetford-warren-lodge",
+    custodian: "english-heritage",
+    name: "Thetford Warren Lodge",
+    english: "Thetford Warren Lodge",
+    city: "Thetford, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [52.423776, 0.706785],
+    asset: "assets/thetford-warren-lodge.png",
+    initial: "W",
+    tags: ["English Heritage", "warrener's lodge", "free exterior"],
+    season: "Daylight visit",
+    travel: "Pair with Thetford Priory",
+    note: "Free exterior visit, with a small free car park on the access track. Pairs well with Thetford Priory."
   },
   {
     id: "netley-abbey",
@@ -1352,11 +1386,46 @@ const places = [
     category: "heritage",
     status: "want",
     coords: [52.3215, 0.1875],
+    asset: "assets/denny-abbey.png",
     initial: "D",
     tags: ["English Heritage", "abbey", "farmland"],
     season: "Quiet afternoon",
     travel: "Short hop north of Cambridge",
     note: "A small former abbey paired with a farmland museum, easy to fold into a day out."
+  },
+  {
+    id: "isleham-priory-church",
+    custodian: "english-heritage",
+    name: "Isleham Priory Church",
+    english: "Isleham Priory Church",
+    city: "Isleham, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [52.343063, 0.409348],
+    asset: "assets/isleham-priory-church.png",
+    initial: "I",
+    tags: ["English Heritage", "Norman priory church", "free"],
+    season: "Any clear day",
+    travel: "North-east of Cambridge expedition",
+    note: "Free-entry Norman priory church, open daily; interior access involves collecting a key nearby. More of a proper little expedition north-east of Cambridge."
+  },
+  {
+    id: "moulton-packhorse-bridge",
+    custodian: "english-heritage",
+    name: "Moulton Packhorse Bridge",
+    english: "Moulton Packhorse Bridge",
+    city: "Moulton, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [52.25215, 0.48745],
+    asset: "assets/moulton-packhorse-bridge.png",
+    initial: "M",
+    tags: ["English Heritage", "medieval bridge", "free"],
+    season: "Daylight visit",
+    travel: "Near Newmarket short stop",
+    note: "Free daylight-access medieval bridge near Newmarket. Very short visit; no car park, limited street parking."
   },
   {
     id: "duxford-chapel",
@@ -1374,6 +1443,108 @@ const places = [
     season: "Any clear day",
     travel: "By Whittlesford Parkway station",
     note: "A tiny medieval wayside chapel right by the station, an easy add-on to a fen ride."
+  },
+  {
+    id: "houghton-house",
+    custodian: "english-heritage",
+    name: "Houghton House",
+    english: "Houghton House, Ampthill",
+    city: "Ampthill, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [52.041431, -0.489574],
+    asset: "assets/houghton-house.png",
+    initial: "H",
+    tags: ["English Heritage", "ruined mansion", "free"],
+    season: "Clear day",
+    travel: "Ampthill ridge stop",
+    note: "Ruined 17th-century mansion with views; free entry and open daily."
+  },
+  {
+    id: "chichele-college",
+    custodian: "english-heritage",
+    name: "Chichele College",
+    english: "Chichele College, Higham Ferrers",
+    city: "Higham Ferrers, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [52.307163, -0.593366],
+    asset: "assets/chichele-college.png",
+    initial: "C",
+    tags: ["English Heritage", "chantry college", "free garden"],
+    season: "Daylight garden",
+    travel: "Higham Ferrers town stop",
+    note: "Free garden daylight access; interior only for events and exhibitions."
+  },
+  {
+    id: "rushton-triangular-lodge",
+    custodian: "english-heritage",
+    name: "Rushton Triangular Lodge",
+    english: "Rushton Triangular Lodge",
+    city: "Rushton, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [52.437977, -0.767901],
+    asset: "assets/rushton-triangular-lodge.png",
+    initial: "R",
+    tags: ["English Heritage", "Elizabethan folly", "free"],
+    season: "Check opening times",
+    travel: "Near Kettering",
+    note: "Gloriously odd Elizabethan folly near Kettering. Free, but limited opening, currently first and third weekends, 11am-2pm, so check before driving."
+  },
+  {
+    id: "colchester-st-botolphs-priory",
+    custodian: "english-heritage",
+    name: "St Botolph's Priory",
+    english: "Colchester St Botolph's Priory",
+    city: "Colchester, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [51.887398, 0.902199],
+    asset: "assets/colchester-st-botolphs-priory.png",
+    initial: "B",
+    tags: ["English Heritage", "Norman priory", "free"],
+    season: "Any clear day",
+    travel: "Colchester priory and gate walk",
+    note: "Free Norman priory ruins; nearby parking is charged."
+  },
+  {
+    id: "st-johns-abbey-gate",
+    custodian: "english-heritage",
+    name: "St John's Abbey Gate",
+    english: "St John's Abbey Gate, Colchester",
+    city: "Colchester, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [51.888778, 0.898764],
+    asset: "assets/st-johns-abbey-gate.png",
+    initial: "J",
+    tags: ["English Heritage", "abbey gate", "free exterior"],
+    season: "Any clear day",
+    travel: "Combine with St Botolph's Priory",
+    note: "Free exterior view, easy to combine with St Botolph's."
+  },
+  {
+    id: "lexden-earthworks",
+    custodian: "english-heritage",
+    name: "Lexden Earthworks and Bluebottle Grove",
+    english: "Lexden Earthworks and Bluebottle Grove",
+    city: "Colchester, UK",
+    region: "uk",
+    category: "walk",
+    status: "want",
+    coords: [51.890326, 0.851697],
+    asset: "assets/lexden-earthworks.png",
+    initial: "L",
+    tags: ["English Heritage", "Iron Age earthworks", "free"],
+    season: "Daylight walk",
+    travel: "Colchester ancient landscape stop",
+    note: "Free daylight access; Iron Age earthworks rather than buildings."
   },
   {
     id: "aydon-castle",
@@ -2853,7 +3024,18 @@ const statusLabels = {
 // Cambridge anchor for the "Focused" scope.
 const CAMBRIDGE_CENTER = [52.205, 0.12];
 const FOCUS_RADIUS_MILES = 30;
-const FOCUS_ALWAYS = new Set(["stonehenge", "netley-abbey", "thetford-priory"]);
+const FOCUS_ALWAYS = new Set([
+  "stonehenge",
+  "netley-abbey",
+  "thetford-priory",
+  "thetford-warren-lodge",
+  "houghton-house",
+  "chichele-college",
+  "rushton-triangular-lodge",
+  "colchester-st-botolphs-priory",
+  "st-johns-abbey-gate",
+  "lexden-earthworks"
+]);
 // Places to keep out of the "Focused" scope even if they would otherwise qualify.
 const FOCUS_NEVER = new Set(["feilai", "zhakou-white-pagoda", "yuqian", "hz-confucian", "baochu", "huqingyutang", "xiling"]);
 
@@ -2936,11 +3118,12 @@ const DETAIL_VARIANTS = new Set([
   "assets/cangpo-village-architecture.png", "assets/caoe-temple.png",
   "assets/carisbrooke-castle.png", "assets/carlisle-castle.png",
   "assets/castle-acre-priory.png", "assets/castle-rising.png",
-  "assets/chen-ge-residence.png", "assets/chesters-roman-fort.png",
+  "assets/chen-ge-residence.png", "assets/chesters-roman-fort.png", "assets/chichele-college.png",
   "assets/chongren-village-architecture.png", "assets/chuzhou-covered-bridge.png",
   "assets/cicheng-architecture.png", "assets/coggeshall-grange-barn.png",
+  "assets/colchester-st-botolphs-priory.png",
   "assets/corbridge-roman-town.png", "assets/dayu-mausoleum.png",
-  "assets/dongyang-lu-residence.png", "assets/dover-castle.png",
+  "assets/denny-abbey.png", "assets/dongyang-lu-residence.png", "assets/dover-castle.png",
   "assets/dunwich-heath.png", "assets/duxford-chapel.png", "assets/eltham-palace.png",
   "assets/ely-cathedral.png", "assets/farleigh-hungerford-castle.png",
   "assets/feilai-feng.png", "assets/feiying-pagoda.png", "assets/felbrigg-hall.png",
@@ -2951,34 +3134,41 @@ const DETAIL_VARIANTS = new Set([
   "assets/guodong-village-architecture.png", "assets/guoqing-temple.png",
   "assets/guyue-bridge.png", "assets/hangzhou-confucian-temple.png",
   "assets/heidelberg-castle.png", "assets/heyang-village-architecture.png",
-  "assets/horsey-windpump.png", "assets/houghton-mill.png",
+  "assets/horsey-windpump.png", "assets/houghton-house.png", "assets/houghton-mill.png",
   "assets/housesteads-roman-fort.png", "assets/huqingyutang.png",
-  "assets/ickworth-estate.png", "assets/jiayetang-library-xiaolianzhuang.png",
+  "assets/ickworth-estate.png", "assets/isleham-priory-church.png",
+  "assets/jiayetang-library-xiaolianzhuang.png",
   "assets/kenilworth-castle.png", "assets/kings-chapel.png", "assets/kirby-hall.png",
   "assets/kongshi-nanzong-temple.png", "assets/lanercost-priory.png",
   "assets/lanxi-tongzhou-bridge.png", "assets/launceston-castle.png",
-  "assets/lavenham-guildhall.png", "assets/lingyin-statue.png", "assets/liuhe-pagoda.png",
+  "assets/lavenham-guildhall.png", "assets/lexden-earthworks.png",
+  "assets/lingyin-statue.png", "assets/liuhe-pagoda.png",
   "assets/liushi-tihao.png", "assets/longyou-residential-architecture.png",
   "assets/lullingstone-roman-villa.png", "assets/maiden-castle.png",
   "assets/marburg-landgrafenschloss.png", "assets/melford-hall.png",
   "assets/middleham-castle.png", "assets/morston-quay.png", "assets/mos-manor.png",
+  "assets/moulton-packhorse-bridge.png",
   "assets/mount-grace-priory.png", "assets/muchelney-abbey.png",
   "assets/nange-archways.png", "assets/nanxun-zhang-residences.png",
   "assets/netley-abbey.png", "assets/nunney-castle.png", "assets/old-sarum.png",
   "assets/orford-castle.png", "assets/osborne-house.png", "assets/oxburgh-estate.png",
   "assets/paycockes-house.png", "assets/peckover-house.png", "assets/pendennis-castle.png",
   "assets/pevensey-castle.png", "assets/portchester-castle.png",
+  "assets/priors-hall-barn.png",
   "assets/putuoshan-duobao-pagoda.png", "assets/puzhuangsuocheng.png",
   "assets/qiantong-architecture.png", "assets/qingan-guild-hall.png",
   "assets/qiyuan-garden.png", "assets/richmond-castle.png", "assets/rievaulx-abbey.png",
   "assets/rochester-castle.png", "assets/rulong-bridge.png",
+  "assets/rushton-triangular-lodge.png",
   "assets/scarborough-castle.png", "assets/shaoxing-ancient-towpath.png",
   "assets/sheringham-park.png", "assets/shi-prince-mansion.png",
   "assets/silchester-roman-city-walls.png", "assets/siping-village-architecture.png",
   "assets/sizhai-architecture.png", "assets/songyang-yanqing-pagoda.png",
-  "assets/st-mawes-castle.png", "assets/stonehenge.png", "assets/sutton-hoo.png",
+  "assets/st-johns-abbey-gate.png", "assets/st-mawes-castle.png",
+  "assets/stonehenge.png", "assets/sutton-hoo.png",
   "assets/taishun-covered-bridge.png", "assets/taizhou-city-wall.png",
   "assets/tangqi-guangji-bridge.png", "assets/thetford-priory.png",
+  "assets/thetford-warren-lodge.png",
   "assets/tianfeng-pagoda.png", "assets/tianning-temple.png", "assets/tianyi-pavilion.png",
   "assets/tilbury-fort.png", "assets/tintagel-castle.png", "assets/tongji-weir.png",
   "assets/trier-porta-nigra.png", "assets/tynemouth-priory-castle.png",
@@ -3239,8 +3429,37 @@ const custodianLabels = {
   "national-trust": "National Trust"
 };
 
+const placeEpigraphs = {
+  kings: {
+    text: "Where light and shade repose, where music dwells / Lingering...",
+    credit: "William Wordsworth, Inside of King's College Chapel, Cambridge"
+  },
+  ely: {
+    text: "All my life I have loved the sun\nand the colour of honey. Now I long for the dark\nto crouch and soar in; with you, my grave, my cathedral.",
+    credit: "Grey Gowrie, Ely 1948"
+  },
+  "netley-abbey": {
+    text: "Fall'n pile! I ask not what has been thy fate;\nBut when the winds, slow wafted from the main,\nThrough each rent arch, like spirits that complain,\nCome hollow to my ear, I meditate.",
+    credit: "William Lisle Bowles, Netley Abbey"
+  },
+  "duxford-chapel": {
+    text: "And so they breathe, these masks, to each\nSir or Madam\nWho lingers there, and their lively speech\nAffords an interpreter much to teach,\nAs their murmurous accents seem to come\nThence hitheraround in a radiant hum,\nAll day cheerily,\nAll night eerily!",
+    credit: "Thomas Hardy, Voices From Things Growing in a Churchyard"
+  }
+};
+
+// Only the selection itself (or its visited state) should replay the detail
+// panel's entrance animation; unrelated re-renders (search, filters) keep it
+// still. `undefined` forces the very first paint.
+let lastDetailKey;
+
 function renderDetail(activePlace) {
+  const detailKey = activePlace ? `${activePlace.id}:${activePlace.status}` : null;
+  if (detailKey === lastDetailKey) return;
+  lastDetailKey = detailKey;
+
   if (!activePlace) {
+    detailPanel.className = "detail-panel";
     detailPanel.innerHTML = `
       <div class="detail-empty">
         <span class="detail-empty-mark">${compassMark}</span>
@@ -3252,18 +3471,36 @@ function renderDetail(activePlace) {
   }
 
   const isVisited = activePlace.status === "visited";
+  const placeEpigraph = placeEpigraphs[activePlace.id];
+  const glyph = activePlace.initial || [...activePlace.name][0] || "";
+  const english =
+    activePlace.english && activePlace.english !== activePlace.name ? activePlace.english : "";
+  detailPanel.className = `detail-panel detail-place-${activePlace.id}`;
   detailPanel.innerHTML = `
-    <div class="photo-strip ${activePlace.category}" aria-hidden="true">
+    <div class="photo-strip ${activePlace.category} detail-place-${activePlace.id}" aria-hidden="true">
+      <span class="stage-glyph">${glyph}</span>
+      <span class="stage-status">
+        <span class="status-dot ${activePlace.status}"></span>${statusLabels[activePlace.status]}
+      </span>
       <div class="detail-model-wrap">
         ${modelMarkup(activePlace, "detail")}
       </div>
     </div>
     <div class="detail-copy">
       <div class="detail-head">
+        ${english ? `<p class="detail-eyebrow">${english}</p>` : ""}
         <h3>${activePlace.name}</h3>
         <p class="detail-location">${formatLocation(activePlace)}</p>
         ${activePlace.custodian ? `<span class="custodian-badge ${activePlace.custodian}">${custodianLabels[activePlace.custodian]}</span>` : ""}
       </div>
+      ${
+        placeEpigraph
+          ? `<figure class="detail-epigraph">
+              <blockquote>${placeEpigraph.text}</blockquote>
+              <cite>${placeEpigraph.credit}</cite>
+            </figure>`
+          : ""
+      }
       <div class="detail-foot">
         <button class="visit-toggle ${isVisited ? "is-visited" : ""}" type="button" data-visit-toggle aria-pressed="${isVisited}">
           <span class="visit-check" aria-hidden="true">${isVisited ? "✓" : ""}</span>

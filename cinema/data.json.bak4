@@ -22,7 +22,7 @@
       "year": 2019,
       "link": "https://en.wikipedia.org/wiki/Dwelling_in_the_Fuchun_Mountains_(film)",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Only Lovers Left Alive",
@@ -850,7 +850,7 @@
       "year": 2013,
       "link": "",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "The Double Life of Véronique",
@@ -898,7 +898,7 @@
       "year": 2018,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "A Short Film About Killing",
@@ -986,10 +986,10 @@
     },
     {
       "name": "Moulin",
-      "place": "Lyon 7e (Gestapo HQ)",
-      "display_place": "École de santé militaire, av. Berthelot, Lyon 7e (1943 Gestapo HQ)",
-      "lat": 45.7484,
-      "lon": 4.8404,
+      "place": "Lyon",
+      "display_place": "Lyon, France (1943; Gestapo HQ under Klaus Barbie)",
+      "lat": 45.764,
+      "lon": 4.835,
       "director": "László Nemes",
       "year": 2026,
       "link": "",
@@ -1130,10 +1130,10 @@
     },
     {
       "name": "A Woman’s Life",
-      "place": "Villeurbanne",
-      "display_place": "Villeurbanne / Lyon suburbs, Auvergne-Rhône-Alpes",
-      "lat": 45.7666,
-      "lon": 4.8794,
+      "place": "Lyon",
+      "display_place": "Lyon area, Auvergne-Rhône-Alpes, France",
+      "lat": 45.764,
+      "lon": 4.835,
       "director": "Charline Bourgeois-Tacquet",
       "year": 2026,
       "link": "",
@@ -1234,7 +1234,7 @@
       "year": 2015,
       "link": "",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "4 Months, 3 Weeks and 2 Days",
@@ -1246,7 +1246,7 @@
       "year": 2007,
       "link": "",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Leviathan",
@@ -1258,7 +1258,7 @@
       "year": 2014,
       "link": "",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Shoplifters",
@@ -1270,7 +1270,7 @@
       "year": 2018,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Her Private Hell",
@@ -1342,7 +1342,7 @@
       "year": 2016,
       "link": "",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Trainspotting",
@@ -1414,7 +1414,7 @@
       "year": 2016,
       "link": "",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Sex, Lies, and Videotape",
@@ -2446,7 +2446,7 @@
       "year": 2023,
       "link": "https://movie.douban.com/subject/27042464/",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "My Mother",
@@ -2643,9 +2643,9 @@
     {
       "name": "A New Old Play",
       "place": "Chengdu opera",
-      "display_place": "Sichuan Opera milieu, Chengdu (textile mill soundstage)",
-      "lat": 30.6655,
-      "lon": 104.0648,
+      "display_place": "Chengdu opera house, Sichuan, China (Qiu Jiongjiong)",
+      "lat": 30.5728,
+      "lon": 104.0668,
       "director": "Qiu Jiongjiong",
       "year": 2021,
       "link": "https://movie.douban.com/subject/27305997/",
@@ -2882,10 +2882,10 @@
     },
     {
       "name": "Love Me Tender",
-      "place": "Arcachon",
-      "display_place": "Arcachon / Southwest France (custody dispute drama)",
-      "lat": 44.6586,
-      "lon": -1.1736,
+      "place": "Bordeaux / Sud-Ouest (Cazenave Cambet)",
+      "display_place": "Bordeaux / South-West France (Cazenave Cambet's region — placeholder)",
+      "lat": 44.8378,
+      "lon": -0.5792,
       "director": "Anna Cazenave Cambet",
       "year": 2025,
       "link": "https://movie.douban.com/subject/37040000/",
@@ -2895,14 +2895,14 @@
     {
       "name": "Resurrection (狂野时代)",
       "place": "Chongqing, China",
-      "display_place": "Jiefangbei alleyways, central Chongqing (30-min unbroken NYE take)",
-      "lat": 29.5565,
-      "lon": 106.5784,
+      "display_place": "Chongqing, China (Bi Gan)",
+      "lat": 29.563,
+      "lon": 106.5516,
       "director": "Bi Gan",
       "year": 2025,
       "link": "https://movie.douban.com/subject/35416174/",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Alpha",
@@ -3334,7 +3334,7 @@
       "year": 2024,
       "link": "https://movie.douban.com/subject/36289263/",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "The Substance",
@@ -3418,7 +3418,7 @@
       "year": 2019,
       "link": "https://movie.douban.com/subject/27668250/",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Long Day's Journey Into Night (地球最后的夜晚)",
@@ -3430,7 +3430,7 @@
       "year": 2018,
       "link": "https://movie.douban.com/subject/26633257/",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Oppenheimer",
@@ -3562,7 +3562,7 @@
       "year": 2023,
       "link": "https://movie.douban.com/subject/35672437/",
       "checked": true,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "The Rocky Horror Picture Show",
@@ -5786,10 +5786,10 @@
     },
     {
       "name": "Paper Tiger",
-      "place": "Rego Park, Queens",
-      "display_place": "Rego Park, Queens (1986 Jewish family; Russian mob)",
-      "lat": 40.724,
-      "lon": -73.8624,
+      "place": "Queens",
+      "display_place": "Queens, New York City (1986; Russian mob)",
+      "lat": 40.7282,
+      "lon": -73.7949,
       "director": "James Gray",
       "year": 2026,
       "link": "",
@@ -5798,10 +5798,10 @@
     },
     {
       "name": "The Electric Kiss",
-      "place": "Place de la Nation",
-      "display_place": "Foire du Trône / Place de la Nation, Paris, 1928 (carnival)",
-      "lat": 48.8484,
-      "lon": 2.3957,
+      "place": "Paris",
+      "display_place": "Paris, 1928 (carnival; \"Vénus électrique\")",
+      "lat": 48.8566,
+      "lon": 2.3522,
       "director": "Pierre Salvadori",
       "year": 2026,
       "link": "",
@@ -6002,10 +6002,10 @@
     },
     {
       "name": "Vertiginous",
-      "place": "Belleville (Dupieux studio area)",
-      "display_place": "Y2K video-game simulation (motion-capture; pinned to Belleville/NE Paris animation district)",
-      "lat": 48.8718,
-      "lon": 2.3789,
+      "place": "Simulated world",
+      "display_place": "Y2K video-game simulation (motion-capture animation)",
+      "lat": 48.8566,
+      "lon": 2.3522,
       "director": "Quentin Dupieux",
       "year": 2026,
       "link": "",
@@ -6058,31 +6058,31 @@
       "year": 2025,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Left-Handed Girl",
-      "place": "Shilin Night Market",
-      "display_place": "Shilin Night Market area, Taipei (noodle stand)",
-      "lat": 25.0883,
-      "lon": 121.5249,
+      "place": "Taipei night market",
+      "display_place": "Taipei night markets (single mother & noodle stand)",
+      "lat": 25.033,
+      "lon": 121.5654,
       "director": "Shih-Ching Tsou",
       "year": 2025,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Girl on Edge (花漾少女杀人事件)",
-      "place": "Heilongjiang skating hall, Harbin",
-      "display_place": "Harbin skating hall (figure-skating psychodrama)",
-      "lat": 45.7732,
-      "lon": 126.6608,
+      "place": "Harbin",
+      "display_place": "Harbin figure-skating world (Huayang Skating Centre)",
+      "lat": 45.8038,
+      "lon": 126.534,
       "director": "Zhou Jinghao",
       "year": 2025,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Black Dog (狗阵)",
@@ -6094,19 +6094,19 @@
       "year": 2024,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "She's Got No Name (酱园弄)",
-      "place": "Hongkou (Jiangyuan Lane)",
-      "display_place": "Jiangyuan Lane, Hongkou, 1940s Shanghai (former Japanese concession)",
-      "lat": 31.2649,
-      "lon": 121.4844,
+      "place": "1940s Shanghai",
+      "display_place": "Jiang-yuan-long, 1940s Shanghai",
+      "lat": 31.2304,
+      "lon": 121.4737,
       "director": "Peter Chan",
       "year": 2024,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Twilight of the Warriors: Walled In (九龙城寨之围城)",
@@ -6118,19 +6118,19 @@
       "year": 2024,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "An Unfinished Film (一部未完成的电影)",
-      "place": "Wuchang, Wuhan (Jan 2020)",
-      "display_place": "Hotel in Wuchang, Wuhan, January 2020 (Covid lockdown)",
-      "lat": 30.55,
-      "lon": 114.33,
+      "place": "Wuhan (Jan 2020)",
+      "display_place": "Hotel near Wuhan, January 2020 (Covid lockdown)",
+      "lat": 30.5928,
+      "lon": 114.3055,
       "director": "Lou Ye",
       "year": 2024,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Blue Sun Palace (蓝色太阳宫)",
@@ -6142,7 +6142,7 @@
       "year": 2024,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Mongrel (白衣苍狗)",
@@ -6154,7 +6154,7 @@
       "year": 2024,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Only the River Flows (河边的错误)",
@@ -6166,7 +6166,7 @@
       "year": 2023,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Man in Black (黑衣人)",
@@ -6178,7 +6178,7 @@
       "year": 2023,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "A Song Sung Blue (小白船)",
@@ -6190,43 +6190,43 @@
       "year": 2023,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Streetwise (街娃儿)",
-      "place": "Zhenwu (fictional Sichuan town)",
-      "display_place": "Zhenwu, southern Sichuan, 2004 (debt-collector noir; shot in Chongqing)",
-      "lat": 29.3593,
-      "lon": 104.7785,
+      "place": "Zhenwu, Sichuan (2004)",
+      "display_place": "Zhenwu town, Sichuan, 2004 (shot in Chongqing; debt-collector noir)",
+      "lat": 29.563,
+      "lon": 106.5516,
       "director": "Na Jiazuo",
       "year": 2021,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Are You Lonesome Tonight? (热带往事)",
-      "place": "Kaiping (filmed)",
-      "display_place": "Kaiping, Guangdong (filmed); fictional \"Yuexin\" 1997 summer",
-      "lat": 22.3852,
-      "lon": 112.6981,
+      "place": "Guangzhou",
+      "display_place": "Guangzhou summer (hit-and-run noir)",
+      "lat": 23.1291,
+      "lon": 113.2644,
       "director": "Wen Shipei",
       "year": 2021,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Revolution of Our Times (时代革命)",
-      "place": "Admiralty / Central, HK",
-      "display_place": "Admiralty & Central, Hong Kong, 2019 (Anti-ELAB documentary)",
-      "lat": 22.2811,
-      "lon": 114.1659,
+      "place": "Hong Kong (2019 protests)",
+      "display_place": "Hong Kong, 2019 (Anti-ELAB movement documentary)",
+      "lat": 22.3193,
+      "lon": 114.1694,
       "director": "Kiwi Chow",
       "year": 2021,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Ripples of Life (永安镇故事集)",
@@ -6238,7 +6238,7 @@
       "year": 2021,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Venus by Water (水边维纳斯)",
@@ -6250,7 +6250,7 @@
       "year": 2021,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Striding into the Wind (野马分鬃)",
@@ -6262,7 +6262,7 @@
       "year": 2020,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Summer of Changsha (六欲天)",
@@ -6274,7 +6274,7 @@
       "year": 2019,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Nina Wu (灼人秘密)",
@@ -6286,19 +6286,19 @@
       "year": 2019,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "To Live to Sing (活着唱着)",
-      "place": "Wenjiang, Chengdu outskirts",
+      "place": "Chengdu outskirts",
       "display_place": "Chengdu outskirts (Sichuan Opera troupe facing demolition)",
-      "lat": 30.6925,
-      "lon": 103.8331,
+      "lat": 30.5728,
+      "lon": 104.0668,
       "director": "Johnny Ma",
       "year": 2019,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Ash Is Purest White (江湖儿女)",
@@ -6310,7 +6310,7 @@
       "year": 2018,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Dead Souls (死灵魂)",
@@ -6322,7 +6322,7 @@
       "year": 2018,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "The Pluto Moment (冥王星时刻)",
@@ -6334,7 +6334,7 @@
       "year": 2018,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Walking Past the Future (路过未来)",
@@ -6346,7 +6346,7 @@
       "year": 2017,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Last Laugh (喜丧)",
@@ -6358,7 +6358,7 @@
       "year": 2017,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "The Assassin (刺客聂隐娘)",
@@ -6370,19 +6370,19 @@
       "year": 2015,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Mountains May Depart (山河故人)",
-      "place": "Fenyang (Wenfeng Pagoda)",
-      "display_place": "Fenyang, Shanxi (Wenfeng Pagoda) & Australia (1999/2014/2025 triptych)",
-      "lat": 37.2615,
-      "lon": 111.7745,
+      "place": "Fenyang, Shanxi",
+      "display_place": "Fenyang, Shanxi & Australia (1999/2014/2025 triptych)",
+      "lat": 37.27,
+      "lon": 111.79,
       "director": "Jia Zhangke",
       "year": 2015,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Coming Home (归来)",
@@ -6394,43 +6394,43 @@
       "year": 2014,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Fantasia (幻想曲)",
-      "place": "Nan'an, Chongqing",
-      "display_place": "Nan'an, Chongqing (low-income family; father with leukemia)",
-      "lat": 29.523,
-      "lon": 106.5635,
+      "place": "Chongqing",
+      "display_place": "Chongqing (low-income family, father with leukemia)",
+      "lat": 29.563,
+      "lon": 106.5516,
       "director": "Wang Chao",
       "year": 2014,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "A Touch of Sin (天注定)",
-      "place": "Wujinshan / Yangcheng, Shanxi",
-      "display_place": "Wujinshan, Yangcheng County, Shanxi (miner Dahai vignette; 4-part film)",
-      "lat": 35.4811,
-      "lon": 112.4042,
+      "place": "Shanxi (& 3 other locales)",
+      "display_place": "Four-vignette violence across China (Shanxi, Chongqing, Hubei, Dongguan)",
+      "lat": 37.27,
+      "lon": 111.79,
       "director": "Jia Zhangke",
       "year": 2013,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Blind Detective (盲探)",
-      "place": "Mongkok, Kowloon",
-      "display_place": "Mongkok, Hong Kong (blind ex-detective + cold cases)",
-      "lat": 22.3185,
-      "lon": 114.1707,
+      "place": "Hong Kong",
+      "display_place": "Hong Kong (blind ex-detective + cold cases)",
+      "lat": 22.3193,
+      "lon": 114.1694,
       "director": "Johnnie To",
       "year": 2013,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Bends (过界)",
@@ -6442,7 +6442,7 @@
       "year": 2013,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Ilo Ilo (爸妈不在家)",
@@ -6454,31 +6454,31 @@
       "year": 2013,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Mystery (浮城谜事)",
-      "place": "Hankou, Wuhan",
-      "display_place": "Hankou, Wuhan (bigamy thriller)",
+      "place": "Wuhan",
+      "display_place": "Wuhan (bigamy thriller)",
       "lat": 30.5928,
-      "lon": 114.2792,
+      "lon": 114.3055,
       "director": "Lou Ye",
       "year": 2012,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Dangerous Liaisons (危险关系)",
-      "place": "The Bund, Shanghai",
-      "display_place": "The Bund, 1930s Shanghai (Laclos adaptation)",
-      "lat": 31.2397,
-      "lon": 121.4905,
+      "place": "1930s Shanghai",
+      "display_place": "1930s Shanghai (Laclos adaptation)",
+      "lat": 31.2304,
+      "lon": 121.4737,
       "director": "Hur Jin-ho",
       "year": 2012,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Dragon / Wu Xia (武侠)",
@@ -6490,7 +6490,7 @@
       "year": 2011,
       "link": "",
       "checked": false,
-      "cannes": false
+      "cannes": true
     },
     {
       "name": "Sauna on the Moon (嫦娥)",
@@ -6502,55 +6502,7 @@
       "year": 2011,
       "link": "",
       "checked": false,
-      "cannes": false
-    },
-    {
-      "name": "Das Boot",
-      "place": "La Rochelle U-boat base",
-      "display_place": "La Rochelle U-boat base & North Atlantic patrol (1941; U-96)",
-      "lat": 46.1591,
-      "lon": -1.1517,
-      "director": "Wolfgang Petersen",
-      "year": 1981,
-      "link": "",
-      "checked": false,
-      "cannes": false
-    },
-    {
-      "name": "Run Lola Run (Lola rennt)",
-      "place": "Berlin (Charlottenburg, Bolle supermarket)",
-      "display_place": "Berlin-Charlottenburg: former Bolle supermarket (Tauroggener / Osnabrücker Str.), Manni & Lola's robbery site",
-      "lat": 52.5254,
-      "lon": 13.3067,
-      "director": "Tom Tykwer",
-      "year": 1998,
-      "link": "",
-      "checked": false,
-      "cannes": false
-    },
-    {
-      "name": "Alice in the Cities (Alice in den Städten)",
-      "place": "Wuppertal (Schwebebahn)",
-      "display_place": "Wuppertal Schwebebahn & Ruhr (after NYC/Amsterdam road trip)",
-      "lat": 51.2562,
-      "lon": 7.1508,
-      "director": "Wim Wenders",
-      "year": 1974,
-      "link": "",
-      "checked": false,
-      "cannes": false
-    },
-    {
-      "name": "Fitzcarraldo",
-      "place": "Iquitos / Camisea, Peru",
-      "display_place": "Iquitos opera dream & Camisea-Ucayali isthmus (steamship over the mountain)",
-      "lat": -3.7437,
-      "lon": -73.2516,
-      "director": "Werner Herzog",
-      "year": 1982,
-      "link": "",
-      "checked": false,
-      "cannes": false
+      "cannes": true
     }
   ],
   "skipped": []
