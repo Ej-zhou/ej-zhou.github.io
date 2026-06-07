@@ -1743,6 +1743,216 @@ const places = [
     travel: "Shropshire Roman route",
     note: "A Roman city ruin with enough surviving masonry to read clearly on the map."
   },
+  {
+    id: "fez",
+    placeholder: true,
+    name: "Fès",
+    english: "Fez",
+    city: "Fez",
+    region: "morocco",
+    category: "heritage",
+    status: "want",
+    coords: [34.0631, -4.9778],
+    tags: ["medina", "Morocco", "old city"],
+    season: "Spring",
+    travel: "Morocco trip",
+    note: "Placeholder for the Fez medina. Add a landmark illustration later."
+  },
+  {
+    id: "tangier",
+    placeholder: true,
+    name: "Tangier",
+    english: "Tangier",
+    city: "Tangier",
+    region: "morocco",
+    category: "heritage",
+    status: "want",
+    coords: [35.7595, -5.834],
+    tags: ["strait", "Morocco", "port"],
+    season: "Spring",
+    travel: "Morocco trip",
+    note: "Placeholder for Tangier, the port at the edge of the strait. Add art later."
+  },
+  {
+    id: "rabat",
+    placeholder: true,
+    name: "Rabat",
+    english: "Rabat",
+    city: "Rabat",
+    region: "morocco",
+    category: "heritage",
+    status: "want",
+    coords: [34.0209, -6.8416],
+    tags: ["capital", "Morocco", "kasbah"],
+    season: "Spring",
+    travel: "Morocco trip",
+    note: "Placeholder for Rabat, with its kasbah above the river. Add art later."
+  },
+  {
+    id: "casablanca",
+    placeholder: true,
+    name: "Casablanca",
+    english: "Casablanca",
+    city: "Casablanca",
+    region: "morocco",
+    category: "heritage",
+    status: "want",
+    coords: [33.5731, -7.5898],
+    tags: ["coast", "Morocco", "city"],
+    season: "Spring",
+    travel: "Morocco trip",
+    note: "Placeholder for Casablanca on the Atlantic coast. Add art later."
+  },
+  {
+    id: "cannes-palais",
+    placeholder: true,
+    name: "Palais des Festivals",
+    english: "Festival Palace, Cannes",
+    city: "Cannes",
+    region: "france",
+    category: "heritage",
+    status: "want",
+    coords: [43.5507, 7.0174],
+    tags: ["cinema", "festival", "Cannes"],
+    season: "Late spring",
+    travel: "Côte d'Azur trip",
+    note: "The film palace and red-carpet steps that host the Cannes Film Festival."
+  },
+  {
+    id: "notre-dame-paris",
+    placeholder: true,
+    name: "Notre-Dame de Paris",
+    english: "Notre-Dame Cathedral",
+    city: "Paris",
+    region: "france",
+    category: "heritage",
+    status: "want",
+    coords: [48.853, 2.3499],
+    tags: ["gothic", "cathedral", "Paris"],
+    season: "Autumn",
+    travel: "Paris trip",
+    note: "The gothic cathedral on the Île de la Cité, reopened after restoration."
+  },
+  {
+    id: "st-pauls",
+    placeholder: true,
+    name: "St Paul's Cathedral",
+    english: "St Paul's Cathedral",
+    city: "London, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [51.5138, -0.0984],
+    tags: ["dome", "Wren", "London"],
+    season: "Any",
+    travel: "London day",
+    note: "Wren's domed cathedral above the City of London."
+  },
+  {
+    id: "westminster-cathedral",
+    placeholder: true,
+    name: "Westminster Cathedral",
+    english: "Westminster Cathedral",
+    city: "London, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [51.4961, -0.1396],
+    tags: ["Byzantine", "Catholic", "London"],
+    season: "Any",
+    travel: "London day",
+    note: "The striped Neo-Byzantine Catholic cathedral near Victoria."
+  },
+  {
+    id: "barbican",
+    placeholder: true,
+    name: "Barbican",
+    english: "Barbican Centre",
+    city: "London, UK",
+    region: "uk",
+    category: "walk",
+    status: "want",
+    coords: [51.52, -0.0937],
+    tags: ["brutalist", "architecture", "London"],
+    season: "Any",
+    travel: "London day",
+    note: "Brutalist estate and arts centre, best explored along the highwalks."
+  },
+  {
+    id: "edinburgh-castle",
+    placeholder: true,
+    name: "Edinburgh Castle",
+    english: "Edinburgh Castle",
+    city: "Edinburgh, UK",
+    region: "uk",
+    category: "heritage",
+    status: "want",
+    coords: [55.9486, -3.1999],
+    tags: ["castle", "Scotland", "Edinburgh"],
+    season: "Summer",
+    travel: "Scotland trip",
+    note: "The castle on the rock above Edinburgh's old town."
+  },
+  {
+    id: "stephansdom",
+    placeholder: true,
+    name: "Stephansdom",
+    english: "St. Stephen's Cathedral, Vienna",
+    city: "Wien",
+    region: "austria",
+    category: "heritage",
+    status: "want",
+    coords: [48.2085, 16.3731],
+    tags: ["gothic", "cathedral", "Vienna"],
+    season: "Winter",
+    travel: "Vienna trip",
+    note: "Vienna's gothic cathedral with its patterned tiled roof."
+  },
+  {
+    id: "brandenburg-gate",
+    placeholder: true,
+    name: "Brandenburger Tor",
+    english: "Brandenburg Gate",
+    city: "Berlin, Germany",
+    region: "germany",
+    category: "heritage",
+    status: "want",
+    coords: [52.5163, 13.3777],
+    tags: ["neoclassical", "landmark", "Berlin"],
+    season: "Any",
+    travel: "Berlin trip",
+    note: "The neoclassical gate at the heart of Berlin."
+  },
+  {
+    id: "nyhavn",
+    placeholder: true,
+    name: "Nyhavn",
+    english: "Nyhavn",
+    city: "Copenhagen",
+    region: "denmark",
+    category: "walk",
+    status: "want",
+    coords: [55.6797, 12.5912],
+    tags: ["harbour", "waterfront", "Copenhagen"],
+    season: "Summer",
+    travel: "Copenhagen trip",
+    note: "The colourful canal-side harbour front in central Copenhagen."
+  },
+  {
+    id: "gdansk-st-mary",
+    placeholder: true,
+    name: "Bazylika Mariacka",
+    english: "St. Mary's Church, Gdańsk",
+    city: "Gdańsk",
+    region: "poland",
+    category: "heritage",
+    status: "want",
+    coords: [54.3494, 18.6531],
+    tags: ["brick gothic", "church", "Gdańsk"],
+    season: "Summer",
+    travel: "Baltic trip",
+    note: "One of the largest brick churches in the world, in Gdańsk's old town."
+  },
 ];
 
 const state = {
@@ -1792,7 +2002,7 @@ function setVisited(id, visited) {
 const regionFocus = {
   china: { filter: (place) => place.city.startsWith("Hangzhou") },
   uk: { view: { center: [52.205, 0.12], zoom: 11 } },
-  germany: { filter: (place) => place.region === "germany" }
+  germany: { view: { center: [49.9, 8.0], zoom: 7 } }
 };
 
 const placeList = document.querySelector("#placeList");
@@ -1924,6 +2134,17 @@ function renderList(visiblePlaces) {
 function modelMarkup(place, size = "marker") {
   if (place.asset) {
     return `<img class="place-asset place-asset-${size} place-asset-${place.id}" src="${place.asset}" alt="" />`;
+  }
+
+  // Places flagged as placeholders show a neutral map pin until bespoke art exists.
+  if (place.placeholder) {
+    return `
+      <svg class="place-model place-model-${size}" viewBox="0 0 96 96" aria-hidden="true">
+        <g class="model-shadow"><ellipse cx="48" cy="84" rx="14" ry="4" /></g>
+        <path class="model-roof slate" d="M48 22 C35 22 26 32 26 45 C26 61 48 80 48 80 C48 80 70 61 70 45 C70 32 61 22 48 22 Z" />
+        <circle class="model-wall pale" cx="48" cy="44" r="9" />
+      </svg>
+    `;
   }
 
   const models = {
