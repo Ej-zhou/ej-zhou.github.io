@@ -580,24 +580,41 @@ h2 {
 .place-model-detail {
   position: relative;
   z-index: 3;
-  width: min(250px, 78%);
+  width: min(390px, 118%);
   height: auto;
-  margin-bottom: -26px;
-  filter: drop-shadow(0 24px 28px rgba(23, 33, 29, 0.28));
+  margin: 0 -34px -78px;
+  filter:
+    drop-shadow(0 34px 34px rgba(23, 33, 29, 0.34))
+    drop-shadow(0 2px 0 rgba(255, 253, 247, 0.72));
 }
 
 .place-asset-detail {
   position: relative;
   z-index: 3;
-  width: min(280px, 84%);
+  width: min(430px, 128%);
   height: auto;
-  margin-bottom: -26px;
-  filter: drop-shadow(0 26px 30px rgba(23, 33, 29, 0.32));
+  margin: 0 -42px -86px;
+  filter:
+    drop-shadow(0 38px 38px rgba(23, 33, 29, 0.38))
+    drop-shadow(0 2px 0 rgba(255, 253, 247, 0.78));
 }
 
 .place-asset-kings.place-asset-detail,
 .place-asset-ely.place-asset-detail {
-  width: min(340px, 94%);
+  width: min(455px, 124%);
+  margin: 0 -32px -60px;
+}
+
+.detail-place-kings .place-asset-detail {
+  transform: translateY(10px) rotate(-1.4deg);
+  transform-origin: 50% 78%;
+}
+
+.detail-place-ely .place-asset-detail {
+  width: min(430px, 118%);
+  margin-bottom: -54px;
+  transform: translateY(4px) rotate(1deg);
+  transform-origin: 50% 78%;
 }
 
 .model-shadow {
@@ -732,18 +749,23 @@ h2 {
   grid-template-rows: auto 1fr;
   min-height: calc(100vh - 32px);
   border-radius: 8px;
-  overflow: hidden;
+  overflow: visible;
+  isolation: isolate;
 }
 
 .photo-strip {
   position: relative;
   z-index: 2;
+  isolation: isolate;
   display: grid;
   place-items: center;
-  min-height: 288px;
+  min-height: clamp(280px, 36vh, 330px);
   overflow: visible;
+  border-radius: 8px 8px 0 0;
+  animation: stage-rise 0.55s ease both;
   background:
-    radial-gradient(115% 70% at 50% 122%, rgba(23, 33, 29, 0.22), transparent 62%),
+    radial-gradient(110% 54% at 50% 108%, rgba(23, 33, 29, 0.32), transparent 64%),
+    radial-gradient(68% 56% at 50% 42%, rgba(255, 253, 247, 0.28), transparent 66%),
     radial-gradient(78% 58% at 72% 12%, rgba(255, 255, 255, 0.42), transparent 56%),
     linear-gradient(162deg, var(--brick), var(--river));
 }
@@ -777,15 +799,18 @@ h2 {
 
 .detail-model-wrap {
   position: relative;
+  z-index: 2;
   display: grid;
   width: 100%;
   height: 100%;
-  min-height: 288px;
+  min-height: clamp(280px, 36vh, 330px);
+  padding-bottom: 66px;
   place-items: end center;
   overflow: visible;
+  animation: model-rise 0.8s cubic-bezier(0.16, 0.78, 0.22, 1) both 0.12s;
   background:
-    radial-gradient(58% 24% at 50% 93%, rgba(23, 33, 29, 0.26), transparent 72%),
-    radial-gradient(circle at 50% 58%, rgba(255, 253, 247, 0.26), transparent 36%);
+    radial-gradient(74% 24% at 50% 92%, rgba(23, 33, 29, 0.34), transparent 72%),
+    radial-gradient(circle at 50% 54%, rgba(255, 253, 247, 0.32), transparent 39%);
 }
 
 .detail-copy {
@@ -799,9 +824,11 @@ h2 {
 }
 
 .detail-head h3 {
-  margin: 0 0 13px;
+  position: relative;
+  margin: 0 0 14px;
+  padding-bottom: 16px;
   font-family: Georgia, "Songti SC", "STSong", "Times New Roman", serif;
-  font-size: clamp(2rem, 2.4vw, 2.55rem);
+  font-size: clamp(2.05rem, 2.5vw, 2.6rem);
   line-height: 1.04;
   letter-spacing: -0.01em;
   color: var(--ink);
@@ -846,6 +873,58 @@ h2 {
 .custodian-badge.national-trust {
   color: #3a5a32;
   background: rgba(58, 90, 50, 0.08);
+}
+
+.detail-epigraph {
+  position: relative;
+  margin: -4px 0 2px;
+  padding: 2px 0 0 18px;
+}
+
+.detail-epigraph::before {
+  content: "\201C";
+  position: absolute;
+  top: -20px;
+  left: -4px;
+  color: rgba(173, 95, 69, 0.34);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4.6rem;
+  line-height: 1;
+}
+
+.detail-epigraph blockquote {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Songti SC", "STSong", "Times New Roman", serif;
+  font-size: clamp(1rem, 1.25vw, 1.28rem);
+  font-style: italic;
+  line-height: 1.22;
+}
+
+.detail-epigraph cite {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.detail-epigraph cite::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  flex: 0 0 auto;
+  background: rgba(173, 95, 69, 0.52);
 }
 
 .detail-foot {
@@ -1005,6 +1084,26 @@ h2 {
 
   .photo-strip {
     min-height: 100%;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .detail-model-wrap {
+    min-height: 300px;
+  }
+
+  .place-model-detail {
+    width: min(330px, 132%);
+    margin: 0 -34px -36px;
+  }
+
+  .place-asset-detail {
+    width: min(360px, 140%);
+    margin: 0 -44px -42px;
+  }
+
+  .place-asset-kings.place-asset-detail,
+  .place-asset-ely.place-asset-detail {
+    width: min(430px, 152%);
   }
 }
 
@@ -1035,5 +1134,160 @@ h2 {
 
   .photo-strip {
     min-height: 170px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .detail-model-wrap {
+    min-height: 210px;
+  }
+
+  .place-model-detail {
+    width: min(300px, 112%);
+    margin: 0 -18px -48px;
+  }
+
+  .place-asset-detail {
+    width: min(330px, 118%);
+    margin: 0 -22px -54px;
+  }
+
+  .place-asset-kings.place-asset-detail,
+  .place-asset-ely.place-asset-detail {
+    width: min(380px, 126%);
+  }
+}
+
+/* ============================================================
+   Detail panel: dramatic stage presentation
+   ============================================================ */
+
+/* Cinematic vignette framing the stage: above the glyph + contour rings,
+   below the landmark, so the model stays bright and edge-lit. */
+.photo-strip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(135% 108% at 50% 44%, transparent 48%, rgba(8, 12, 9, 0.5) 100%);
+}
+
+/* Oversized place glyph watermark behind the landmark, like a faint seal. */
+.stage-glyph {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  transform: translate(-50%, -60%);
+  font-family: Georgia, "Songti SC", "STSong", "Times New Roman", serif;
+  font-weight: 700;
+  font-size: clamp(8rem, 18vw, 13rem);
+  line-height: 1;
+  color: rgba(255, 250, 241, 0.14);
+  text-shadow: 0 6px 44px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  animation: glyph-in 1s ease both 0.06s;
+}
+
+/* Floating status chip on the stage. */
+.stage-status {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 13px 6px 11px;
+  border-radius: 999px;
+  background: rgba(255, 253, 247, 0.92);
+  color: var(--ink);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 22px rgba(10, 14, 10, 0.32);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  animation: tag-in 0.5s ease both 0.3s;
+}
+
+.stage-status .status-dot {
+  width: 8px;
+  height: 8px;
+}
+
+/* English / transliterated name as an italic serif overline. */
+.detail-eyebrow {
+  margin: 0 0 10px;
+  font-family: Georgia, "Songti SC", "STSong", "Times New Roman", serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+
+/* Gold accent rule under the title. */
+.detail-head h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--ochre), var(--brick));
+}
+
+/* Staggered copy reveal beneath the stage. */
+.detail-head {
+  animation: copy-in 0.55s ease both 0.2s;
+}
+
+.detail-epigraph {
+  animation: copy-in 0.55s ease both 0.28s;
+}
+
+.detail-foot {
+  animation: copy-in 0.55s ease both 0.36s;
+}
+
+@keyframes stage-rise {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes glyph-in {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.82); }
+  to { opacity: 1; transform: translate(-50%, -60%) scale(1); }
+}
+
+@keyframes tag-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes model-rise {
+  from { opacity: 0; transform: translateY(40px) scale(0.9); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes copy-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-strip,
+  .stage-glyph,
+  .stage-status,
+  .detail-model-wrap,
+  .detail-head,
+  .detail-epigraph,
+  .detail-foot {
+    animation: none;
   }
 }
