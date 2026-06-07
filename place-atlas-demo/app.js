@@ -2133,7 +2133,7 @@ function renderList(visiblePlaces) {
 
 function modelMarkup(place, size = "marker") {
   if (place.asset) {
-    return `<img class="place-asset place-asset-${size} place-asset-${place.id}" src="${place.asset}" alt="" />`;
+    return `<img class="place-asset place-asset-${size} place-asset-${place.id}" src="${place.asset}" alt="" loading="lazy" decoding="async" />`;
   }
 
   // Places flagged as placeholders show a neutral map pin until bespoke art exists.
