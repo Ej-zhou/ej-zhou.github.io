@@ -68,14 +68,14 @@ As of the latest working pass, the project folder contains a large generated ass
 
 Current asset count in this project folder:
 
-- 163 final transparent PNG landmark assets in `assets/`.
-- 162 matching `*-detail.png` higher-resolution panel variants.
-- 163 matching `*-chroma.png` source files.
-- The website map currently has 175 places in `app.js`.
-- 160 places have image-backed markers.
-- 14 places are marked as placeholders and use the neutral fallback pin until bespoke assets exist.
-- Place distribution: 64 China, 97 UK, 5 Germany, 4 Morocco, 2 France, 1 Austria, 1 Denmark, 1 Poland.
-- Status distribution in source data: 158 want, 17 visited.
+- 181 final transparent PNG landmark assets in `assets/`.
+- 180 matching `*-detail.png` higher-resolution panel variants.
+- 181 matching `*-chroma.png` source files.
+- The website map currently has 178 places in `app.js`.
+- 178 places have image-backed markers.
+- 0 places are marked as placeholders.
+- Place distribution: 64 China, 97 UK, 5 Germany, 4 Morocco, 2 France, 2 Poland, 1 Austria, 1 Denmark, 1 Hong Kong, 1 Korea.
+- Status distribution in source data: 152 want, 26 visited.
 
 Important implementation notes:
 
@@ -84,7 +84,7 @@ Important implementation notes:
 - Grantchester and Xixi Wetland were removed from the active map dataset earlier.
 - Coordinates should remain real geographic coordinates when new Shanghai / Jiangsu entries are integrated.
 - The "Focused" scope currently includes all China and Germany places, places within 30 miles of Cambridge, and a few explicit UK keepers. Some dense Hangzhou entries are intentionally excluded by `FOCUS_NEVER`.
-- Placeholder trip-seed entries exist for Morocco, France, Austria, Denmark, Poland, London, Scotland, and Berlin. They are searchable/listed when the current scope allows them, but most do not have bespoke assets yet.
+- Earlier placeholder trip-seed entries for Morocco, France, Austria, Denmark, Poland, London, Scotland, Berlin, Seoul, and Hong Kong now have bespoke generated assets.
 
 ### Earlier Integrated Asset Work
 
@@ -157,6 +157,29 @@ The latest Zhejiang generation pass used the Zhejiang national protected heritag
 - `rulong-bridge.png` - 如龙桥
 
 The run was interrupted while starting the next batch. `兰亭` and `大善塔` were generated in the default Codex image output folder, but they were not processed into project assets or copied into `assets/` before the interruption. Regenerate or recover/process them deliberately if they are still wanted.
+
+### Placeholder Asset Completion
+
+The latest completion pass generated and integrated bespoke transparent PNG assets for all entries that were previously missing proper landmark images:
+
+- `tiantong-temple.png` - 天童寺
+- `bou-inania-fez.png` - Madrasa Bou Inania
+- `kasbah-tangier.png` - Dar el Makhzen / Kasbah Museum, Tangier
+- `udayas-rabat.png` - Kasbah des Oudayas
+- `hassan-ii-casablanca.png` - Hassan II Mosque
+- `cannes-palais.png` - Palais des Festivals
+- `centre-pompidou.png` - Centre Pompidou
+- `st-pauls.png` - St Paul's Cathedral
+- `westminster-cathedral.png` - Westminster Cathedral
+- `barbican.png` - Barbican Centre
+- `edinburgh-castle.png` - Edinburgh Castle
+- `stephansdom.png` - St. Stephen's Cathedral, Vienna
+- `berghain.png` - Berghain
+- `nyhavn.png` - Nyhavn
+- `gdansk-crane.png` - Żuraw / The Crane, Gdańsk
+- `krakow-wawel.png` - Wawel Royal Castle
+- `gyeongbokgung-seoul.png` - 경복궁 / Gyeongbokgung Palace
+- `boc-tower-hongkong.png` - Bank of China Tower, Hong Kong
 
 ### Next Requested Direction
 
