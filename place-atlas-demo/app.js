@@ -3913,6 +3913,10 @@ const custodianLabels = {
 };
 
 const placeEpigraphs = {
+  abbey: {
+    text: "Now — now, as low I stooped, thought I,\nI will see what this snowdrop is;\nSo shall I put much sorrow by,\nAnd clean forget my heaviness.",
+    credit: "Walter de la Mare, The Snowdrop"
+  },
   kings: {
     text: "Where light and shade repose, where music dwells / Lingering...",
     credit: "William Wordsworth, Inside of King's College Chapel, Cambridge"
