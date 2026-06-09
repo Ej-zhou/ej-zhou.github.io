@@ -68,14 +68,14 @@ As of the latest working pass, the project folder contains a large generated ass
 
 Current asset count in this project folder:
 
-- 181 final transparent PNG landmark assets in `assets/`.
-- 180 matching `*-detail.png` higher-resolution panel variants.
-- 181 matching `*-chroma.png` source files.
-- The website map currently has 178 places in `app.js`.
-- 178 places have image-backed markers.
+- 208 final transparent PNG landmark assets in `assets/`.
+- 207 matching `*-detail.png` higher-resolution panel variants.
+- 208 matching `*-chroma.png` source files.
+- The website map currently has 205 places in `app.js`.
+- 205 places have image-backed markers.
 - 0 places are marked as placeholders.
-- Place distribution: 64 China, 97 UK, 5 Germany, 4 Morocco, 2 France, 2 Poland, 1 Austria, 1 Denmark, 1 Hong Kong, 1 Korea.
-- Status distribution in source data: 152 want, 26 visited.
+- Place distribution: 97 UK, 65 China, 5 Germany, 5 Japan, 4 Morocco, 4 USA, 3 France, 3 Malaysia, 3 Vietnam, 2 Poland, 2 Switzerland, 1 Albania, 1 Austria, 1 Bosnia, 1 Denmark, 1 Hong Kong, 1 Hungary, 1 Italy, 1 Kazakhstan, 1 Korea, 1 Puerto Rico, 1 Singapore, 1 Thailand.
+- Status distribution in source data: 174 want, 31 visited.
 
 Important implementation notes:
 
@@ -180,6 +180,38 @@ The latest completion pass generated and integrated bespoke transparent PNG asse
 - `krakow-wawel.png` - Wawel Royal Castle
 - `gyeongbokgung-seoul.png` - 경복궁 / Gyeongbokgung Palace
 - `boc-tower-hongkong.png` - Bank of China Tower, Hong Kong
+
+### Latest Global Trip-Seed Asset Completion
+
+The latest pass generated and integrated bespoke transparent PNG assets for all newly added Japan / Southeast Asia / Europe / USA trip-seed entries:
+
+- `sensoji-tokyo.png` - 浅草寺 / Sensō-ji, Tokyo
+- `kinkakuji-kyoto.png` - 金閣寺 / Kinkaku-ji, Kyoto
+- `osaka-castle.png` - 大阪城 / Osaka Castle
+- `toshogu-nikko.png` - 日光東照宮 / Nikkō Tōshō-gū
+- `kobe-port-tower.png` - 神戸ポートタワー / Kobe Port Tower
+- `marina-bay-sands-singapore.png` - Marina Bay Sands
+- `wat-arun-bangkok.png` - Wat Arun, Bangkok
+- `temple-of-literature-hanoi.png` - Văn Miếu / Temple of Literature, Hanoi
+- `hue-imperial-city.png` - Đại Nội / Imperial City, Huế
+- `saigon-post-office.png` - Bưu điện Sài Gòn / Saigon Central Post Office
+- `petronas-towers-kl.png` - Menara Petronas / Petronas Towers
+- `blue-mansion-penang.png` - Cheong Fatt Tze Mansion / Blue Mansion
+- `ipoh-railway-station.png` - Ipoh Railway Station
+- `zenkov-cathedral-almaty.png` - Ascension / Zenkov Cathedral, Almaty
+- `urumqi-grand-bazaar.png` - 新疆国际大巴扎 / International Grand Bazaar, Ürümqi
+- `sarajevo-city-hall.png` - Vijećnica / Sarajevo City Hall
+- `ethem-bey-mosque-tirana.png` - Et'hem Bey Mosque, Tirana
+- `budapest-parliament.png` - Országház / Hungarian Parliament
+- `geneva-st-pierre.png` - Cathédrale Saint-Pierre, Geneva
+- `zurich-grossmunster.png` - Grossmünster, Zurich
+- `milan-duomo.png` - Duomo di Milano / Milan Cathedral
+- `marseille-notre-dame-garde.png` - Notre-Dame de la Garde, Marseille
+- `chrysler-building-nyc.png` - Chrysler Building, New York
+- `us-capitol-washington.png` - United States Capitol
+- `trinity-church-boston.png` - Trinity Church, Boston
+- `mcgraw-tower-ithaca.png` - McGraw Tower, Cornell
+- `el-morro-san-juan.png` - Castillo San Felipe del Morro / El Morro
 
 ### Next Requested Direction
 
