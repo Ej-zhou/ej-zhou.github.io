@@ -6551,18 +6551,6 @@
       "link": "",
       "checked": false,
       "cannes": false
-    },
-    {
-      "name": "Silent Friend",
-      "place": "Marburg, Germany",
-      "display_place": "Alter Botanischer Garten & Marburg University: a ginkgo tree across 1908 / 1972 / 2020",
-      "lat": 50.8093,
-      "lon": 8.7676,
-      "director": "Ildikó Enyedi",
-      "year": 2025,
-      "link": "https://en.wikipedia.org/wiki/Silent_Friend",
-      "checked": false,
-      "cannes": false
     }
   ],
   "skipped": []
