@@ -1327,6 +1327,38 @@ const places = [
     note: "A Roman city-gate object, different enough to widen the atlas beyond castles and abbeys."
   },
   {
+    id: "koblenz-deutsches-eck",
+    name: "Deutsches Eck",
+    english: "Koblenz Deutsches Eck",
+    city: "Koblenz, Germany",
+    region: "germany",
+    category: "heritage",
+    status: "want",
+    coords: [50.3640, 7.6060],
+    placeholder: true,
+    initial: "D",
+    tags: ["river confluence", "Rhine", "Moselle"],
+    season: "Clear early autumn",
+    travel: "Koblenz riverside walk",
+    note: "The headland where the Moselle meets the Rhine, a good anchor for the river-valley stretch of the atlas."
+  },
+  {
+    id: "luxembourg-adolphe-bridge",
+    name: "Pont Adolphe",
+    english: "Adolphe Bridge, Luxembourg City",
+    city: "Luxembourg City, Luxembourg",
+    region: "luxembourg",
+    category: "heritage",
+    status: "want",
+    coords: [49.6097, 6.1278],
+    placeholder: true,
+    initial: "P",
+    tags: ["stone arch bridge", "Pétrusse valley", "old town"],
+    season: "Crisp autumn",
+    travel: "Luxembourg City valley walk",
+    note: "A tall stone arch leaping the Pétrusse gorge, best seen from the green valley floor looking up."
+  },
+  {
     id: "wicken-fen",
     custodian: "national-trust",
     name: "Wicken Fen",
