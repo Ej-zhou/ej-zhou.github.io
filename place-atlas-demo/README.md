@@ -68,14 +68,14 @@ As of the latest working pass, the project folder contains a large generated ass
 
 Current asset count in this project folder:
 
-- 208 final transparent PNG landmark assets in `assets/`.
-- 207 matching `*-detail.png` higher-resolution panel variants.
-- 208 matching `*-chroma.png` source files.
-- The website map currently has 205 places in `app.js`.
-- 205 places have image-backed markers.
+- 210 final transparent PNG landmark assets in `assets/`.
+- 209 matching `*-detail.png` higher-resolution panel variants.
+- 210 matching `*-chroma.png` source files.
+- The website map currently has 207 places in `app.js`.
+- 207 places have image-backed markers.
 - 0 places are marked as placeholders.
-- Place distribution: 97 UK, 65 China, 5 Germany, 5 Japan, 4 Morocco, 4 USA, 3 France, 3 Malaysia, 3 Vietnam, 2 Poland, 2 Switzerland, 1 Albania, 1 Austria, 1 Bosnia, 1 Denmark, 1 Hong Kong, 1 Hungary, 1 Italy, 1 Kazakhstan, 1 Korea, 1 Puerto Rico, 1 Singapore, 1 Thailand.
-- Status distribution in source data: 174 want, 31 visited.
+- Place distribution: 97 UK, 65 China, 6 Germany, 5 Japan, 4 Morocco, 4 USA, 3 France, 3 Malaysia, 3 Vietnam, 2 Poland, 2 Switzerland, 1 Albania, 1 Austria, 1 Bosnia, 1 Denmark, 1 Hong Kong, 1 Hungary, 1 Italy, 1 Kazakhstan, 1 Korea, 1 Luxembourg, 1 Puerto Rico, 1 Singapore, 1 Thailand.
+- Status distribution in source data: 175 want, 32 visited.
 
 Important implementation notes:
 
