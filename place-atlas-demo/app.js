@@ -3232,6 +3232,21 @@ const places = [
     note: "A striped pseudo-Moorish hall on the Miljacka, rebuilt after the war as the city's library."
   },
   {
+    id: "mostar-stari-most",
+    name: "Stari Most",
+    english: "Mostar Old Bridge",
+    city: "Mostar",
+    region: "bosnia",
+    category: "heritage",
+    status: "visited",
+    coords: [43.3373, 17.8150],
+    asset: "assets/mostar-stari-most.png",
+    tags: ["Ottoman bridge", "Neretva", "Mostar"],
+    season: "Spring",
+    travel: "Balkans trip",
+    note: "The pale stone bridge over the turquoise Neretva, with old-town lanes pressing close to both banks."
+  },
+  {
     id: "ethem-bey-mosque-tirana",
     name: "Xhamia e Et'hem Beut",
     english: "Et'hem Bey Mosque, Tirana",
@@ -3245,6 +3260,21 @@ const places = [
     season: "Spring",
     travel: "Balkans trip",
     note: "A small Ottoman mosque on Skanderbeg Square, rare for its painted exterior frescoes."
+  },
+  {
+    id: "berat-castle",
+    name: "Kalaja e Beratit",
+    english: "Berat Castle",
+    city: "Berat",
+    region: "albania",
+    category: "heritage",
+    status: "visited",
+    coords: [40.7058, 19.9459],
+    asset: "assets/berat-castle.png",
+    tags: ["castle", "Ottoman houses", "Berat"],
+    season: "Spring",
+    travel: "Balkans trip",
+    note: "A castle-hill place above the white Ottoman houses, good for remembering Berat as windows, stone, and slope."
   },
   {
     id: "budapest-parliament",
@@ -3631,7 +3661,7 @@ function renderList(visiblePlaces) {
 const DETAIL_VARIANTS = new Set([
   "assets/amsterdam-canals.png", "assets/anglesey-abbey.png", "assets/audley-end-house.png", "assets/aydon-castle.png",
   "assets/ayuwang-temple.png", "assets/baochu-pagoda.png", "assets/baoguo-temple.png",
-  "assets/barbican.png", "assets/battle-abbey.png", "assets/beeston-castle.png", "assets/bergamo-citta-alta.png", "assets/berghain.png",
+  "assets/barbican.png", "assets/battle-abbey.png", "assets/beeston-castle.png", "assets/berat-castle.png", "assets/bergamo-citta-alta.png", "assets/berghain.png",
   "assets/birdoswald-roman-fort.png", "assets/blakeney-point.png",
   "assets/blickling-estate.png", "assets/boc-tower-hongkong.png", "assets/bolsover-castle.png",
   "assets/bourne-mill.png", "assets/bou-inania-fez.png",
@@ -3672,7 +3702,7 @@ const DETAIL_VARIANTS = new Set([
   "assets/marburg-landgrafenschloss.png", "assets/melford-hall.png",
   "assets/middleham-castle.png", "assets/morston-quay.png", "assets/mos-manor.png",
   "assets/moulton-packhorse-bridge.png",
-  "assets/mount-grace-priory.png", "assets/muchelney-abbey.png",
+  "assets/mostar-stari-most.png", "assets/mount-grace-priory.png", "assets/muchelney-abbey.png",
   "assets/nange-archways.png", "assets/nanxun-zhang-residences.png",
   "assets/netley-abbey.png", "assets/nunney-castle.png", "assets/nyhavn.png", "assets/old-sarum.png",
   "assets/orford-castle.png", "assets/osaka-castle.png", "assets/osborne-house.png", "assets/oxburgh-estate.png",
