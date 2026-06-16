@@ -3330,7 +3330,7 @@ const places = [
     category: "heritage",
     status: "visited",
     coords: [45.7036, 9.6628],
-    placeholder: true,
+    asset: "assets/bergamo-citta-alta.png",
     initial: "B",
     tags: ["walled town", "Venetian walls", "hill town"],
     season: "Late spring",
@@ -3346,7 +3346,7 @@ const places = [
     category: "heritage",
     status: "visited",
     coords: [52.3667, 4.8852],
-    placeholder: true,
+    asset: "assets/amsterdam-canals.png",
     initial: "A",
     tags: ["canal ring", "gabled houses", "bridges"],
     season: "Late spring",
@@ -3629,9 +3629,9 @@ function renderList(visiblePlaces) {
 // The small base image stays on the map markers; only the detail panel (one
 // image at a time) loads the crisp version.
 const DETAIL_VARIANTS = new Set([
-  "assets/anglesey-abbey.png", "assets/audley-end-house.png", "assets/aydon-castle.png",
+  "assets/amsterdam-canals.png", "assets/anglesey-abbey.png", "assets/audley-end-house.png", "assets/aydon-castle.png",
   "assets/ayuwang-temple.png", "assets/baochu-pagoda.png", "assets/baoguo-temple.png",
-  "assets/barbican.png", "assets/battle-abbey.png", "assets/beeston-castle.png", "assets/berghain.png",
+  "assets/barbican.png", "assets/battle-abbey.png", "assets/beeston-castle.png", "assets/bergamo-citta-alta.png", "assets/berghain.png",
   "assets/birdoswald-roman-fort.png", "assets/blakeney-point.png",
   "assets/blickling-estate.png", "assets/boc-tower-hongkong.png", "assets/bolsover-castle.png",
   "assets/bourne-mill.png", "assets/bou-inania-fez.png",
