@@ -33,19 +33,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const pivot = rawSrc.indexOf('pics/');
     const prefix = pivot >= 0 ? rawSrc.slice(0, pivot) : '';
     const names = [
+      'IMG_2397.jpeg',
       'syn.png','dark.png','stone.png','night.png','girl.png','voila.png',
       'red.png','yellow.png','buddha.png','sh.png','scaoe.png','yaddha.png','bureal.png','gang.png'
     ];
     const images = names.map(function (n) { return prefix + 'pics/' + n; });
+    // The first image (index 0) lingers longer than the rest.
+    const FIRST_DELAY = 8000;
+    const DELAY = 3000;
     let currentIndex = 0;
     function changeImage() {
       currentIndex = (currentIndex + 1) % images.length;
       if (img) img.src = images[currentIndex];
+      schedule();
+    }
+    function schedule() {
+      const delay = currentIndex === 0 ? FIRST_DELAY : DELAY;
+      setTimeout(changeImage, delay);
     }
     // Respect user's reduced-motion preference
     const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduce) {
-      setInterval(changeImage, 3000);
+      schedule();
     }
   }
 });
