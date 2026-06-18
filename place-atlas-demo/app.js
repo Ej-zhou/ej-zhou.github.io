@@ -3634,7 +3634,13 @@ function setActive(id) {
 function renderList(visiblePlaces) {
   placeList.innerHTML = "";
 
-  visiblePlaces.forEach((place) => {
+  // UK places float to the top of the rail; everything else keeps its order
+  // (Array.prototype.sort is stable, so ties preserve the original sequence).
+  const ordered = [...visiblePlaces].sort((a, b) => {
+    return (a.region === "uk" ? 0 : 1) - (b.region === "uk" ? 0 : 1);
+  });
+
+  ordered.forEach((place) => {
     const card = document.createElement("button");
     card.className = `place-card ${place.id === state.activeId ? "active" : ""}`;
     card.type = "button";
