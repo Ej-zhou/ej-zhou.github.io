@@ -1173,7 +1173,7 @@
       "director": "Javier Ambrossi & Javier Calvo",
       "year": 2026,
       "link": "",
-      "checked": true,
+      "checked": false,
       "cannes": true
     },
     {
@@ -1281,7 +1281,7 @@
       "director": "Nicolas Winding Refn",
       "year": 2026,
       "link": "",
-      "checked": true,
+      "checked": false,
       "cannes": true
     },
     {
@@ -1329,9 +1329,8 @@
       "director": "Nicolas Athane & Marco Nguyen",
       "year": 2026,
       "link": "",
-      "checked": true,
-      "cannes": true,
-      "comment": "A gay hero's journey, charging through bears, scamps, drag, the gaystapo headquarters: basically an insider's encyclopedia. Very cheesy, very camp, utterly unapologetic. A film like this is destined to be made only once, which is itself a kind of never-done-before novelty. Over a safe, well-behaved queer film, I would rather watch a Guiraudie."
+      "checked": false,
+      "cannes": true
     },
     {
       "name": "The Neon Demon",
@@ -2294,6 +2293,18 @@
       "cannes": false
     },
     {
+      "name": "Fallen Leaves",
+      "place": "Kallio / supermarket",
+      "display_place": "Kallio supermarket and walk-up, Helsinki (Kaurismäki)",
+      "lat": 60.184799999999996,
+      "lon": 24.950200000000002,
+      "director": "Aki Kaurismäki",
+      "year": 2023,
+      "link": "https://movie.douban.com/subject/35928797/",
+      "checked": true,
+      "cannes": false
+    },
+    {
       "name": "Happy as Lazzaro",
       "place": "Civita di Bagnoregio, Lazio, Italy",
       "display_place": "Civita, Bagnoregio, Viterbo, Lazio, 01022, Italy",
@@ -2595,10 +2606,10 @@
     },
     {
       "name": "The Phoenician Scheme",
-      "place": "Studio Babelsberg",
-      "display_place": "Studio Babelsberg, Potsdam (filming location; fictional Phoenicia)",
-      "lat": 52.3847,
-      "lon": 13.1183,
+      "place": "Europe",
+      "display_place": "Europe",
+      "lat": 51.0,
+      "lon": 10.0,
       "director": "Wes Anderson",
       "year": 2025,
       "link": "https://movie.douban.com/subject/36465394/",
@@ -5782,9 +5793,8 @@
       "director": "James Gray",
       "year": 2026,
       "link": "",
-      "checked": true,
-      "cannes": true,
-      "comment": "Queens by way of an undercover thriller: neither is quite a genre piece, more a variation spun out of film noir, with bursts of superb suspense and action only in places (the cornfield scene, a few strokes yet taut as wire). A deeply local film, an intensely New York, intensely 90s story; the unflappable, airtight crime boss who knows how to stage a set-piece is practically a Queens ethnography. Back in Jiangnan, we would call him a white-ink scholar."
+      "checked": false,
+      "cannes": true
     },
     {
       "name": "The Electric Kiss",
@@ -5807,7 +5817,7 @@
       "director": "Andy Garcia",
       "year": 2026,
       "link": "",
-      "checked": true,
+      "checked": false,
       "cannes": true
     },
     {
@@ -5891,9 +5901,8 @@
       "director": "Jia Zhangke",
       "year": 2026,
       "link": "",
-      "checked": true,
-      "cannes": true,
-      "comment": "The director... and his Tao..."
+      "checked": false,
+      "cannes": true
     },
     {
       "name": "A Girl Unknown",
@@ -6554,105 +6563,6 @@
       "link": "https://en.wikipedia.org/wiki/Silent_Friend",
       "checked": false,
       "cannes": false
-    },
-    {
-      "name": "Notre Salut",
-      "place": "Brussels",
-      "display_place": "Brussels, Ixelles (approx; Emmanuel Marre's base)",
-      "lat": 50.827,
-      "lon": 4.3714,
-      "director": "Emmanuel Marre",
-      "year": 2026,
-      "link": "https://movie.douban.com/",
-      "checked": true,
-      "cannes": true
-    },
-    {
-      "name": "Histoires parallèles",
-      "place": "Paris",
-      "display_place": "Paris, 11e (approx; French-language production)",
-      "lat": 48.8632,
-      "lon": 2.3775,
-      "director": "Asghar Farhadi",
-      "year": 2026,
-      "link": "https://movie.douban.com/",
-      "checked": true,
-      "cannes": true
-    },
-    {
-      "name": "HOPE",
-      "place": "Busan",
-      "display_place": "Busan port (approx; 'Hope Port')",
-      "lat": 35.1014,
-      "lon": 129.0411,
-      "director": "Na Hong-jin",
-      "year": 2026,
-      "link": "https://movie.douban.com/",
-      "checked": true,
-      "cannes": true
-    },
-    {
-      "name": "Amarga Navidad",
-      "place": "Madrid",
-      "display_place": "Madrid, Malasaña (approx; Almodóvar's milieu)",
-      "lat": 40.4267,
-      "lon": -3.7038,
-      "director": "Pedro Almodóvar",
-      "year": 2026,
-      "link": "https://movie.douban.com/",
-      "checked": true,
-      "cannes": true
-    },
-    {
-      "name": "Das geträumte Abenteuer",
-      "place": "Bulgaria",
-      "display_place": "Petrohan, rural Bulgaria (approx; Grisebach's milieu)",
-      "lat": 43.13,
-      "lon": 23.08,
-      "director": "Valeska Grisebach",
-      "year": 2026,
-      "link": "https://movie.douban.com/",
-      "checked": false,
-      "cannes": true
-    },
-    {
-      "name": "Les Roches Rouges",
-      "place": "Esterel / Agay",
-      "display_place": "Massif de l'Esterel, Agay, Côte d'Azur (red rocks)",
-      "lat": 43.4267,
-      "lon": 6.8556,
-      "director": "Bruno Dumont",
-      "year": 2026,
-      "link": "https://movie.douban.com/",
-      "checked": true,
-      "cannes": true,
-      "comment": "A pack of kids splashing and diving on the Cote d'Azur, and that is the whole story. Like Ponette, the charm lies entirely in the children's innocence: watching it, I felt eight years old again, seeing the world fresh. The lead is luminous, probably has ADHD, limbs flying off at unpredictable angles, like the alien in Dumont's earlier films (children are an alien species to begin with). A rare film made purely for children, untainted by adult imagination."
-    },
-    {
-      "name": "Minotaure",
-      "place": "Vyborg",
-      "display_place": "Provincial northwest Russia, Vyborg (approx; Zvyagintsev milieu)",
-      "lat": 60.7106,
-      "lon": 28.7494,
-      "director": "Andrey Zvyagintsev",
-      "year": 2026,
-      "link": "https://movie.douban.com/",
-      "checked": true,
-      "cannes": true,
-      "comment": "Zvyagintsev's signature cold mise-en-scene: a small-town CEO accidentally kills his wife's lover (a photographer, of course), leans on the mayor to bury the investigation, and in the end the patriarch triumphs and the couple jets off to vacation in Greece. Conscription dread blankets the whole town. What hit me hardest was the post-dinner exchange: 'They are your friends, not mine', ne nashi, tvoi. I have heard those exact words. A pity it is too on-the-nose, and the motivation is thin; nanako said using the war as a backdrop for a banal affair is rather contemptible."
-    },
-    {
-      "name": "L'inconnue",
-      "place": "Paris outskirts",
-      "display_place": "Bobigny, Paris banlieue (approx)",
-      "lat": 48.9069,
-      "lon": 2.4397,
-      "director": "Arthur Harari",
-      "year": 2026,
-      "link": "https://movie.douban.com/",
-      "checked": true,
-      "cannes": true,
-      "comment": "My Palme d'Or. It uses the kinky motif of swapping bodies after sex to interrogate the self and free will: 'the same soul in a different body' collapses on its own terms, because there is no 'same soul' to begin with. As restrained as Anatomy of a Fall, with the same quietly surging sense of crisis; the abundant still-life photography recalls Blow-Up, and in black and white the buildings on the Paris outskirts seem to breathe. Rhythm, image and sound, deliberation, the spectral. As it opens, people in a nightclub are dancing and jeering at a giant ludicrous image of Trump's head, and amid the din David's gaze suddenly zooms in on Eva's face, the music drops away into the cold roar of reality, like the falling sensation in a dream that jolts you awake: a cold sweat, and everything begins at once."
     }
   ],
   "skipped": []

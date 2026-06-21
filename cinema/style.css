@@ -498,6 +498,25 @@ body::after {
   transition: color .2s, border-color .2s;
 }
 .popup .link:hover { color: var(--crimson-glow); border-bottom-color: var(--crimson-glow); }
+.popup-comment {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+  font-family: 'EB Garamond', serif;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1.62;
+  color: var(--bone-soft);
+  max-height: 200px;
+  overflow-y: auto;
+}
+.popup-comment::before {
+  content: "“";
+  color: var(--crimson);
+  font-style: normal;
+  margin-right: 2px;
+}
+.popup-comment::after { content: "”"; color: var(--crimson); font-style: normal; }
 
 /* ───── Errata (editorial corrections) ───── */
 .popup .errata {

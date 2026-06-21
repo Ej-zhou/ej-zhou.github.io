@@ -522,6 +522,8 @@ function renderPopup(m, i) {
   ].filter(Boolean).join('');
   const link = m.link
     ? `<a class="link" href="${esc(m.link)}" target="_blank" rel="noopener">view ↗</a>` : '';
+  const comment = m.comment
+    ? `<div class="popup-comment">${esc(m.comment)}</div>` : '';
 
   const entry = errataStore.get(m);
   const seal = entry ? `<div class="disputed-seal">disputed</div>` : '';
@@ -541,6 +543,7 @@ function renderPopup(m, i) {
       <div class="place">${esc(m.place)}</div>
       <div class="badges">${badges}</div>
       ${link}
+      ${comment}
       <details class="errata" ${hasAny ? 'open' : ''}>
         <summary>mark as incorrect<span class="save-dot"></span></summary>
         <form class="errata-form" data-errata onsubmit="return false;">
