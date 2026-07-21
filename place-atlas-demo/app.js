@@ -2962,6 +2962,38 @@ const places = [
     note: "The royal castle on Wawel Hill above the Vistula, Poland's historic seat of kings."
   },
   {
+    id: "wieliczka-salt-mine",
+    name: "Kopalnia soli Wieliczka",
+    english: "Wieliczka Salt Mine",
+    city: "Wieliczka",
+    region: "poland",
+    category: "heritage",
+    status: "want",
+    coords: [49.9836, 20.0546],
+    placeholder: true,
+    initial: "W",
+    tags: ["salt mine", "underground", "UNESCO"],
+    season: "Any season",
+    travel: "Kraków day trip",
+    note: "A vast medieval salt mine carved into chapels and chambers, a short hop south-east of Kraków."
+  },
+  {
+    id: "auschwitz-birkenau",
+    name: "Auschwitz-Birkenau",
+    english: "Auschwitz-Birkenau Memorial",
+    city: "Oświęcim",
+    region: "poland",
+    category: "heritage",
+    status: "want",
+    coords: [50.0359, 19.1783],
+    placeholder: true,
+    initial: "A",
+    tags: ["memorial", "UNESCO", "WWII"],
+    season: "Any season",
+    travel: "Kraków day trip",
+    note: "The former camp preserved as a memorial and museum, a solemn place to visit slowly and with care."
+  },
+  {
     id: "gyeongbokgung-seoul",
     name: "경복궁",
     english: "Gyeongbokgung Palace, Seoul",
