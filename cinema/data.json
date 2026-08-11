@@ -6520,6 +6520,30 @@
       "link": "https://en.wikipedia.org/wiki/Silent_Friend",
       "checked": false,
       "cannes": false
+    },
+    {
+      "name": "That Summer in Paris",
+      "place": "Paris La Défense Arena, Nanterre",
+      "display_place": "Paris La Défense Arena, Nanterre: the 2024 Olympic swimming venue Blandine comes from Normandy to see",
+      "lat": 48.8958,
+      "lon": 2.2292,
+      "director": "Valentine Cadic",
+      "year": 2025,
+      "link": "https://en.wikipedia.org/wiki/That_Summer_in_Paris",
+      "checked": false,
+      "cannes": false
+    },
+    {
+      "name": "Obsession",
+      "place": "Silver Lake, Los Angeles",
+      "display_place": "Silver Lake record-store milieu, Los Angeles (shot in LA, October 2024; in-film store unnamed, approximate)",
+      "lat": 34.0869,
+      "lon": -118.2702,
+      "director": "Curry Barker",
+      "year": 2025,
+      "link": "https://en.wikipedia.org/wiki/Obsession_(2025_film)",
+      "checked": false,
+      "cannes": false
     }
   ],
   "skipped": []
