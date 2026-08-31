@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const names = [
       'IMG_2397.jpeg',
       'syn.png','dark.png','stone.png','night.png','girl.png','voila.png',
-      'red.png','yellow.png','buddha.png','sh.png','scaoe.png','yaddha.png','bureal.png','gang.png'
+      'red.png','yellow.png','sh.png','scaoe.png','yaddha.png','bureal.png'
     ];
     const images = names.map(function (n) { return prefix + 'pics/' + n; });
     // The first image (index 0) lingers longer than the rest.
