@@ -10,7 +10,7 @@
   --ink-dim:    #7a7a7a;
   --paper:      #ffffff;
   --rule:       #e6e6e6;
-  --accent:     #6e3d34;           /* a quiet, ink-red */
+  --accent:     #35557a;           /* a quiet steel blue */
   --max-content: 820px;
   --sans: 'Nova Script', 'Times New Roman', serif;
   --body: 'Courier New', ui-monospace, Menlo, monospace;
@@ -185,7 +185,8 @@ section p, section li { color: var(--ink-soft); }
 .ri-table td { vertical-align: top; padding: 14px 16px 14px 0; border-bottom: 1px solid var(--rule); }
 .ri-table th:last-child, .ri-table td:last-child { padding-right: 0; }
 .ri-table a { color: var(--ink); }
-.ri-venue { display: block; color: var(--ink-soft); }
+.ri-take { display: block; font-family: var(--body); font-size: 13.5px; line-height: 1.5; color: var(--accent); margin-top: 5px; }
+.ri-venue { display: block; font-size: 0.85em; color: var(--ink-dim); margin-top: 4px; }
 
 /* ── Misc ─────────────────────────────────────────────────────────── */
 .sanskrit {
