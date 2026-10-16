@@ -186,19 +186,22 @@ section p, section li { color: var(--ink-soft); }
 /* Core thread: the four papers that carry the argument */
 .ri-node a, .ri-node { color: var(--ink-soft); }
 .ri-key, .ri-key > a { color: var(--ink); font-size: 1.07em; }
-.ri-key > a { text-decoration-thickness: 2px; text-decoration-color: var(--accent); }
+.ri-key > a { text-decoration-thickness: 1px; text-decoration-color: var(--accent); text-underline-offset: 4px; }
 .ri-key .ri-take, .ri-key .ri-venue { font-size: 13.5px; }
 .ri-key .ri-venue { font-size: 0.8em; }
-.ri-node:not(.ri-first)::before { content: '↓'; display: block; height: 22px; line-height: 22px; margin-bottom: 4px; color: var(--ink-dim); }
-.ri-plain::before { visibility: hidden; } /* keeps row spacing, no lineage arrow */
-/* Link from the Representation column into Beyond the Final Layer: out of the source node,
-   down the gap between the columns, then into the merge node at its title line. */
-.ri-conn { grid-column: 2; position: relative; }
-.ri-conn-a { grid-row: 3; }
-.ri-conn-a::before { content: ''; position: absolute; left: 0; right: 50%; top: 13px; bottom: 0; border-top: 1px solid var(--ink-dim); border-right: 1px solid var(--ink-dim); border-top-right-radius: 10px; }
-.ri-conn-b { grid-row: 4; }
-.ri-conn-b::before { content: ''; position: absolute; left: 50%; right: 5px; top: 0; height: 40px; border-left: 1px solid var(--ink-dim); border-bottom: 1px solid var(--ink-dim); border-bottom-left-radius: 10px; }
-.ri-conn-b::after { content: ''; position: absolute; right: 0; top: 36px; border: 4px solid transparent; border-left: 6px solid var(--ink-dim); border-right: 0; }
+/* Down-arrow between steps in a thread: thin line, small solid head */
+.ri-node:not(.ri-first) { position: relative; }
+.ri-node:not(.ri-first)::before { content: ''; display: block; width: 0; height: 16px; margin: 0 0 10px 7px; border-left: 1px solid var(--ink-soft); }
+.ri-node:not(.ri-first)::after { content: ''; position: absolute; left: 4px; top: 13px; border: 3.5px solid transparent; border-top: 7px solid var(--ink-soft); border-bottom: 0; }
+.ri-plain::before, .ri-plain::after { visibility: hidden; } /* keeps row spacing, no lineage arrow */
+/* Fork from the Representation thread into Beyond the Final Layer: branches off the
+   down-arrow under The Strong Platonic Hypothesis, runs down the gap, lands on the title line. */
+.ri-conn { position: relative; pointer-events: none; }
+.ri-conn-a { grid-column: 1 / 3; grid-row: 4; }
+.ri-conn-a::before { content: ''; position: absolute; left: 7px; right: calc(var(--gap) / 2); top: 8px; height: 16px; border-top: 1px solid var(--ink-soft); border-right: 1px solid var(--ink-soft); border-top-right-radius: 10px; }
+.ri-conn-b { grid-column: 2; grid-row: 4; }
+.ri-conn-b::before { content: ''; position: absolute; left: 50%; right: 7px; top: 24px; height: 16px; border-left: 1px solid var(--ink-soft); border-bottom: 1px solid var(--ink-soft); border-bottom-left-radius: 10px; }
+.ri-conn-b::after { content: ''; position: absolute; right: 1px; top: 36.5px; border: 3.5px solid transparent; border-left: 7px solid var(--ink-soft); border-right: 0; }
 .ri-take { display: block; font-family: var(--body); font-size: 13.5px; line-height: 1.5; color: var(--accent); margin-top: 5px; }
 .ri-venue { display: block; font-size: 0.85em; color: var(--ink-dim); margin-top: 4px; }
 .ri-also { display: none; font-size: 0.85em; color: var(--ink-dim); margin-top: 4px; }
